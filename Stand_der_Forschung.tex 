@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{graphicx}
+
+
+\title{Stand der Forschung \\[1ex] \large Thema: Wie verhindern Entwickler bildergenerierender KIs, dass diese nicht zur Erzeugung ethisch fragwürdiger Inhalte missbraucht werden.}
+\date{16.04.2023}
+\author{Ronja Drechsler, \and Dominic Fitter, \and Michel Hecker, \and Khaldon Kassem, \and Phillip Eckstein}
+
+\begin{document}
+\maketitle
+
+\section{Einleitung}
+Dieses Dokument dient der näheren Beleuchtung des Forschungsstands zum Thema  „Möglichkeiten Verhinderung des Missbrauchs bildergenerierender Kis zur Erzeugung ethisch fragwürdiger Inhalte. Eine Bestandaufnahme“ mit der Forschungsfrage, wie in der Praxis verhindert wird, dass IGAI zur Erzeugung ethisch fragwürdiger Inhalte missbraucht werden. Dafür soll zunächst auf die eigentliche Recherche und die daraus mündenden Ergebnisse eingegangen werden, bevor die für die Recherche angewendeten KI-Werkzeuge genannt und deren Nutzen diskutiert wird. Zuletzt wird ein Ausblick gegeben, wie die Erarbeitung des Forschungsstands noch verfeinert und abgeschlossen werden kann.
+\section{Recherche}
+Für die Recherche fanden folgende Datenbanken und Webseiten Anwendung:
+\begin{itemize}
+    \item Google Scholar
+    \item link.springer.org
+    \item Semantic Scholar
+    \item ACM
+    \item Regensburger Katalog
+    \item Katalog der Universitätsbibliothek Leipzig
+    \item Katalog der Deutschen Nationalbibliothek
+    \item Bibliothekskatalog der Westsächsischen Hochschule Zwickau
+    \item IEEE
+    \item IBM
+\end{itemize}
+
+Zudem dienten KI-gestützte Recherchetools wie Elicit und ChatGPT-3 sowie WikiCFP der groben Orientierung innerhalb des Themas und inspirierten zur Nutzung einiger der oben genannten Datenbanken wie Semantic Scholar. Dabei wurden Fragenstellungen wie die folgenden genutzt:
+How can the generation of unethical content through picture generating ai be prevented?
+How to develop image generating AI so that users can not create unethical imges with it
+Methods to prevent the generation of unethical content in AI
+Eine Einschätzung der Dienlichkeit der verwendeten Werkzeuge folgt in Kapitel 4.
+\setcion {Forschungsstand}
+Werke wie [Salminen 2020] zeigen, dass KI Wie unter anderem [Jobin 2019] und [Partadiredja 2020] zeigen, gibt es bereits Richtlinien und ähnliche Werke zu ethischen Festlegungen bezüglich KI. Es gibt solche Richtlinien also, jedoch zeigen Werke wie [Ayling 2021], dass diese bei der Entwicklung und dem Einsatz von KI jedoch noch nicht ausreichend praktische Anwendung finden. [Ayling 2021] zeigt hierzu explizit Defizite aktueller Werkzeuge für Audits und Risikobewertungen bezüglich ethischer Rahmenwerke und Grundsätze in der KI auf, die in Zukunft berücksichtigt werden sollten. 
+Prinzipiell gibt es bereits Arbeiten, deren Ergebnisse die Umsetzung verschiedener Richtlinien fördern können, so legt [European Commission 2019] Anforderungen an KI in der EU fest. [Jobin 2019] und [Hagendorff 2020] definieren Strategien für die Implementierung von Richtlinien für ethische Prinzipien für KI. Zudem geben einige Unternehmen Überblick über ihre Ansätze zur Verminderung von Verzerrungen bei der Benutzung von KI, beispielsweise IBM über [Hobson 2021]. In diesem Werk wird auch anhand von Prozessen dargelegt, wie ethisch korrekt mit KI umgegangen werden kann.
+Eine Variante, bestimmte Inhalte zu blockieren, besteht in der Filterung. Einen solche Filter für Bilder beschreibt [Zheng 2004]. Die beschriebene Software kann Haut auf Bildern erkennen und darüber z. B. nicht kinder- und jugendfreie Inhalte und Symbole herausfiltern.
+Zusammenfassend lässt sich also sagen, dass die Problematik bei der Umsetzung ethischer Prinzipien in der KI erkannt und durch Richtlinien u. ä. Anleitungen gegeben werden, wie diese geschehen kann. Außerdem gibt es Untersuchungen zur Anforderungsanalyse und Vorschläge zur Implementierung für diese Umsetzung, allerdings keinen zusammenfassenden Überblick, was denn tatsächlich praktisch getan wird, um Missbrauch bildergenerierender Kis zur Erzeugung ethisch fragwürdiger Inhalte zu verhindern.
+Nennung und Einschätzung der verwendeten KI-Werkzeuge
+Wie bereits in Kapitel 2 erwähnt, wurden für die Recherche verschiedene KI-Werkzeuge verwendet, deren Nutzung im Folgenden eingeschätzt und die Nützlichkeit dessen diskutiert werden soll. 
+ChatGPT3 ist ein Sprachmodell und dient somit der Fomulierung sprachlich korrekter Texte, kann jedoch beispielsweise keine Paper zusammenfassen, sondern gibt nur anhand des Titels jeweils ähnlich klingende Zusammenfassungen, ohne sich dabei auf die tatsächlichen Inhalte des Papers berufen zu können. Somit eignet sich höchstens, um die betrachtete Disziplin erforschende Autoren zu finden und auf dieser Basis mit anderen Werkzeugen weiterzurecherchieren. Solche Unterstützung liefern allerdings auch wissenschaftlich etabliertere Webseiten wie WikiCFP. Zudem könnte ChatGPT3 von Wissenschaftlern, die in der Sprache, in der sie eine wissenschaftliche Arbeit schreiben, nicht ausreichend versiert sind, als Unterstützung bei der Formulierung eines wohlklingenden Texts verwendet werden.
+Neben dem reinen ChatGPT3 wurde Bing mit ChatGPT3 verwendet. Dies bietet gegenüber der oben beschriebenen Variante den Vorteil, dass Bing das Internet durchsucht und somit inhaltlich passendere Antworten liefern kann. Der Nachteil besteht darin, dass nur das Internet beipielsweise nach dem Papertitel und „summary“ durchsucht wird und eines der ersten Suchergebnisse in wohlformulierter Sprache widergegeben wird, weshalb auch hier keine wirklich brauchbaren Inhalte erzeugt werden.
+Generell muss die Benutzung eines Werkzeugs geübt werden, um die Möglichkeiten dessen in guter Qualität auszuschöpfen. Demzufolge müsste länger und intensiver mit diesem Werkzeug gearbeitet werden, um eventuell nützlichere Ergebnisse zu erzielen als diese. Die oben genannte Einschätzung beruht nur auf einwöchige Nutzung ohne nennenswerte Vorkenntnisse und ist demnach nicht repräsentativ für das tatsächliche Potenzial der genutzten KI-Werkzeuge.
+Dasselbe gilt für Elicit. Dieses Werkzeug ist durch die Größe seiner Datenbank beschränkt, innerhalb dieser jedoch hilfreich, um einen Überblick über Werke zu erlangen, deren Autoren nicht auf den hiesigen Konferenzen vertreten und folglich mithilfe der klassischen Recherche über Konferenzen und deren Paper und Teilnehmer nicht auffindbar wären. Mithilfe geeigneter Fragen kann auch Zeit bei der Recherche gespart werden, indem die Zusammenfassung der ersten vier Paper genutzt wird. Diese sollte jedoch nicht nur, wenn die eigentlich intendierte Frage nicht direkt beantwortet wird, überprüft werden, da sie sehr kurz und nicht immer vollständig zutreffend ist.
+\section{Ausblick}
+Während der einwöchigen Recherche konnten noch nicht alle potentiell der vorliegenden Arbeit dienlichen Werke konsultiert werden. So wird [Pawelec 2021] nach Einreichung dieses Dokuments noch über die Deutsche Nationalbibliothek bezogen.
+Der zusammengestellte Forschungsstand gibt einen ersten Einblick in die in der angestrebten wissenschaftlichen Arbeit thematisierte Disziplin, jedoch muss die genannte Literatur noch konkreter danach untersucht werden, inwiefern die verwendeten Methoden die für die angestrebte Arbeit zu verwendende beeinflussen können.
+\section{Quellen}
+\begin{itemize}
+\item Avelar, P. et al.: Measuring Ethics in AI with AI: A Methodology and Dataset Construction. In: Goebel, Randy, Wahlster, Wolfgang, Zhou, Zhi-Hua (2022): Intelligent Systems: 11th Brazilian Conference, BRACIS 2022, Campinas, Brazil, November 28 – December 1, 2022, Proceedings, Part I. Springer-Verlag, Berlin, Heidelberg.
+\item Ayling, J., Chapman, A.: Putting AI ethics to work: are the tools fit for purpose?. In: AI and Ethics 2 (2021): 405 - 429.
+\item European Commission, Directorate-General for Communications Networks, Content and Technology, Ethics guidelines for trustworthy AI, Publications Office, 2019.
+\item Hagendorff, T.: The Ethics of AI Ethics: An Evaluation of Guidelines. In: Minds an Machines, Volume 30, issue 1 (2020). S. 99ff. <https://link.springer.com/content/pdf/10.1007/s11023-020-09517-8.pdf>
+\item Hobson, S., Dortch, A. (2021): Mitigating Bias in Artificial Intelligence. IBM Policy Lap. IBM. Abgerufen am 15.04.2023.
+\item Jameel, T. et al. (2020): Ethics of Artificial Intelligence : Research Challenges and Potential Solutions. In: iCoMET 2020 : 3rd International Conference on Computing, Mathematics and Engineering Technologies. 1 – 6.
+\item Jobin, A., Ienca, M. & Vayena, E.: The global landscape of AI ethics guidelines. In: Nat Mach Intell 1 (2019). S. 389–399.
+\item Minkkinen, M. et al. (2022): Continuous Auditing of Artificial Intelligence: a Conceptualization and Assessment of Tools and Frameworks. DISO 1, Artikel 21.
+\item Partadiredja, R. et al. (2020): AI or Human: The Socio-ethical Implications of AI-Generated Media Content. 2020 13th CMI Conference on Cybersecurity and Privacy (CMI) - Digital Transformation - Potentials and Challenges(51275), Copenhagen, Denmark, 2020. S. 1ff.
+\item Pawelec, M., Bieß, C. (2021):  Deepfakes. Technikfolgen und Regulierungsfragen aus ethischer und sozialwissenschaftlicher Perspektive. Baden-Baden: Nomos.
+\item Shah, F. et al. (2022): Artificial Intelligence as a Service for Immoral ContentDetection and Eradication. Hindawi Publishing Corporation.
+\item Somepalli, G. et al.(2022): Diffusion Art or Digital Forgery? Investigating Data Replication in Diffusion Models. eprint ArXiv:2212.03860.
+\item Srinivasan, R., Chander, A. (2021): Biases in AI Systems: A survey for practitioners. In: Quene, Volume 19, No2. S. 45ff.
+\item Srinivasan, R., Chander, A. (2021): Biases in AI Systems. In: Communications of the ACM, Volume 64, Issue 8. S. 44ff.
+\item Stahl, B. C., Schroeder, D., & Rodrigues, R. (2023): The ethics of artificial intelligence: A conclusion. In: Springerbriefs in research and innovation governance. SpringerBriefs in Research and Innovation Governance. Springer, Cham.
+\item Sun, F., Ye, R. (2023): Moral Considerations of Artificial Intelligence. In: Ethics of Artificial Intelligence. Case Studies and Options for Addressing Ethical Challenges. S. 107ff.
+\item Turner, Jacob (2019): Robot Rules. Palgrave Macmillan, Cham.
+\item Zheng, Huicheng et al. (2004): Blocking objectionable images: adult images and harmful symbols. In: 2004 IEEE International Conference on Multimedia and Expo (ICME) (IEEE Cat. No.04TH8763) 2, Volume 2, S. 1223ff.
+\item Zuber, Niina Marja Christine (2022): Ethik in der Softwareentwicklung. Dissertation, Ludwig‐Maximilians‐Universität München. PDF. <https://edoc.ub.uni-muenchen.de/31152/1/Zuber_Niina_Marja_Christine.pdf>
+\end{itemize}
+\end{document}
