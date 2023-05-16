@@ -128,6 +128,13 @@ Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden
 \end{itemize}
 
 \subsubsection{Verwendung von Datenerweiterung (Data Augmentation)}
+Data Augmentation beschreibt eine Technik Varianz in vorhandene Daten einzufügen und so die Datenmenge zu erweitern.
+Im Fall von IGAIs könnten so Eingabetexte, mit welchen moralisch kritische Inhalte erzeugt werden könnten, im mehreren leicht oder stärker abgewandelten Formen der IGAI vorgegeben werden um die Konsistenz dieser zu überprüfen und besser anzutrainieren.  
+Zusätzlich können Einschränkungen und Richtlinien in den Augmentationsprozess integriert werden, um sicherzustellen, dass bestimmte ethische Prinzipien eingehalten werden. 
+Durch den Einsatz von Data Augmentation wird der Algorithmus besser darauf vorbereitet, moralische Grenzen zu respektieren und kontroverse oder anstößige Inhalte zu vermeiden. 
+Die Verwendung von Data Augmentation ermöglicht somit eine Verbesserung der moralischen Ertragbarkeit des ML-Algorithmus bei der Generierung von Bildern aus Textinput.
+
+Quelle: https://arxiv.org/pdf/1712.04621.pdf https://doi.org/10.48550/arXiv.1712.04621
 
 \subsubsection{Verwendung von überwachtem Lernen (Supervised Learning)}
 Die Trainingsdatensätze werden im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
@@ -142,8 +149,17 @@ Weiter wäre auch das Gegenteil möglich: Ein geordnetes Paar an Texten und mora
 Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
 
 \subsubsection{Verwendung von kontradiktorischen Training (adversarial training)}
+Adversarial Learning ist eine Technik, die eingesetzt werden kann, um einen Machine Learning-Algorithmus moralisch ertragbarer zu gestalten. 
+Dabei wird ein zusätzlicher Algorithmus, der als Adversary bezeichnet wird, verwendet, um den Hauptalgorithmus herauszufordern und zu verbessern. 
 
+Der Adversary wird darauf trainiert, gezielt moralisch problematische Beispiele zu generieren, die der Hauptalgorithmus falsch klassifizieren könnte. 
+Indem der Hauptalgorithmus mit solchen herausfordernden Beispielen konfrontiert wird, wird er dazu gezwungen, seine Entscheidungen sorgfältiger zu treffen und moralisch akzeptablere Ergebnisse zu erzielen. 
 
+Durch diesen iterativen Prozess des Trainings und der Herausforderung kann der Algorithmus lernen, ethische Aspekte besser zu berücksichtigen und so seine Leistung im Hinblick auf Moral und Ethik zu verbessern. 
+
+Adversarial Learning bietet somit eine vielversprechende Möglichkeit, ML-Algorithmen in Bezug auf moralische Aspekte weiterzuentwickeln und deren Einfluss auf die Gesellschaft verantwortungsvoll zu gestalten.
+
+Quelle: https://arxiv.org/pdf/1611.01236.pdf
 
 \section{Fazit}
 \bibliographystyle{ieeetr}
