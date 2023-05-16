@@ -109,7 +109,7 @@ Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrunge
 Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite{Srinivasan}.
 
 Ein menschliche Bewerter eines Modells können in veschiedenen Aspekten kritisch handeln. Sie können durch eigene Einstellungen und Erfahrungen auch unabsichtlich beeinflußt sein \cite{Srinivasan}.
-Gerade wenn ein Bewerter direkt am Model beteiligt ist kann es zum so genannten Bestätigungsfehler, oder 	\glqq Peak-End-Effect\grqq{} kommen \cite{Srinivasan}.
+Gerade wenn ein Bewerter direkt am Model beteiligt ist kann es zum so genannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen \cite{Srinivasan}.
 Ein Bestätigungsfehler ist der Neigung durch subjektive Wahrnemung eine Erwartung bestätigt zu sehen \cite{Srinivasan}. 
 Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Höhepunkten und dem letzten Eindruck geprägt \cite{Srinivasan}.
 Ebenfalls kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird \cite{Srinivasan}.
@@ -122,8 +122,8 @@ Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden
     \item Wird für die Evaluation ein Test-Framework verwendet, muss dieses weitreichend auf systematische Fehler überprüft werden.
 \end{itemize}
 
-
 \subsubsection{Verwendung von Datenerweiterung (Data Augmentation)}
+
 \subsubsection{Verwendung von überwachtem Lernen (Supervised Learning)}
 Die Trainingsdatensätze werden im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
 Das Modell kann aus diesem Vergleich lernen, welches Verhalten oder Ergebnis richtig und welches falsch ist.
@@ -132,8 +132,10 @@ Nach diesem Prinzip könnte man für IGAIs Datensätze erstellen, welche aus 2-T
 Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erzeugen darf.
 
 Weiter wäre auch das Gegenteil möglich: Ein geordnetes Paar an Texten und moralisch verwerflichen Bildern, anhand derer die KI lernen kann, was sie auf keinen Fall generieren darf.
+
 \subsubsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
 Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
+
 \subsubsection{Verwendung von kontradiktorischen Training (adversarial training)}
 
 
