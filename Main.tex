@@ -169,6 +169,12 @@ Adversarial Learning bietet somit eine vielversprechende Möglichkeit, ML-Algori
 
 Quelle: https://arxiv.org/pdf/1611.01236.pdf
 
+\subsubsection{Input-Filter}
+Der erste Punkt an dem Entwickler ansetzen können, die Erzeugten Ergebnisse einer IGAI zu kontrollieren, ist die Eingabe. Die Eingabe ist in diesem Fall der Text den ein Nutzer der IGAI als Input gibt, um daraus ein Bild zu erzeugen. Die Kontrolle der Eingabe kann durch die Verwendung einer weiteren AI erfolgen, die auf das Ermitteln von unethischem Inhalt spezialisiert ist. Als Beispiel dient hierbei der Artikel Artificial Intelligence as a Service for Immoral Content Detection and Eradication von Fadia Shah et al. In ihrer Arbeit haben die Autoren eine AI entwickelt, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von IGAIs können anhand dieser Ergebnisse ihre eigene AI entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese AI können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur IGAI gelangen.
+
+\subsubsection{Output-Filter}
+Nachdem eine IGAI ein Bild generiert, haben Entwickler die Möglichkeit dieses Ergebnis zu kontrollieren. Das Vorgehen ist ähnlich zu dem der Input-Filter, jedoch wird hierbei nicht der Input, also der Text, gefiltert, sondern der Output, also das erzeugte Bild. Die Autoren Huicheng Zheng et al. zeigen in ihrem Artikel Blocking objectionable images: adult images and harmful symbols ein Beispiel auf. Die Autoren haben ein System entwickelt, das aus zwei getrennten Filtern besteht: dem verbotene Symbole Filter und dem nicht jugendfreie Bilder Filter. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Die Entwickler haben damit die Möglichkeit alles zu filtern, was dem Nutzer nicht ausgegeben werden soll. Das System der Autoren war schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels, ist anzunehmen, dass heute Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln.
+
 \section{Fazit}
 \bibliographystyle{ieeetr}
 \bibliography{Sources.bib}
