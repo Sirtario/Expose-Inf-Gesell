@@ -71,7 +71,16 @@ Technische und Nicht-Technische Methoden unterteilen. Nachfolgen werden verschie
 \section{Nicht-Technische Methoden}
 Nicht-Technische Methoden sind solche, die nicht primär auf Technische Lösungen setzen.
 
-\subsection{AGBs und TOS}
+\subsubsection{AGBs und TOS}
+Allgemeine Geschäftsbedingungen (AGBs) oder auch Terms of Service (TOS) etablieren den rechtlichen Rahmen für die Nutzung von IGAIs. Dadurch können sie dazu beitragen, den Missbrauch solcher Systeme einzudämmen. 
+Allerdings sind AGBs allein nicht hinreichend, um den Missbrauch von IGAIs gänzlich zu verhindern, da sie keine aktive Nutzungsbeschränkung bieten. Wesentliche Aspekte könnten sein:
+\begin{itemize}
+    \item Festlegung des Nutzungszwecks: AGBs oder TOS sollten explizit den beabsichtigten Nutzungszweck der KI definieren. Dadurch wird ein Rahmen für akzeptable Aktivitäten abgesteckt und unerwünschte Nutzungsformen ausgeschlossen.
+    \item Untersagung unzulässiger Aktivitäten: AGBs sollten eine Liste von Aktivitäten enthalten, die als Missbrauch der KI gelten und somit untersagt sind.
+    \item Haftungsausschluss: Ein Haftungsausschluss in den AGBs ist bedeutsam, um zu verdeutlichen, dass der Anbieter der KI nicht für den Missbrauch der Technologie durch die Nutzer verantwortlich gemacht werden kann. Dadurch sollen potenzielle rechtliche Konsequenzen für den Anbieter eingeschränkt werden
+    \item Festlegung von Nutzungsregeln: Die AGBs  können spezifische Regeln für die Nutzer der KI enthalten, um den Missbrauch einzudämmen. Dies könnte beispielsweise die Verpflichtung zur Registrierung, die Verwendung sicherer Zugangsdaten oder die Einhaltung ethischer Richtlinien umfassen.
+    \item Überwachung und Sanktionen: AGBs sollten auch klare Informationen darüber bereitstellen, wie die Nutzung der KI überwacht wird und welche Sanktionen im Falle von Missbrauch verhängt werden können. Dies kann beispielsweise die Möglichkeit zur Überprüfung von Nutzeraktivitäten, die Sperrung von Konten oder die Meldung rechtswidrigen Verhaltens umfassen.
+\end{itemize}
 
 \subsection{Zusammenarbeit und Feedback}
 Benutzerfeedback und Engagement beinhalten das aktive Einbeziehen von Benutzern während des Entwicklungsprozesses und die Integration ihrer Perspektiven, Bedenken und Werte in die Gestaltung und Entscheidungsfindung von KI-Systemen. Durch die Berücksichtigung des Benutzerfeedbacks können KI-Entwickler wertvolle Einblicke in die potenziellen ethischen Implikationen ihrer Bildgenerierungsmodelle gewinnen und sicherstellen, dass die generierten Bilder mit den Erwartungen und Werten der Benutzer übereinstimmen.
@@ -102,6 +111,7 @@ Verantwortlichkeit: Benutzerfeedback spielt eine entscheidende Rolle bei der Rec
 Fairness: Benutzerfeedback hilft dabei, potenzielle Voreingenommenheit im KI-Bildgenerierungsprozess zu identifizieren. Unterschiedliche Benutzer können unterschiedliche Erwartungen, kulturelle Kontexte oder Sensibilitäten haben. Indem sie mit einer vielfältigen Benutzergruppe interagieren, können Entwickler Voreingenommenheit erkennen und mindern, die zu unfairer oder diskriminierender Bildgenerierung führen könnten. Benutzerfeedback bietet die Möglichkeit sicherzustellen, dass das KI-System eine breite Palette von Perspektiven berücksichtigt und verschiedene kulturelle und gesellschaftliche Normen respektiert.
 
 \section{Technische Methoden}
+
 Technische Ansätze sind diese, die von den Entwicklern der IGAI sowohl während als auch nach der Entwicklungsphase eingesetzt werden können, beispielsweise in Form von Datenaufbereitung und -manipulation oder Filter. 
 Aufgrund dessen werden in der weiteren Durchführung diese Ansätze danach gruppiert, ob diese in der Entwicklungsphase der IGAI oder in deren Anwendungsphase anzuwenden sind.
 
@@ -156,6 +166,13 @@ Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden
 \end{itemize}
 
 \subsubsection{Verwendung von Datenerweiterung (Data Augmentation)}
+Data Augmentation beschreibt eine Technik Varianz in vorhandene Daten einzufügen und so die Datenmenge zu erweitern.
+Im Fall von IGAIs könnten so Eingabetexte, mit welchen moralisch kritische Inhalte erzeugt werden könnten, im mehreren leicht oder stärker abgewandelten Formen der IGAI vorgegeben werden um die Konsistenz dieser zu überprüfen und besser anzutrainieren.  
+Zusätzlich können Einschränkungen und Richtlinien in den Augmentationsprozess integriert werden, um sicherzustellen, dass bestimmte ethische Prinzipien eingehalten werden. 
+Durch den Einsatz von Data Augmentation wird der Algorithmus besser darauf vorbereitet, moralische Grenzen zu respektieren und kontroverse oder anstößige Inhalte zu vermeiden. 
+Die Verwendung von Data Augmentation ermöglicht somit eine Verbesserung der moralischen Ertragbarkeit des ML-Algorithmus bei der Generierung von Bildern aus Textinput.
+
+Quelle: https://arxiv.org/pdf/1712.04621.pdf https://doi.org/10.48550/arXiv.1712.04621
 
 \subsection{Verwendung von überwachtem Lernen (Supervised Learning)}
 Die Trainingsdatensätze werden im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
@@ -169,9 +186,24 @@ Weiter wäre auch das Gegenteil möglich: Ein geordnetes Paar an Texten und mora
 \subsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
 Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
 
-\subsection{Verwendung von kontradiktorischen Training (adversarial training)}
+\subsubsection{Verwendung von kontradiktorischen Training (adversarial training)}
+Adversarial Learning ist eine Technik, die eingesetzt werden kann, um einen Machine Learning-Algorithmus moralisch ertragbarer zu gestalten. 
+Dabei wird ein zusätzlicher Algorithmus, der als Adversary bezeichnet wird, verwendet, um den Hauptalgorithmus herauszufordern und zu verbessern. 
 
+Der Adversary wird darauf trainiert, gezielt moralisch problematische Beispiele zu generieren, die der Hauptalgorithmus falsch klassifizieren könnte. 
+Indem der Hauptalgorithmus mit solchen herausfordernden Beispielen konfrontiert wird, wird er dazu gezwungen, seine Entscheidungen sorgfältiger zu treffen und moralisch akzeptablere Ergebnisse zu erzielen. 
 
+Durch diesen iterativen Prozess des Trainings und der Herausforderung kann der Algorithmus lernen, ethische Aspekte besser zu berücksichtigen und so seine Leistung im Hinblick auf Moral und Ethik zu verbessern. 
+
+Adversarial Learning bietet somit eine vielversprechende Möglichkeit, ML-Algorithmen in Bezug auf moralische Aspekte weiterzuentwickeln und deren Einfluss auf die Gesellschaft verantwortungsvoll zu gestalten.
+
+Quelle: https://arxiv.org/pdf/1611.01236.pdf
+
+\subsubsection{Input-Filter}
+Der erste Punkt an dem Entwickler ansetzen können, die Erzeugten Ergebnisse einer IGAI zu kontrollieren, ist die Eingabe. Die Eingabe ist in diesem Fall der Text den ein Nutzer der IGAI als Input gibt, um daraus ein Bild zu erzeugen. Die Kontrolle der Eingabe kann durch die Verwendung einer weiteren AI erfolgen, die auf das Ermitteln von unethischem Inhalt spezialisiert ist. Als Beispiel dient hierbei der Artikel Artificial Intelligence as a Service for Immoral Content Detection and Eradication von Fadia Shah et al. In ihrer Arbeit haben die Autoren eine AI entwickelt, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von IGAIs können anhand dieser Ergebnisse ihre eigene AI entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese AI können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur IGAI gelangen.
+
+\subsubsection{Output-Filter}
+Nachdem eine IGAI ein Bild generiert, haben Entwickler die Möglichkeit dieses Ergebnis zu kontrollieren. Das Vorgehen ist ähnlich zu dem der Input-Filter, jedoch wird hierbei nicht der Input, also der Text, gefiltert, sondern der Output, also das erzeugte Bild. Die Autoren Huicheng Zheng et al. zeigen in ihrem Artikel Blocking objectionable images: adult images and harmful symbols ein Beispiel auf. Die Autoren haben ein System entwickelt, das aus zwei getrennten Filtern besteht: dem verbotene Symbole Filter und dem nicht jugendfreie Bilder Filter. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Die Entwickler haben damit die Möglichkeit alles zu filtern, was dem Nutzer nicht ausgegeben werden soll. Das System der Autoren war schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels, ist anzunehmen, dass heute Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln.
 
 \chapter{Fazit}
 \bibliographystyle{ieeetr}
