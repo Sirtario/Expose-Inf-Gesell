@@ -52,13 +52,17 @@ Wie in der Methodik erwähnt, werden im Folgenden die Begriffe der bildgeneriend
 Durch diese Vorgehensweise soll vermieden werden, dass diese Thematiken bei kommenden Durchführung immer neu angesprochen werden müssen und sich die Arbeit so auf klare und einheitliche Definitionen der Begriffe stützen kann.
 \subsection{Ethik}\label{subsection:ethicsdefinition}
 \subsection{AI}
-Im Gegensatz zu bisherigen AIs können den generative artifical intelligence (GAI) neue Daten generieren, anstatt wie bisher Daten zu analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen, wie der komplette Inhalt von Wikipedia, zur Verfügung gestellt. Daher sind diese AIs erst mit steigender Rechenkapazität möglich geworden. GAIs modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können GAIs ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind image generating artifical intelligence (IGAI) oder auch text-to-image AIs, eine Unterkategorie von GAIs. Diese AIs können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
+Im Gegensatz zu bisherigen AIs können den generative artifical intelligence (GAI) neue Daten generieren, anstatt wie bisher Daten zu analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen, 
+wie der komplette Inhalt von Wikipedia, zur Verfügung gestellt. Daher sind diese AIs erst mit steigender Rechenkapazität möglich geworden. GAIs modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach 
+bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können GAIs ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind image generating 
+artifical intelligence (IGAI) oder auch text-to-image AIs, eine Unterkategorie von GAIs. Diese AIs können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
 
 
 Um GAIs zu trainieren, werden drei Arten von Machine Learning verwendet: überwachtes Lernen, unüberwachtes Lernen und verstärktes Lernen. 
 Beim überwachten Lernen werden gekennzeichnete Datensätze verwendet, um Vorhersagen zu treffen. Die gekennzeichneten Daten werden als Trainingsdaten verwendet und nach dem Ausführen des Algorithmus wird überprüft, ob die getroffene Vorhersage der Kennzeichnung entspricht.
 Beim unüberwachten Lernen wird dem Algorithmus nicht gekennzeichnete Daten zugeführt. Hierbei wird nicht versucht eine Vorhersage zu treffen, sondern Schlussfolgerungen oder Zusammenhänge zwischen den Daten zu finden.
-Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des optimalen Verhaltens automatisiert werden.
+Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des 
+optimalen Verhaltens automatisiert werden.
 
 \section{Durchführung}
 Verschiedene Formen der Voreignenommenheit von AI lassen sich durch unterschiedliche Methoden verhindern. Diese lassen sich allgemein in 
@@ -68,6 +72,25 @@ Nicht-Technische Methoden sind solche, die nicht primär auf Technische Lösunge
 
 Eine Möglichekeit des Vermeidens Von Voreignenommenheit ist der Einbezug von möglichst vieler Anteilhaber aus verschiedenen Gruppierungen. 
 Ziel des Einbezugs ist es, möglichst viele unterschiedliche Perspektiven zu erhalten, was dabei helfen soll mögliche Voreignenommenheiten zu erkennen und vermeiden.
+
+Die Gewährleistung ethischer KI-Bildgenerierung beginnt mit einer sorgfältigen Berücksichtigung der Datensammlungs- und Annotationspraktiken. Es ist entscheidend, Schulungsdatensätze zu kuratieren, die vielfältig, repräsentativ und auf ethische 
+Weise beschafft wurden. Dies beinhaltet die Berücksichtigung potenzieller Verzerrungen und schädlicher Inhalte, die im Datensatz vorhanden sein können. Um diese Probleme zu mindern, empfiehlt es sich, eine vielfältige Gruppe von Annotatoren 
+einzubeziehen, den unterschiedlichen Perspektiven einbringen können und die Einführung von verzerrten oder diskriminierenden Labels verringern. Durch die Diversifizierung des Annotatoren-Pools wird es möglich, den Einfluss individueller Vorurteile 
+zu minimieren und ausgewogenere und inklusivere Trainingsdaten zu erstellen.
+
+Ein gutes Beispiel ist die in der Studie von (1. Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J.W., Wallach, H., Dauméé III, H. & Crawford, K. (2018). Datasheets for Datasets. arXiv Preprint arXiv:1803.09010) durchgeführte Untersuchung, die einen 
+Fragenkatalog bereitstellt, der darauf abzielt, die Informationen zu ermitteln, die ein Datenblatt für einen Datensatz enthalten könnte, sowie einen Workflow, den Datensatz-Ersteller verwenden können, um diese Fragen zu beantworten. Die Fragen wurden in 
+Abschnitte unterteilt, die eng mit den Hauptphasen des Lebenszyklus des Datensatzes übereinstimmen: Motivation, Zusammensetzung, Erfassungsprozess, Vorverarbeitung/Bereinigung/Annotation, Verwendung, Verteilung und Wartung.
+
+Der Zweck der Datensatzerstellung und der Ersteller wurden als Fragen im Zusammenhang mit der Motivation aufgeworfen. Bei der Zusammensetzung ging es um den Typ des Datensatzes, die Anzahl der Fälle, ob er alle möglichen Fälle abdeckt und ob der Datensatz 
+als vertraulich angesehen werden kann. Der Erfassungsprozess betrifft die Art und Weise, wie die Daten erfasst wurden: direkt von den betroffenen Personen oder über Dritte oder andere Quellen, ob eine ethische Überprüfung des Datensatzes durchgeführt 
+wurde und welche Mechanismen zur Datenerfassung verwendet wurden. Dann wurden Fragen zur Vorverarbeitung/Bereinigung/Annotation der Daten gestellt (z. B. Diskretisierung oder Eimerung, Tokenisierung, Part-of-Speech-Markierung, SIFT-Feature-Extraktion, 
+Entfernung von Instanzen, Verarbeitung von fehlenden Werten) und ob die "rohen" Daten gespeichert wurden. Einige Fragen betrafen die Verwendung des Datensatzes, z. B., ob der Datensatz bereits für bestimmte Aufgaben verwendet wurde oder für welche (weiteren)
+ Aufgaben der Datensatz verwendet werden könnte. Bei der Verteilung wurde gefragt, wie der Datensatz verteilt wird (auf einer Website, einer API, GitHub) und ob der Datensatz an Dritte außerhalb der Organisation verteilt wird. Schließlich bezogen sich Fragen 
+ zur Wartung darauf, wer den Datensatz unterstützen/hosten/warten wird, ob der Datensatz aktualisiert wird und wie der Manager des Datensatzes kontaktiert werden kann.
+
+Neben einer vielfältigen und repräsentativen Datensammlung erfordert die ethische KI-Bildgenerierung auch die Berücksichtigung anderer Aspekte der Datenannotation. Es ist wichtig, klare Richtlinien und Protokolle für Annotatoren festzulegen, 
+um Konsistenz und Genauigkeit im Beschriftungsprozess sicherzustellen. Dies hilft, subjektive Interpretationen zu reduzieren und eine gewisse Standardisierung einzuführen, die für ethische KI-Praktiken entscheidend ist.
 
 \subsection{Technische Methoden}
 Technische Ansätze sind diese, die von den Entwicklern der IGAI sowohl während als auch nach der Entwicklungsphase eingesetzt werden können, beispielsweise in Form von Datenaufbereitung und -manipulation oder Filter. 
