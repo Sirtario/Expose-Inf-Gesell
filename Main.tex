@@ -14,7 +14,7 @@
 
 \maketitle
 \tableofcontents
-\section{Einleitung}
+\chapter{Einleitung}
 In den letzten Jahren haben Fortschritte in der Künstlichen Intelligenz (KI) dazu geführt, dass Bildgenerierende KI-Systeme immer 
 leistungsfähiger geworden sind. Diese Systeme können nun hochauflösende Bilder in beispiellosem Detail generieren und haben das Potenzial,
  in vielen Branchen eingesetzt zu werden, einschließlich der Unterhaltungsindustrie, des Einzelhandels und des Gesundheitswesens. 
@@ -26,7 +26,7 @@ leistungsfähiger geworden sind. Diese Systeme können nun hochauflösende Bilde
  Herausforderung stellt eine wichtige Forschungsfrage dar, die untersucht werden muss, um sicherzustellen, dass die Verwendung von
   bildgenerierenden KI-Systemen ethisch vertretbar bleibt.
 
- \subsection{Motivation und Relevanz}
+ \section{Motivation und Relevanz}
  Die Entwicklung von AI-Kunst reicht zurück bis in die 1960er Jahre\cite{Garcia}, aber erst in den letzten Jahren wurden 
  diese KIs durch die Veröffentlichungen von bahnbrechenden Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion 
  (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser KIs zeigen jedoch auch auf, 
@@ -43,16 +43,16 @@ leistungsfähiger geworden sind. Diese Systeme können nun hochauflösende Bilde
  handeln können, um sicherzustellen, dass ihre KIs nur für ethisch vertretbare Zwecke eingesetzt werden. Das Ziel ist es, 
  Wege aufzuzeigen, wie KI-Entwickler dazu beitragen können, die positiven Auswirkungen der Technologie zu maximieren, 
  während sie gleichzeitig die negativen Auswirkungen minimieren.
- \subsection{Forschungsfrage}
+ \section{Forschungsfrage}
  In dieser Arbeit soll die Frage geklärt werden welche Methodiken möglich sind bzw. angewandt werden, um die Erzeugung ethisch 
  fragwürdiger Inhalte durch IGAI zu verhindern?
  \include{StandForschung.tex}
 \include{Methodik.tex}
-\section{Definitionen}
+\chapter{Definitionen}
 Wie in der Methodik erwähnt, werden im Folgenden die Begriffe der bildgenerienden KI und der Ethik im Bezug auf dieser für diese Arbeit definiert. 
 Durch diese Vorgehensweise soll vermieden werden, dass diese Thematiken bei kommenden Durchführung immer neu angesprochen werden müssen und sich die Arbeit so auf klare und einheitliche Definitionen der Begriffe stützen kann.
-\subsection{Ethik}\label{subsection:ethicsdefinition}
-\subsection{AI}
+\section{Ethik}\label{subsection:ethicsdefinition}
+\section{AI}
 Im Gegensatz zu bisherigen AIs können den generative artifical intelligence (GAI) neue Daten generieren, anstatt wie bisher Daten zu analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen, 
 wie der komplette Inhalt von Wikipedia, zur Verfügung gestellt. Daher sind diese AIs erst mit steigender Rechenkapazität möglich geworden. GAIs modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach 
 bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können GAIs ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind image generating 
@@ -65,10 +65,10 @@ Beim unüberwachten Lernen wird dem Algorithmus nicht gekennzeichnete Daten zuge
 Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des 
 optimalen Verhaltens automatisiert werden.
 
-\section{Durchführung}
+\chapter{Durchführung}
 Verschiedene Formen der Voreignenommenheit von AI lassen sich durch unterschiedliche Methoden verhindern. Diese lassen sich allgemein in 
 Technische und Nicht-Technische Methoden unterteilen. Nachfolgen werden verschiedene Methoden erläutert.
-\subsection{Nicht-Technische Methoden}
+\section{Nicht-Technische Methoden}
 Nicht-Technische Methoden sind solche, die nicht primär auf Technische Lösungen setzen.
 
 \subsubsection{AGBs und TOS}
@@ -81,11 +81,41 @@ Allerdings sind AGBs allein nicht hinreichend, um den Missbrauch von IGAIs gänz
     \item Festlegung von Nutzungsregeln: Die AGBs  können spezifische Regeln für die Nutzer der KI enthalten, um den Missbrauch einzudämmen. Dies könnte beispielsweise die Verpflichtung zur Registrierung, die Verwendung sicherer Zugangsdaten oder die Einhaltung ethischer Richtlinien umfassen.
     \item Überwachung und Sanktionen: AGBs sollten auch klare Informationen darüber bereitstellen, wie die Nutzung der KI überwacht wird und welche Sanktionen im Falle von Missbrauch verhängt werden können. Dies kann beispielsweise die Möglichkeit zur Überprüfung von Nutzeraktivitäten, die Sperrung von Konten oder die Meldung rechtswidrigen Verhaltens umfassen.
 \end{itemize}
-\subsection{Technische Methoden}
+
+\subsection{Zusammenarbeit und Feedback}
+Benutzerfeedback und Engagement beinhalten das aktive Einbeziehen von Benutzern während des Entwicklungsprozesses und die Integration ihrer Perspektiven, Bedenken und Werte in die Gestaltung und Entscheidungsfindung von KI-Systemen. Durch die Berücksichtigung des Benutzerfeedbacks können KI-Entwickler wertvolle Einblicke in die potenziellen ethischen Implikationen ihrer Bildgenerierungsmodelle gewinnen und sicherstellen, dass die generierten Bilder mit den Erwartungen und Werten der Benutzer übereinstimmen.
+
+Durch eine aktive Zusammenarbeit mit externen Interessengruppen, Forschern und der breiteren Gemeinschaft können Organisationen wertvolle Erkenntnisse sammeln, Bedenken ansprechen und ihre Praktiken kontinuierlich verbessern. Dieser kollaborative Ansatz gewährleistet, dass die Entwicklung und Bereitstellung von KI-Bildgenerierungstechnologien mit gesellschaftlichen Werten und ethischen Standards im Einklang stehen.
+
+\subsubsection{Partnerschaften über Sektorengrenzen hinweg}
+Die Zusammenarbeit sollte über die Grenzen einer einzelnen Organisation oder Branche hinausgehen. Fördern Sie Partnerschaften mit anderen Institutionen, einschließlich akademischen Forschern, gemeinnützigen Organisationen, Regierungsbehörden und Branchenkollegen. Diese interdisziplinäre Zusammenarbeit ermöglicht eine breitere Perspektive und ein umfassenderes Verständnis der ethischen Implikationen der KI-Bildgenerierung. Durch die Nutzung des gemeinsamen Fachwissens und der Ressourcen verschiedener Sektoren können Organisationen komplexe Herausforderungen angehen und einen ganzheitlicheren Ansatz für ethische KI sicherstellen.
+
+\subsubsection{Partizipative Gestaltung}
+Beteiligung die Endbenutzer und Stakeholder am Design- und Entwicklungsprozess von KI-Bildgenerierungssystemen. Indem Organisationen diejenigen einbeziehen, die direkt von der Technologie betroffen sein werden, können sie wertvolle Einblicke gewinnen, spezifische Bedürfnisse identifizieren und Lösungen gemeinsam entwickeln, die den Benutzerwerten und ethischen Standards entsprechen. Partizipative Designmethoden wie nutzerzentriertes Design und Co-Creation-Workshops fördern die Zusammenarbeit, fördern Empathie und stellen sicher, dass KI-Systeme unter Berücksichtigung der Benutzerinteressen gestaltet werden.
+\cite{Vogel}
+\subsubsection{Öffentliche Beteiligung und Bewusstseinsbildung}
+örderung Initiativen zur öffentlichen Beteiligung und Bewusstseinsbildung, um eine breitere Palette von Interessengruppen in den Dialog über die Ethik von KI-Bildgenerierung einzubeziehen. Führung öffentliche Konsultationen durch, organisieren Sie Workshops und Förderung öffentliche Debatten über die ethischen Implikationen von KI-Technologien. Diese Initiativen schaffen Raum für Diskussionen, fördern diverse Perspektiven und befähigen Einzelpersonen, zur Entwicklung ethischer Leitlinien und Richtlinien beizutragen.
+
+Durch die Förderung der öffentlichen Beteiligung und Bewusstseinsbildung können Organisationen ein breiteres Spektrum an Perspektiven und Meinungen berücksichtigen. Die Einbeziehung der Öffentlichkeit kann helfen, Bedenken und Erwartungen bezüglich der Nutzung von KI-Technologien zu verstehen und somit auch Vertrauen aufzubauen.
+\cite{Zytko}
+\subsubsection{Kontinuierliche Überwachung und Evaluation}
+Etablierung fortlaufender Überwachungs- und Evaluierungsprozesse zur Bewertung der ethischen Auswirkungen und Leistung von KI-Bildgenerierungssystemen. Regelmäßige Erfassung und Analyse von Rückmeldungen von Benutzern, betroffenen Gemeinschaften und anderen Interessengruppen, um potenzielle Voreingenommenheit, unbeabsichtigte Folgen oder aufkommende ethische Fragen zu identifizieren. Diese Feedbackschleife ermöglicht es Organisationen, Bedenken proaktiv anzugehen, ihre Modelle zu überarbeiten und sicherzustellen, dass ethische Praktiken während des gesamten Lebenszyklus von KI-Bildgenerierungssystemen eingehalten werden.
+\cite{WILSON2022101652}
+\subsubsection{Benutzerfeedback}
+In dem Artikel \cite{Mittelstadt} argumentieren die Autoren, dass Benutzerfeedback und -beteiligung zu mehreren ethischen Dimensionen von KI-Algorithmen beitragen können, einschließlich Transparenz, Verantwortlichkeit und Fairness. Hier ist eine Erweiterung des Konzepts:
+
+Transparenz: Benutzerfeedback kann dazu beitragen, die Transparenz von KI-Bildgenerierungssystemen zu erhöhen. Indem Benutzer in den Entwicklungsprozess einbezogen werden, können KI-Entwickler Informationen darüber teilen, wie das System funktioniert, seine Grenzen und die mögliche Voreingenommenheit, die es haben kann. Transparenz ermöglicht es den Benutzern, ein besseres Verständnis dafür zu haben, wie ihre Daten verwendet werden und wie das KI-System Bilder generiert.
+
+Verantwortlichkeit: Benutzerfeedback spielt eine entscheidende Rolle bei der Rechenschaftspflicht von KI-Entwicklern und -Systemen. Es ermöglicht den Benutzern, Bedenken hinsichtlich potenzieller ethischer Probleme, Voreingenommenheit oder unbeabsichtigter Konsequenzen im Zusammenhang mit den generierten Bildern zu äußern. Entwickler können dieses Feedback nutzen, um Mängel zu identifizieren und zu beheben, die Algorithmen zu verfeinern und die Verantwortung für die Auswirkungen ihrer KI-Systeme zu übernehmen.
+
+Fairness: Benutzerfeedback hilft dabei, potenzielle Voreingenommenheit im KI-Bildgenerierungsprozess zu identifizieren. Unterschiedliche Benutzer können unterschiedliche Erwartungen, kulturelle Kontexte oder Sensibilitäten haben. Indem sie mit einer vielfältigen Benutzergruppe interagieren, können Entwickler Voreingenommenheit erkennen und mindern, die zu unfairer oder diskriminierender Bildgenerierung führen könnten. Benutzerfeedback bietet die Möglichkeit sicherzustellen, dass das KI-System eine breite Palette von Perspektiven berücksichtigt und verschiedene kulturelle und gesellschaftliche Normen respektiert.
+
+\section{Technische Methoden}
+
 Technische Ansätze sind diese, die von den Entwicklern der IGAI sowohl während als auch nach der Entwicklungsphase eingesetzt werden können, beispielsweise in Form von Datenaufbereitung und -manipulation oder Filter. 
 Aufgrund dessen werden in der weiteren Durchführung diese Ansätze danach gruppiert, ob diese in der Entwicklungsphase der IGAI oder in deren Anwendungsphase anzuwenden sind.
 
-\subsubsection{Vermeidung von Datenverzerrungen im Trainingsdatensatz}
+\subsection{Vermeidung von Datenverzerrungen im Trainingsdatensatz}
 Bereits bei der Zusammenstellung des Trainingsdatensatzes einer KI kann es zu Verzerrungen kommen, welche sich im späteren Verlauf der Entwicklung kaum mehr beheben lassen.
 Diese beinhalten Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen, oder Verzerrung durch Einseitigkeit \cite{Srinivasan}.
 
@@ -104,7 +134,7 @@ Bei dieser Überwachung sollten mindestens die genannten Punkte Beachtung finden
     \item Die Daten müssen qualitativ hochwertig, mindestens aber für den Anwendungsfall ausreichend sein.
 \end{itemize}
 
-\subsubsection{Vermeidung von Verzerrungen in der Anforderungsformulierungen}
+\subsection{Vermeidung von Verzerrungen in der Anforderungsformulierungen}
 Bei den Definitionen einer Aufgabenstellung und den Anforderungen eines Modell kann es zu Verzerrungen kommen.
 
 Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung entstehen, oder durch die Art der verwendeten Daten um das Ergebnis des Models zu erhalten \cite{Srinivasan}.
@@ -117,7 +147,7 @@ Bei der Formulierung der Anforderungen des Systems sollte eine Reihe an Aspekten
     \item Die Formulierung muss neutral gestaltet sein, das heißt durch die Formulierung an sich keine voreingenommenen Schlüsse ziehen lässt.
 \end{itemize}
 
-\subsubsection{Vermeidung von Verzerrungen bei der Modellbewertung}
+\subsection{Vermeidung von Verzerrungen bei der Modellbewertung}
 Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
 Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite{Srinivasan}.
 
@@ -144,7 +174,7 @@ Die Verwendung von Data Augmentation ermöglicht somit eine Verbesserung der mor
 
 Quelle: https://arxiv.org/pdf/1712.04621.pdf https://doi.org/10.48550/arXiv.1712.04621
 
-\subsubsection{Verwendung von überwachtem Lernen (Supervised Learning)}
+\subsection{Verwendung von überwachtem Lernen (Supervised Learning)}
 Die Trainingsdatensätze werden im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
 Das Modell kann aus diesem Vergleich lernen, welches Verhalten oder Ergebnis richtig und welches falsch ist.
 
@@ -153,7 +183,7 @@ Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erz
 
 Weiter wäre auch das Gegenteil möglich: Ein geordnetes Paar an Texten und moralisch verwerflichen Bildern, anhand derer die KI lernen kann, was sie auf keinen Fall generieren darf.
 
-\subsubsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
+\subsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
 Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
 
 \subsubsection{Verwendung von kontradiktorischen Training (adversarial training)}
@@ -175,7 +205,7 @@ Der erste Punkt an dem Entwickler ansetzen können, die Erzeugten Ergebnisse ein
 \subsubsection{Output-Filter}
 Nachdem eine IGAI ein Bild generiert, haben Entwickler die Möglichkeit dieses Ergebnis zu kontrollieren. Das Vorgehen ist ähnlich zu dem der Input-Filter, jedoch wird hierbei nicht der Input, also der Text, gefiltert, sondern der Output, also das erzeugte Bild. Die Autoren Huicheng Zheng et al. zeigen in ihrem Artikel Blocking objectionable images: adult images and harmful symbols ein Beispiel auf. Die Autoren haben ein System entwickelt, das aus zwei getrennten Filtern besteht: dem verbotene Symbole Filter und dem nicht jugendfreie Bilder Filter. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Die Entwickler haben damit die Möglichkeit alles zu filtern, was dem Nutzer nicht ausgegeben werden soll. Das System der Autoren war schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels, ist anzunehmen, dass heute Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln.
 
-\section{Fazit}
+\chapter{Fazit}
 \bibliographystyle{ieeetr}
 \bibliography{Sources.bib}
 \end{document}
