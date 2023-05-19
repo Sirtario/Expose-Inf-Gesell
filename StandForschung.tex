@@ -1,54 +1,8 @@
 \chapter{Stand der Forschung}
-\paragraph{was Herr Müller sich gewünscht hatte:} 
-Was in Recherche steht, wird zum Teil auch in Auswahl der Quellen beschrieben, bzw. lässt sich zusammenführen, die Aufzählung würde ich (Dominic) gerne entfernen und als Fließtext haben, braucht sonst zu viel Platz
-zum schluss soll weiter ein Kapitel zu den verwendeten AI-Tools kommen
-Methoden der Quellen in eigene Methoden integrieren, statt eigenes Kapitel
-
-
 
 Nachfolgend wird der Stand der Forschung zum Thema Möglichkeiten zur Verhinderung 
-des Missbrauchs bildergenerierender Kis zur Erzeugung ethisch fragwürdiger Inhalte beleuchtet. Eine Bestandaufnahme 
-mit der Forschungsfrage, wie in der Praxis verhindert wird, dass IGAI zur Erzeugung ethisch fragwürdiger 
-Inhalte missbraucht werden erfolgt. Dafür soll zunächst auf die eigentliche Recherche und die daraus mündenden 
-Ergebnisse eingegangen werden, bevor die für die Recherche angewendeten KI-Werkzeuge genannt und deren 
-Nutzen diskutiert wird. Zuletzt wird ein Ausblick gegeben, wie die Erarbeitung des Forschungsstands noch 
-verfeinert und abgeschlossen werden kann.
-\section{Recherche}
-Für die Recherche fanden folgende Datenbanken und Webseiten Anwendung:
-\begin{itemize}
-    \item Google Scholar
-    \item link.springer.org
-    \item Semantic Scholar
-    \item ACM
-    \item Regensburger Katalog
-    \item Katalog der Universitätsbibliothek Leipzig
-    \item Katalog der Deutschen Nationalbibliothek
-    \item Bibliothekskatalog der Westsächsischen Hochschule Zwickau
-    \item IEEE
-    \item IBM    
-\end{itemize}
+des Missbrauchs bildergenerierender Kis zur Erzeugung ethisch fragwürdiger Inhalte mit Fokus darauf beleuchtet, wie in der Praxis verhindert wird, dass IGAI zur Erzeugung ethisch fragwürdiger Inhalte missbraucht werden. Anschließend wird die Nützlichkeit der für die Recherche verwendeten KI-Anwendungen kurz diskutiert.
 
-Zudem dienten KI-gestützte Recherchetools wie Elicit und ChatGPT-3 sowie WikiCFP der groben 
-Orientierung innerhalb des Themas und inspirierten zur Nutzung einiger der oben genannten 
-Datenbanken wie Semantic Scholar. Dabei wurden Fragenstellungen wie die folgenden genutzt:
-How can the generation of unethical content through picture generating ai be prevented?
-How to develop image generating AI so that users can not create unethical imges with it
-Methods to prevent the generation of unethical content in AI
-Eine Einschätzung der Dienlichkeit der verwendeten Werkzeuge folgt in Kapitel 4.
-
-\section{Auswahl der Quellen}
-Bei der Suche nach Quellen wurde eine Vielzahl an verschiedenen Datenbanken verwendet, um ein möglichst großes 
-Spektrum an Material abzudecken. Dabei wurden verschiedene Arten von Fragestellungen verwendet. Zum einen wurden 
-Fragestellungen zu der Forschungsfrage im Allgemeinen formuliert und zum anderen konkrete Fragestellungen zu einzelnen 
-Teilbereichen des Themas. Bei der Auswahl wurde sich lediglich auf frei zugängliche Quellen bezogen, da ansonsten der 
-finanzielle und zeitliche Rahmen dieser Arbeit überschritten worden wäre. Für die Entscheidung, ob ein Werk für die 
-Verwendung in der vorliegenden Arbeit geeignet ist, wurde anhand des Abstracts überprüft, ob das Paper Aspekte der 
-Forschungsfrage thematisiert oder ob die Ergebnisse des Papers genutzt werden können, um die Forschungsfrage zu beantworten. 
-Je nach Datenbank standen zusätzlich Werkzeuge zur Verfügung, die es ermöglichen die Arbeiten qualitativ zu bewerten. 
-Wenn diese Werkzeuge zur Verfügung standen, wurden vorzugsweise Paper mit einer höheren Bewertung verwendet. Aufgrund der 
-Neuheit der Thematik und beschränkten Datenlage wurden allerdings nur wenige Werke aufgrund niedriger Bewertung außer Acht gelassen.
-
-\section{Forschungsstand}
 Werke wie \cite{Salminen} zeigen, dass KI nicht ethisch ist, sondern Ergebnisse auf Basis ihres Datensatzes liefert,
 und Bias schnell zu diskriminierenden Verteilungen von Ergebnismengen führen können. \cite{Jobin} und \cite{Partadiredja}
 sind Beispiele für Werke, die bereits vorhandene Richtlinien und ähnliche Werke zu ethischen Festlegungen bezüglich KI 
@@ -78,7 +32,18 @@ zur Anforderungsanalyse und Vorschläge zur Implementierung für diese Umsetzung
 fragwürdiger Inhalte zu verhindern.
 Nennung und Einschätzung der verwendeten KI-Werkzeuge
 
-Wie bereits in Kapitel 2 erwähnt, wurden für die Recherche verschiedene KI-Werkzeuge verwendet, deren Nutzung im Folgenden 
+Die betrachteten Arbeiten lassen sich somit wie folgt inhaltlich gruppieren: Es gibt wissenschaftliche Arbeiten zur Analyse und Filterung
+bestimmter Inputs/Outputs wie Haut und Symbole aus Bildern \cite{Zheng} oder unmoralische Wörter oder Phrasen \cite{Shah}. Des weiteren 
+werden Richtlinien zum ethischen Einsatz von KI zusammenstellt oder definiert und diskutiert \cite{Ayling} \cite{Srinivasan} 
+\cite{Jameel} \cite{Hagendorff} \cite{Jobin} \cite{Unity} \cite{EUCommision}[World Economic Forum 2018] \cite{Mueller}.
+Neben diesen Richtlinien werden Frameworks für KI entwickelt [Huang et al. 2022] \cite{Mueller}. Es werden Probleme von Kis ermittelt \cite{Ayling}, 
+beispielsweise Bias \cite{Salminen} \cite{Jameel}, Kopien \cite{Somepalli}, wobei u. a. Bias auch zu ethisch 
+fragwürdigen Resultaten führen kann [Zuber 2022]. Lösungsansätze für diese Probleme werden allgemein für KI-spezifische Probleme ohne 
+Konzentration auf ein bestimmtes \cite{Ayling} \cite{Avelar}, aber auch konkret für bestimmte Problemkategorien wie Bias \cite{Srinivasan}
+\cite{Jameel}untersucht. Technikfolgen und Regulierungsfragen für verschiedene von KI beeinflusste Kontexte wie Politik und Wirtschaft
+werden analysiert \cite{Pawelec}.
+
+Für die Recherche wurden verschiedene KI-Werkzeuge verwendet, deren Nutzung im Folgenden 
 eingeschätzt und die Nützlichkeit dessen diskutiert werden soll. 
 ChatGPT3 ist ein Sprachmodell und dient somit der Fomulierung sprachlich korrekter Texte, kann jedoch beispielsweise keine Paper 
 zusammenfassen, sondern gibt nur anhand des Titels jeweils ähnlich klingende Zusammenfassungen, ohne sich dabei auf die tatsächlichen 
@@ -100,18 +65,3 @@ klassischen Recherche über Konferenzen und deren Paper und Teilnehmer nicht auf
 auch Zeit bei der Recherche gespart werden, indem die Zusammenfassung der ersten vier Paper genutzt wird. Diese sollte jedoch 
 nicht nur, wenn die eigentlich intendierte Frage nicht direkt beantwortet wird, überprüft werden, da sie sehr kurz und nicht 
 immer vollständig zutreffend ist.
-
-Die betrachteten Arbeiten lassen sich somit wie folgt inhaltlich gruppieren: Es gibt wissenschaftliche Arbeiten zur Analyse und Filterung
-bestimmter Inputs/Outputs wie Haut und Symbole aus Bildern \cite{Zheng} oder unmoralische Wörter oder Phrasen \cite{Shah}. Des weiteren 
-werden Richtlinien zum ethischen Einsatz von KI zusammenstellt oder definiert und diskutiert \cite{Ayling} \cite{Srinivasan} 
-\cite{Jameel} \cite{Hagendorff} \cite{Jobin} \cite{Unity} \cite{EUCommision}[World Economic Forum 2018] \cite{Mueller}.
-Neben diesen Richtlinien werden Frameworks für KI entwickelt [Huang et al. 2022] \cite{Mueller}. Es werden Probleme von Kis ermittelt \cite{Ayling}, 
-beispielsweise Bias \cite{Salminen} \cite{Jameel}, Kopien \cite{Somepalli}, wobei u. a. Bias auch zu ethisch 
-fragwürdigen Resultaten führen kann [Zuber 2022]. Lösungsansätze für diese Probleme werden allgemein für KI-spezifische Probleme ohne 
-Konzentration auf ein bestimmtes \cite{Ayling} \cite{Avelar}, aber auch konkret für bestimmte Problemkategorien wie Bias \cite{Srinivasan}
-\cite{Jameel}untersucht. Technikfolgen und Regulierungsfragen für verschiedene von KI beeinflusste Kontexte wie Politik und Wirtschaft
-werden analysiert \cite{Pawelec}.
-
-\section{Methoden der Quellen}
-Die genutzten Quellen verwendeten verschiedene Methodiken um ihre Ergebnisse zu erreichen. Es wurden verschiedene Experimente angefertigt wie in \cite{Zheng}. Hier wurde zum Beispiel ein Bild-Filter gegen Pornografische Inhalte erstellt.
-Des Weiteren wurden verschiedene Literaturübersichten angefertigt wie in \cite{Srinivasan} oder \cite{Jobin}. Eine Ausnahme stellt dabei die Arbeit von Minikken \cite{Minkkinen} dar, in welcher eine Nutzweranalyse betrieben wurde. 
