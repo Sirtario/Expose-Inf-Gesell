@@ -96,12 +96,12 @@ Förderung Initiativen zur öffentlichen Beteiligung und Bewusstseinsbildung, um
 Durch die Förderung der öffentlichen Beteiligung und Bewusstseinsbildung können Organisationen ein breiteres Spektrum an Perspektiven und Meinungen berücksichtigen. Die Einbeziehung der Öffentlichkeit kann helfen, Bedenken und Erwartungen bezüglich der Nutzung von KI-Technologien zu verstehen und somit auch Vertrauen aufzubauen.
 \cite{Zytko}
 \subsubsection{Kontinuierliche Überwachung und Evaluation}
-Etablierung fortlaufender Überwachungs- und Evaluierungsprozesse zur Bewertung der ethischen Auswirkungen und Leistung von KI-Bildgenerierungssystemen. Regelmäßige Erfassung und Analyse von Rückmeldungen von Benutzern, betroffenen Gemeinschaften und anderen Interessengruppen, um potenzielle Voreingenommenheit, unbeabsichtigte Folgen oder aufkommende ethische Fragen zu identifizieren. Diese Feedbackschleife ermöglicht es Organisationen, Bedenken proaktiv anzugehen, ihre Modelle zu überarbeiten und sicherzustellen, dass ethische Praktiken während des gesamten Lebenszyklus von KI-Bildgenerierungssystemen eingehalten werden.
+Etablierung fortlaufender Überwachungs- und Evaluierungsprozesse zur Bewertung der ethischen Auswirkungen und Leistung von KI-Bildgenerierungssystemen. Regelmäßige Erfassung und Analyse von Rückmeldungen durch Benutzer, betroffene Gemeinschaften und andere Interessengruppen, um potenzielle Voreingenommenheit, unbeabsichtigte Folgen oder aufkommende ethische Fragen zu identifizieren. Diese Feedbackschleife ermöglicht es Organisationen, Bedenken proaktiv anzugehen, ihre Modelle zu überarbeiten und sicherzustellen, dass ethische Praktiken während des gesamten Lebenszyklus von KI-Bildgenerierungssystemen eingehalten werden.
 \cite{WILSON2022101652}
 \subsubsection{Benutzerfeedback}
-In dem Artikel \cite{Mittelstadt} argumentieren die Autoren, dass Benutzerfeedback und -beteiligung zu mehreren ethischen Dimensionen von KI-Algorithmen beitragen können, einschließlich Transparenz, Verantwortlichkeit und Fairness. Hier ist eine Erweiterung des Konzepts:
+ \cite{Mittelstadt} argumentiert, dass Benutzerfeedback und -beteiligung zu mehreren ethischen Dimensionen von KI-Algorithmen beitragen können, einschließlich Transparenz, Verantwortlichkeit und Fairness. Hier ist eine Erweiterung des Konzepts:
 
-Transparenz: Benutzerfeedback kann dazu beitragen, die Transparenz von KI-Bildgenerierungssystemen zu erhöhen. Indem Benutzer in den Entwicklungsprozess einbezogen werden, können KI-Entwickler Informationen darüber teilen, wie das System funktioniert, seine Grenzen und die mögliche Voreingenommenheit, die es haben kann. Transparenz ermöglicht es den Benutzern, ein besseres Verständnis dafür zu haben, wie ihre Daten verwendet werden und wie das KI-System Bilder generiert.
+Transparenz: Benutzerfeedback kann dazu beitragen, die Transparenz von KI-Bildgenerierungssystemen zu erhöhen. Indem Benutzer in den Entwicklungsprozess einbezogen werden, können KI-Entwickler Informationen über die Funktion des Systems, seine Grenzen und seine potenzielle Voreingenommenheit teilen.
 
 Verantwortlichkeit: Benutzerfeedback spielt eine entscheidende Rolle bei der Rechenschaftspflicht von KI-Entwicklern und -Systemen. Es ermöglicht den Benutzern, Bedenken hinsichtlich potenzieller ethischer Probleme, Voreingenommenheit oder unbeabsichtigter Konsequenzen im Zusammenhang mit den generierten Bildern zu äußern. Entwickler können dieses Feedback nutzen, um Mängel zu identifizieren und zu beheben, die Algorithmen zu verfeinern und die Verantwortung für die Auswirkungen ihrer KI-Systeme zu übernehmen.
 
@@ -109,7 +109,7 @@ Fairness: Benutzerfeedback hilft dabei, potenzielle Voreingenommenheit im KI-Bil
 
 \section{Technische Methoden}
 
-Technische Ansätze sind diese, die von den Entwicklern der IGAI sowohl während als auch nach der Entwicklungsphase eingesetzt werden können, beispielsweise in Form von Datenaufbereitung und -manipulation oder Filter. 
+Technische Ansätze sind solche, die von den Entwicklern einer IGAI sowohl während als auch nach der Entwicklungsphase eingesetzt werden können, beispielsweise in Form von Datenaufbereitung und -manipulation oder Filter. 
 Aufgrund dessen werden in der weiteren Durchführung diese Ansätze danach gruppiert, ob diese in der Entwicklungsphase der IGAI oder in deren Anwendungsphase anzuwenden sind.
 
 \subsection{Entwicklungsphase}
@@ -129,14 +129,14 @@ Diese beinhalten Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsve
 
 Beispiele für Stichprobenverzerrungen können sein, dass zu wenig Daten in die Datensätze aufgenommen werden und diese keine realitätsnahe Darstellung ermöglichen \cite{Srinivasan}.
 Auch ist es möglich, dass die Daten systematisch einseitig sind. Ein Gesichtserkennungsmodell, das hauptsächlich an hellhäutigen Gesichtern trainiert wurde, kann beispielweise bei dunkleren Hauttönen schlechter abschneiden oder bestimmte Gesichtsformen und -farben gar nicht als solche wahrnehmen \cite{Srinivasan}.
-Ebenfalls ist eine systematisch Messwertverzerrung möglich, etwa wenn Bilder, welche mit einer defekten Kamera aufgenommen worden, in die Trainingsdaten einbezogen werden.
-Es kann auch vorkommen, dass Daten falsch oder unzuverlässig gekennzeichnet werden. So kann es vorkommen, dass eine Wiese als \textit{Rasen}, \textit{Gras}, \textit{Wiese} oder \textit{Weide} gekennzeichnet wird, damit existieren vier Bezeichnungen für das gleiche Objekt. Dies kann sich insgesamt negativ auf die Genauigkeit des Modells auswirken \cite{Srinivasan}.
+Zudem ist eine systematisch Messwertverzerrung möglich, etwa wenn Bilder, die mit einer nicht voll funktionstüchtigen Kamera aufgenommen worden, in die Trainingsdaten einbezogen werden.
+Es kann auch vorkommen, dass Daten falsch oder unzuverlässig gekennzeichnet werden. So kann es vorkommen, dass eine Wiese als \textit{Rasen}, \textit{Gras}, \textit{Wiese} oder \textit{Weide} gekennzeichnet wird, damit existieren vier Bezeichnungen für dasselbe Objekt. Dies kann sich insgesamt negativ auf die Genauigkeit des Modells auswirken \cite{Srinivasan}.
 
 Diese Verzerrung lassen sich vermeiden, indem man den Prozess der Datensammlung von neutraler Seite überwacht und verifiziert.
 Bei dieser Überwachung sollten mindestens die genannten Punkte Beachtung finden: 
 \begin{itemize}
     \item Die Daten müssen die Realität widerspiegeln und nicht nur Randgruppen oder Mehrheiten darstellen.
-    \item Die Anzahl der Daten muss ausreichen um diese Realitätswiederspiegelung gewährleisten zu können.
+    \item Die Anzahl der Daten muss ausreichen, um eine Realitätswiederspiegelung gewährleisten zu können.
     \item Die Kennzeichnung der Daten muss auf Voreingenommenheit und Redundanz geprüft werden.
     \item Die Daten müssen qualitativ hochwertig, mindestens aber für den Anwendungsfall ausreichend sein.
 \end{itemize}
@@ -149,39 +149,37 @@ zweiter Absatz eine Citation
 dritter absatz neutraler Beobachter weiter nach vorne, wie im Kapitel davor auch
 
 
-Bei den Definitionen einer Aufgabenstellung und den Anforderungen eines Modell kann es zu Verzerrungen kommen.
+Bei den Definitionen einer Aufgabenstellung und den Anforderungen eines Modells kann es zu Verzerrungen kommen.
 
-Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung entstehen, oder durch die Art der verwendeten Daten um das Ergebnis des Models zu erhalten \cite{Srinivasan}.
-Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise sein, Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in die 
-Entscheidung einfließen zu lassen, ob einer Person ein Kredit gewährt wird. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden \cite{Srinivasan}.
+Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung oder durch die Art der verwendeten Daten entstehen.  \cite{Srinivasan}.
+Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise darin bestehen, wenn Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in die 
+Entscheidung einfließen, ob einer Person ein Kredit gewährt wird. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden \cite{Srinivasan}.
 
-Bei der Formulierung der Anforderungen des Systems sollte eine Reihe an Aspekten berücksichtigt und durch einen neutralen Beobachter verifiziert werden:
+Bei der Formulierung der Anforderungen eines Systems sollte eine Reihe an Aspekten berücksichtigt und durch einen neutralen Beobachter verifiziert werden:
 \begin{itemize}
     \item Bei dem Treffen einer Entscheidung des Modells dürfen keine Aspekte berücksichtigt werden, die für ein erfolgreiches Ausführen des Algorithmus nicht nötig sind.
-    \item Die Formulierung muss neutral gestaltet sein, das heißt durch die Formulierung an sich keine voreingenommenen Schlüsse ziehen lässt.
+    \item Die Formulierung muss neutral gestaltet sein, sodass sich durch die Formulierung an sich keine Schlüsse ziehen lassen, die mit Voreingenommenheit einhergehen.
 \end{itemize}
 
 \subsubsection{Vermeidung von Verzerrungen bei der Modellbewertung}
-Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
+Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten, kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
 Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite{Srinivasan}.
 
-Ein menschliche Bewerter eines Modells können in veschiedenen Aspekten kritisch handeln. Sie können durch eigene Einstellungen und Erfahrungen auch unabsichtlich beeinflußt sein \cite{Srinivasan}.
-Gerade wenn ein Bewerter direkt am Model beteiligt ist kann es zum so genannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen \cite{Srinivasan}.
-Ein Bestätigungsfehler ist der Neigung durch subjektive Wahrnemung eine Erwartung bestätigt zu sehen \cite{Srinivasan}. 
-Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Höhepunkten und dem letzten Eindruck geprägt \cite{Srinivasan}.
-Ebenfalls kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird \cite{Srinivasan}.
+Ein menschliche Bewerter eines Modells kann in verschiedenen Aspekten kritisch handeln. Sie können durch eigene Einstellungen und Erfahrungen auch unabsichtlich beeinflußt sein \cite{Srinivasan}.
+Gerade wenn ein Bewerter direkt am Model beteiligt ist, kann es zu einem sogenannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen \cite{Srinivasan}. Ein Bestätigungsfehler basiert auf der Neigung, durch subjektive Wahrnehmung eine Erwartung bestätigt zu sehen \cite{Srinivasan}. Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Höhepunkten und dem letzten Eindruck geprägt \cite{Srinivasan}.
+Außerdem kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird \cite{Srinivasan}.
 
 Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden:
 \begin{itemize}
-    \item Wenn Menschen das Modell bewerten sollten diese nicht direkt an der Entwicklung beteiligt sein, um so Neutralität zu wahren.
-    \item Wenn das Modell durch Menschen evaluiert wird, sollte diese Evalutaion von unteschiedlichen Personen mit unterschiedlichen Hintergründen durchgeführt werden.
-    \item Wird für die Evaluation ein Test-Framework verwendet, muss dieses mindestens eine für den Anwedungsfall annehmbare Menge an voneinander unabhängigen Tests durchführen.
+    \item Wenn Menschen das Modell bewerten, sollten diese nicht direkt an der Entwicklung beteiligt sein, um Neutralität zu gewährleisten.
+    \item Wenn das Modell durch Menschen evaluiert wird, sollte diese Evalutaion von mehreren Personen mit unterschiedlichen Hintergründen durchgeführt werden.
+    \item Wird für die Evaluation ein Test-Framework verwendet, muss dieses mindestens eine für den Anwendungsfall annehmbare Menge an voneinander unabhängigen Tests durchführen.
     \item Wird für die Evaluation ein Test-Framework verwendet, muss dieses weitreichend auf systematische Fehler überprüft werden.
 \end{itemize}
 
 \subsubsection{Verwendung von Datenerweiterung (Data Augmentation)}
-Data Augmentation beschreibt eine Technik Varianz in vorhandene Daten einzufügen und so die Datenmenge zu erweitern.
-Im Fall von IGAIs könnten so Eingabetexte, mit welchen moralisch kritische Inhalte erzeugt werden könnten, im mehreren leicht oder stärker abgewandelten Formen der IGAI vorgegeben werden um die Konsistenz dieser zu überprüfen und besser anzutrainieren.  
+Data Augmentation beschreibt eine Technik, Varianz in vorhandene Daten einzufügen und so die Datenmenge zu erweitern.
+Im Fall von IGAIs könnten so Eingabetexte, mit denen moralisch kritische Inhalte erzeugt werden könnten, im mehreren leicht oder stärker abgewandelten Formen der IGAI vorgegeben werden um die Konsistenz dieser zu überprüfen und besser anzutrainieren.  
 Zusätzlich können Einschränkungen und Richtlinien in den Augmentationsprozess integriert werden, um sicherzustellen, dass bestimmte ethische Prinzipien eingehalten werden. 
 Durch den Einsatz von Data Augmentation wird der Algorithmus besser darauf vorbereitet, moralische Grenzen zu respektieren und kontroverse oder anstößige Inhalte zu vermeiden. 
 Die Verwendung von Data Augmentation ermöglicht somit eine Verbesserung der moralischen Ertragbarkeit des ML-Algorithmus bei der Generierung von Bildern aus Textinput.
@@ -191,25 +189,23 @@ https://arxiv.org/pdf/1712.04621.pdf
 https://doi.org/10.48550/arXiv.1712.04621
 
 \subsubsection{Verwendung von überwachtem Lernen (Supervised Learning)}
-Die Trainingsdatensätze werden im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
+Beim überwachten Lernen werden Trainingsdatensätze im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
 Das Modell kann aus diesem Vergleich lernen, welches Verhalten oder Ergebnis richtig und welches falsch ist.
 
 Nach diesem Prinzip könnte man für IGAIs Datensätze erstellen, welche aus 2-Tupeln bestehen: einem Text anhand dem ein Bild erzeugt werden soll und einem dazu passenden moralisch unbedenklichen Bild. 
 Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erzeugen darf.
 
-Weiter wäre auch das Gegenteil möglich: Ein geordnetes Paar an Texten und moralisch verwerflichen Bildern, anhand derer die KI lernen kann, was sie auf keinen Fall generieren darf.
+Auch das Gegenteil wäre möglich: ein geordnetes Paar an Texten und moralisch verwerflichen Bildern, anhand derer die KI lernen kann, was sie auf keinen Fall generieren darf.
 
 \subsubsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
-Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
+Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, der die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
 
 \subsubsection{Verwendung von kontradiktorischen Training (adversarial training)}
-Adversarial Learning ist eine Technik, die eingesetzt werden kann, um einen Machine Learning-Algorithmus moralisch ertragbarer zu gestalten. 
+Adversarial Learning ist eine Technik, die eingesetzt werden kann, um einen Machine-Learning-Algorithmus moralisch ertragbarer zu gestalten. 
 Dabei wird ein zusätzlicher Algorithmus, der als Adversary bezeichnet wird, verwendet, um den Hauptalgorithmus herauszufordern und zu verbessern. 
 
 Der Adversary wird darauf trainiert, gezielt moralisch problematische Beispiele zu generieren, die der Hauptalgorithmus falsch klassifizieren könnte. 
-Indem der Hauptalgorithmus mit solchen herausfordernden Beispielen konfrontiert wird, wird er dazu gezwungen, seine Entscheidungen sorgfältiger zu treffen und moralisch akzeptablere Ergebnisse zu erzielen. 
-
-Durch diesen iterativen Prozess des Trainings und der Herausforderung kann der Algorithmus lernen, ethische Aspekte besser zu berücksichtigen und so seine Leistung im Hinblick auf Moral und Ethik zu verbessern. 
+Durch die Konfrontation des Hauptalgorithmus mit solchen herausfordernden Beispielen wird dieser dazu gezwungen, seine Entscheidungen sorgfältiger zu treffen und moralisch akzeptablere Ergebnisse zu erzielen. Durch diesen iterativen Prozess des Trainings und der Herausforderung kann der Algorithmus lernen, ethische Aspekte besser zu berücksichtigen und so seine Leistung im Hinblick auf Moral und Ethik zu verbessern. 
 
 Adversarial Learning bietet somit eine vielversprechende Möglichkeit, ML-Algorithmen in Bezug auf moralische Aspekte weiterzuentwickeln und deren Einfluss auf die Gesellschaft verantwortungsvoll zu gestalten.
 
@@ -219,10 +215,10 @@ Quelle: https://arxiv.org/pdf/1611.01236.pdf
 
 Michel will es überarbeiten und Einleitung machen bis 18.05 12:00:00
 \subsubsection{Input-Filter}
-Der erste Punkt an dem Entwickler ansetzen können, die Erzeugten Ergebnisse einer IGAI zu kontrollieren, ist die Eingabe. Die Eingabe ist in diesem Fall der Text den ein Nutzer der IGAI als Input gibt, um daraus ein Bild zu erzeugen. Die Kontrolle der Eingabe kann durch die Verwendung einer weiteren AI erfolgen, die auf das Ermitteln von unethischem Inhalt spezialisiert ist. Als Beispiel dient hierbei der Artikel Artificial Intelligence as a Service for Immoral Content Detection and Eradication von Fadia Shah et al. In ihrer Arbeit haben die Autoren eine AI entwickelt, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von IGAIs können anhand dieser Ergebnisse ihre eigene AI entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese AI können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur IGAI gelangen.
+Die erzeugten Ergebnisse einer IGAI können von den Entwicklern bei der Eingabe kontrolliert werden. Die Eingabe besteht in dem in der vorliegenden Arbeit betrachteten Anwendungsfall aus Text, den ein Nutzer der IGAI als Input gibt, um daraus ein Bild erzeugen zu lassen. Die Kontrolle der Eingabe kann durch die Verwendung einer weiteren AI erfolgen, die auf die Ermittlung unethischen Inhalts spezialisiert ist. Als Beispiel hierfür dient eine AI, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von IGAIs können anhand dieser Ergebnisse ihre eigene AI entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese AI können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur IGAI gelangen.
 
 \subsubsection{Output-Filter}
-Nachdem eine IGAI ein Bild generiert, haben Entwickler die Möglichkeit dieses Ergebnis zu kontrollieren. Das Vorgehen ist ähnlich zu dem der Input-Filter, jedoch wird hierbei nicht der Input, also der Text, gefiltert, sondern der Output, also das erzeugte Bild. Die Autoren Huicheng Zheng et al. zeigen in ihrem Artikel Blocking objectionable images: adult images and harmful symbols ein Beispiel auf. Die Autoren haben ein System entwickelt, das aus zwei getrennten Filtern besteht: dem verbotene Symbole Filter und dem nicht jugendfreie Bilder Filter. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Die Entwickler haben damit die Möglichkeit alles zu filtern, was dem Nutzer nicht ausgegeben werden soll. Das System der Autoren war schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels, ist anzunehmen, dass heute Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln.
+Nachdem eine IGAI ein Bild generiert, haben Entwickler die Möglichkeit dieses Ergebnis zu kontrollieren. Das Vorgehen ist ähnlich zu dem der Input-Filter, jedoch wird hierbei nicht der Input, also der Text, gefiltert, sondern der Output, also das erzeugte Bild. Die Autoren Huicheng Zheng et al. zeigen in ihrem Artikel Blocking objectionable images: adult images and harmful symbols ein Beispiel auf. Die Autoren haben ein System entwickelt, das aus zwei getrennten Filtern besteht: einem für verbotene Symbole und einem für nicht jugendfreie Bilder. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere ergänzt werden. Die Entwickler haben damit die Möglichkeit, alles zu filtern, was dem Nutzer nicht ausgegeben werden soll. Das in QUELLENANGABE NOCHMAL OHNE SEITENZAHL beschriebene System ist schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels, ist anzunehmen, dass heutige Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln.
 \subsubsection{Tokenmechanik}
 macht michi bis 18.05 12:00s
 
