@@ -115,23 +115,12 @@ Aufgrund dessen werden in der weiteren Durchführung diese Ansätze danach grupp
 \subsection{Entwicklungsphase}
 \subsubsection{Datenverzerrungen im Trainingsdatensatz}
 Bereits bei der Zusammenstellung des Trainingsdatensatzes einer KI kann es zu Verzerrungen kommen. Würde eine KI durch einen so verzerrten Datensatz trainiert werden, könnte sich in ihr diese Verzerrung wiederspiegeln. Eine so antrainierte Verzerrung lässt sich, wenn überhaupt, nur sehr aufwendig wieder korrigieren, es empfiehlt sich also von vorherein einen geeigneten Datensatz zu verwenden.
-Diese Verzerrungen können dabei Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen, oder Verzerrung durch Einseitigkeit beinhalten. \cite{Srinivasan}
-
-\paragraph{Kommentar Franke/Müller:}
-Zweiter Absatz braucht nur eine Citation, kommt alles von der gleichen Quelle
-Erster Satz soll mehr beschreiben, dass wenn der Wurm einmal drin ist, kriegt man ihn durch späteres ausbessern nicht mehr raus
-dritter Absatz die überwachungsinstanz sollter weiter hervorgehben werden und nicht nur kurz am Ende rangeklatscht werden
-Zweiter Absatz den Satzbau der Beispiele verbessern, die Sätze lesen sich schwer
-vor die Aufzählung die jeweiligen Begriffe schreiben (in Reihenfolge): repräsentativ, quantitativ, qualitativ, Güte
-
-
-Bereits bei der Zusammenstellung des Trainingsdatensatzes einer KI kann es zu Verzerrungen kommen, welche sich im späteren Verlauf der Entwicklung kaum mehr beheben lassen.
-Diese beinhalten Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen, oder Verzerrung durch Einseitigkeit \cite{Srinivasan}.
+Diese Verzerrungen können dabei Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen, oder Verzerrung durch Einseitigkeit sein \cite[S. 48ff.]{Srinivasan}.
 
 Beispiele für Stichprobenverzerrungen können sein, dass zu wenig Daten in die Datensätze aufgenommen werden und diese keine realitätsnahe Darstellung ermöglichen.
 Auch ist es möglich, dass die Daten systematisch einseitig sind. Ein Gesichtserkennungsmodell, das hauptsächlich an hellhäutigen Gesichtern trainiert wurde, kann beispielweise bei dunkleren Hauttönen schlechter abschneiden oder bestimmte Gesichtsformen und -farben gar nicht als Gesichter erkennen.
 Zudem ist eine systematisch Messwertverzerrung möglich, etwa wenn Bilder, die mit einer nicht vollständig funktionstüchtigen Kamera aufgenommen worden, in die Trainingsdaten einbezogen werden.
-Es kann auch vorkommen, dass Daten falsch, überflüssig oder unzuverlässig gekennzeichnet werden. So ist die Unterscheidung zwischen einer \textit{Wiese} und einer \textit{Weide} selten nötig. Existieren jedoch beide Label im Trainingsdatensatz einer KI, kann sich dies negativ auf die Genauigkeit des Modells auswirken, wenn bei der Beschriftung nicht konsequent beide Begriffe unterschieden werden. \cite{Srinivasan}
+Es kann auch vorkommen, dass Daten falsch, überflüssig oder unzuverlässig gekennzeichnet werden. Bespielsweise ist die Unterscheidung zwischen einer \textit{Wiese} und \textit{Gras} selten nötig. Existieren aber beide Label im Trainingsdatensatz einer KI kann sich dies negativ auf die Genauigkeit des Modells auswirken, wenn bei der Beschriftung nicht konsequent beide Begriffe unterschieden werden\cite[S. 48ff.]{Srinivasan}. 
 
 Eine Überwachungsinstanz in Form eines neutralen Beobachter oder Systems zuzüglich einer reflektierten Selbstkontrolle der Datensammler kann dabei helfen solche Verzerrungen zu vermeiden.
 Bei dieser Überwachung sollten mindestens die genannten Punkte Beachtung finden:
@@ -147,37 +136,24 @@ Bei dieser Überwachung sollten mindestens die genannten Punkte Beachtung finden
 \subsubsection{Verzerrungen in der Anforderungsformulierungen}
 Bei den Definitionen einer Aufgabenstellung und der Anforderungen an ein Modell kann es zu Verzerrungen kommen.
 
-Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung aus den Anforderungen oder durch die Art der verwendeten Daten entstehen.  \cite{Srinivasan}
-Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise darin bestehen, wenn Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in die Entscheidung einfließen, ob einer Person ein Kredit gewährt wird. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden \cite{Srinivasan}.
+Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung aus den Anforderungen oder durch die Art der verwendeten Daten entstehen.  \cite[S. 51f.]{Srinivasan}
 
-Bei der Formulierung der Anforderungen eines Systems sollte eine Reihe an Aspekten berücksichtigt und durch einen neutralen Beobachter verifiziert werden:
+Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise darin bestehen, wenn Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in die Entscheidung einfließen, ob einer Person ein Kredit gewährt wird. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden \cite[S. 51f.]{Srinivasan}.
+
+Es empfiehlt sich das Einsetzten eines neutralen Beobachters, welcher die Anforderungen und daraus enstehende Aufgabenstellung auf folgende Aspekte prüf
 \begin{itemize}
-    \item Bei dem Treffen einer Entscheidung des Modells dürfen keine Aspekte berücksichtigt werden, die für ein erfolgreiches Ausführen des Algorithmus nicht nötig sind.
+    \item Bei dem Treffen einer Entscheidung des Modells dürfen keine Aspekte berücksichtigt werden, die für eine erfolgreiche Ergebnisfindung der Aufgabenstellung nicht nötig sind.
     \item Die Formulierung muss neutral gestaltet sein, sodass sich durch die Formulierung an sich keine Schlüsse ziehen lassen, die mit Voreingenommenheit einhergehen.
 \end{itemize}
 
 \subsubsection{Vermeidung von Verzerrungen bei der Modellbewertung}
 Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten, kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
-Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite{Srinivasan}.
-
-Ein menschliche Bewerter eines Modells kann in verschiedenen Aspekten kritisch handeln. Sie können durch eigene Einstellungen und Erfahrungen auch unabsichtlich beeinflußt sein \cite{Srinivasan}.
-Gerade wenn ein Bewerter direkt am Model beteiligt ist, kann es zu einem sogenannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen \cite{Srinivasan}. Ein Bestätigungsfehler basiert auf der Neigung, durch subjektive Wahrnehmung eine Erwartung bestätigt zu sehen \cite{Srinivasan}. Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Höhepunkten und dem letzten Eindruck geprägt \cite{Srinivasan}.
-Außerdem kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird \cite{Srinivasan}.
-
-Hier empfiehlt sich das Einsetzten eines neutralen Beobachters, welcher die Anforderungen und daraus enstehende Aufgabenstellung auf folgende Aspekte prüft: 
-\begin{itemize}
-    \item Bei dem Treffen einer Entscheidung des Modells dürfen keine Aspekte berücksichtigt werden, die für eine erfolgreiche Ergebnisfindung der Aufgabenstellung nicht nötig sind.
-    \item Die Formulierung muss neutral gestaltet sein, das heißt durch die Formulierung an sich dürfen siche keine voreingenommenen Schlüsse ziehen lassen.
-\end{itemize}
-
-\subsubsection{Verzerrungen bei der Modellbewertung}
-Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten, kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
-Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten. \cite{Srinivasan}
+Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite[S. 54f.]{Srinivasan}.
 
 Menschliche Bewerter eines Modells können auf verschiedene Arten unethisch handeln. Sie können durch eigene Einstellungen und Erfahrungen beeinflusst sein, auch unbeabsichtigt.
 Gerade wenn ein Bewerter direkt am Model beteiligt ist kann es zum so genannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen. Ein Bestätigungsfehler ergibt sich aus der Neigung, durch subjektive Wahrnehmung eine Erwartung bestätigt zu sehen. Ist so beispielsweise der Beurteiler beruflich oder finanziell direkt vom Erfolg des Projekts abhängig ist es eher möglich, dass Fehler nicht auffallen oder relativiert werden, als wenn er es nicht wäre.
 Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Besonderheiten oder dem letzten Eindruck geprägt.
-Ferner kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird. \cite{Srinivasan}
+Ferner kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird \cite[S. 54f.]{Srinivasan}.
 
 Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden:
 \begin{itemize}
@@ -196,9 +172,9 @@ Zusätzlich können Einschränkungen und Richtlinien in den Augmentationsprozess
 Durch den Einsatz von Data Augmentation wird der Algorithmus besser darauf vorbereitet, moralische Grenzen zu respektieren und kontroverse oder anstößige Inhalte zu vermeiden. 
 Die Verwendung von Data Augmentation ermöglicht somit eine Verbesserung der moralischen Ertragbarkeit des ML-Algorithmus bei der Generierung von Bildern aus Textinput.
 
-Quelle: 
-https://arxiv.org/pdf/1712.04621.pdf 
-https://doi.org/10.48550/arXiv.1712.04621
+%Quelle: 
+%https://arxiv.org/pdf/1712.04621.pdf 
+%https://doi.org/10.48550/arXiv.1712.04621
 
 \subsubsection{Verwendung von überwachtem Lernen (Supervised Learning)}
 Beim überwachten Lernen werden Trainingsdatensätze im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
@@ -209,6 +185,9 @@ Nach diesem Prinzip könnte man für IGAIs Datensätze erstellen, welche aus 2-T
 Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erzeugen darf.
 
 Auch das Gegenteil wäre möglich: ein geordnetes Paar an Texten und moralisch verwerflichen Bildern, anhand derer die KI lernen kann, was sie auf keinen Fall generieren darf.
+
+%Quelle: 
+%https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1428-6_451
 
 \subsubsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
 Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt
@@ -223,7 +202,8 @@ Durch die Konfrontation des Hauptalgorithmus mit solchen herausfordernden Beispi
 
 Adversarial Learning bietet somit eine vielversprechende Möglichkeit, ML-Algorithmen in Bezug auf moralische Aspekte weiterzuentwickeln und deren Einfluss auf die Gesellschaft verantwortungsvoll zu gestalten.
 
-Quelle: https://arxiv.org/pdf/1611.01236.pdf
+%Quelle: 
+%https://arxiv.org/pdf/1611.01236.pdf
 
 \subsection{Anwendungsphase}
 
@@ -239,6 +219,8 @@ macht michi bis 18.05 12:00s
 \chapter{Fazit}
 Das Ziel der vorliegenden Arbeit besteht darin, die Frage zu beantworten, welche Methoden es aktuell gibt, mit denen IGAI-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden. Diese Frage konnte durch die detaillierte Auflistung und Erklärung der Methoden in Kapitel BITTE QUERVERWEIS EINFÜGEN beantwortet werden. Die gewählte Methode, ausschließlich einen Überblick über die in der Literatur beschriebenen Methoden auszuführen, kann jedoch nicht zeigen, welche Methoden tatsächlich wie angewandt werden und ihren Zweck inwiefern erfüllen. Von den Autoren der vorliegenden Arbeit selbst erdachte Methoden wie die Verwendung von überwachtem Lernen in Kapitel BITTE QUERVERWEIS EINFÜGEN konnten nicht auf ihre tatsächliche Anwendbarkeit überprüft werden, da dies den Rahmen der vorliegenden Arbeit sprengen würde. Es würde sich im Anschluss an die vorliegende Arbeit also anbieten, experimentell die tatsächliche Umsetzung der genannten Methoden an verschiedenen IGAIs zu überprüfen bzw. auch experimentell zu untersuchen, inwiefern die skizzierten im Rahmen der vorliegenden Arbeit erdachten Methoden tatsächlich anwendbar und dienlich sind.
 So kann diese Arbeit jedoch als Grundlage dienen, um einen Überblick über mögliche Methoden zu gewinnen, um darauf fußend ethisch korrekter handelnde KI zu entwickeln.
+
+% Gefahr Achtung! Supervised Learning also überwachtes Lernen ist nicht selbst erdacht, ich hab nur die Quelle vergessen!
 
 \bibliographystyle{ieeetr}
 \bibliography{Sources.bib}
