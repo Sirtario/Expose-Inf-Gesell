@@ -113,63 +113,45 @@ Technische Ansätze sind diese, die von den Entwicklern der IGAI sowohl während
 Aufgrund dessen werden in der weiteren Durchführung diese Ansätze danach gruppiert, ob diese in der Entwicklungsphase der IGAI oder in deren Anwendungsphase anzuwenden sind.
 
 \subsection{Entwicklungsphase}
-\subsubsection{Vermeidung von Datenverzerrungen im Trainingsdatensatz}
+\subsubsection{Datenverzerrungen im Trainingsdatensatz}
+Bereits bei der Zusammenstellung des Trainingsdatensatzes einer KI kann es zu Verzerrungen kommen. Würde eine KI durch einen so verzerrten Datensatz trainiert werden, könnte sich in ihr diese Verzerrung wiederspiegeln. Eine so antrainierte Verzerrung lässt sich, wenn überhaupt, nur sehr aufwendig wieder korrigieren, es empfiehlt sich also von vorherein einen geeigneten Datensatz zu verwenden.
+Diese Verzerrungen können dabei Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen, oder Verzerrung durch Einseitigkeit beinhalten. \cite{Srinivasan}
 
-
-\paragraph{Kommentar Franke/Müller:}
-Zweiter Absatz braucht nur eine Citation, kommt alles von der gleichen Quelle
-Erster Satz soll mehr beschreiben, dass wenn der Wurm einmal drin ist, kriegt man ihn durch späteres ausbessern nicht mehr raus
-dritter Absatz die überwachungsinstanz sollter weiter hervorgehben werden und nicht nur kurz am Ende rangeklatscht werden
-Zweiter Absatz den Satzbau der Beispiele verbessern, die Sätze lesen sich schwer
-vor die Aufzählung die jeweiligen Begriffe schreiben (in Reihenfolge): repräsentativ, quantitativ, qualitativ, Güte
-
-
-Bereits bei der Zusammenstellung des Trainingsdatensatzes einer KI kann es zu Verzerrungen kommen, welche sich im späteren Verlauf der Entwicklung kaum mehr beheben lassen.
-Diese beinhalten Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen, oder Verzerrung durch Einseitigkeit \cite{Srinivasan}.
-
-Beispiele für Stichprobenverzerrungen können sein, dass zu wenig Daten in die Datensätze aufgenommen werden und diese keine realitätsnahe Darstellung ermöglichen \cite{Srinivasan}.
-Auch ist es möglich, dass die Daten systematisch einseitig sind. Ein Gesichtserkennungsmodell, das hauptsächlich an hellhäutigen Gesichtern trainiert wurde, kann beispielweise bei dunkleren Hauttönen schlechter abschneiden oder bestimmte Gesichtsformen und -farben gar nicht als solche wahrnehmen \cite{Srinivasan}.
+Beispiele für Stichprobenverzerrungen können sein, dass zu wenig Daten in die Datensätze aufgenommen werden und diese keine realitätsnahe Darstellung ermöglichen.
+Auch ist es möglich, dass die Daten systematisch einseitig sind. Ein Gesichtserkennungsmodell, das hauptsächlich an hellhäutigen Gesichtern trainiert wurde, kann beispielweise bei dunkleren Hauttönen schlechter abschneiden oder bestimmte Gesichtsformen und -farben gar nicht als Gesichter erkennen.
 Ebenfalls ist eine systematisch Messwertverzerrung möglich, etwa wenn Bilder, welche mit einer defekten Kamera aufgenommen worden, in die Trainingsdaten einbezogen werden.
-Es kann auch vorkommen, dass Daten falsch oder unzuverlässig gekennzeichnet werden. So kann es vorkommen, dass eine Wiese als \textit{Rasen}, \textit{Gras}, \textit{Wiese} oder \textit{Weide} gekennzeichnet wird, damit existieren vier Bezeichnungen für das gleiche Objekt. Dies kann sich insgesamt negativ auf die Genauigkeit des Modells auswirken \cite{Srinivasan}.
+Es kann auch vorkommen, dass Daten falsch, überflüssig oder unzuverlässig gekennzeichnet werden. Bespielsweise ist die Unterscheidung zwischen einer \textit{Wiese} und einer \textit{Weide} selten nötig. Existieren aber beide Label im Trainingsdatensatz einer KI kann sich dies negativ auf die Genauigkeit des Modells auswirken, wenn bei der Beschriftung nicht konsequent beide Begriffe unterschieden werden. \cite{Srinivasan}
 
-Diese Verzerrung lassen sich vermeiden, indem man den Prozess der Datensammlung von neutraler Seite überwacht und verifiziert.
-Bei dieser Überwachung sollten mindestens die genannten Punkte Beachtung finden: 
+Eine Überwachungsinstanz in Form eines neutralen Beobachter oder Systems zuzüglich einer reflektierten Selbstkontrolle der Datensammler kann dabei helfen solche Verzerrungen zu vermeiden.
+Bei dieser Überwachung sollten mindestens die genannten Punkte Beachtung finden:
 \begin{itemize}
-    \item Die Daten müssen die Realität widerspiegeln und nicht nur Randgruppen oder Mehrheiten darstellen.
-    \item Die Anzahl der Daten muss ausreichen um diese Realitätswiederspiegelung gewährleisten zu können.
-    \item Die Kennzeichnung der Daten muss auf Voreingenommenheit und Redundanz geprüft werden.
-    \item Die Daten müssen qualitativ hochwertig, mindestens aber für den Anwendungsfall ausreichend sein.
+    \item Repräsentativität: Die Daten müssen die Realität widerspiegeln und nicht nur Randgruppen oder Mehrheiten darstellen.
+    \item Quantität: Die Anzahl der Daten muss ausreichen um diese Realitätswiederspiegelung gewährleisten zu können.
+    \item Qualität: Die Kennzeichnung der Daten muss auf Voreingenommenheit und Redundanz geprüft werden.
+    \item Güte: Die Daten müssen qualitativ hochwertig, mindestens aber für den Anwendungsfall ausreichend sein.
 \end{itemize}
 
-\subsubsection{Vermeidung von Verzerrungen in der Anforderungsformulierungen}
-\paragraph{Kommentar Franke/Müller:}
-Den Satz vom Beispiel drehen, alse mit der Kreditvergabe anfangen
-Nochmal überlegen was jetzt nun Aufgabe und Anforderung sind und was die miteinander zu tun haben und das dann auch so im Text beibehalten, Vorschlag war auch Aufgabe ergibt sich Anforderung und diese Anforderung muss dann passen
-zweiter Absatz eine Citation
-dritter absatz neutraler Beobachter weiter nach vorne, wie im Kapitel davor auch
+\subsubsection{Verzerrungen in der Anforderungsformulierungen}
+Bei den Definitionen der Anforderungen eines Modell kann es zu Verzerrungen kommen.
 
+Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung aus den Anforderungen entstehen, oder durch die Art der verwendeten Daten um das Ergebnis des Models zu erhalten.
+Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise sein, bei einer Prüfrung auf Kreditwürdigkeit eines möglichen Kreditnehmers Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in den Entscheidungsprozess einfließen zu lassen. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden. \cite{Srinivasan}
 
-Bei den Definitionen einer Aufgabenstellung und den Anforderungen eines Modell kann es zu Verzerrungen kommen.
-
-Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung entstehen, oder durch die Art der verwendeten Daten um das Ergebnis des Models zu erhalten \cite{Srinivasan}.
-Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise sein, Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in die 
-Entscheidung einfließen zu lassen, ob einer Person ein Kredit gewährt wird. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden \cite{Srinivasan}.
-
-Bei der Formulierung der Anforderungen des Systems sollte eine Reihe an Aspekten berücksichtigt und durch einen neutralen Beobachter verifiziert werden:
+Hier empfiehlt sich das Einsetzten eines neutralen Beobachters, welcher die Anforderungen und daraus enstehende Aufgabenstellung auf folgende Aspekte prüft: 
 \begin{itemize}
-    \item Bei dem Treffen einer Entscheidung des Modells dürfen keine Aspekte berücksichtigt werden, die für ein erfolgreiches Ausführen des Algorithmus nicht nötig sind.
-    \item Die Formulierung muss neutral gestaltet sein, das heißt durch die Formulierung an sich keine voreingenommenen Schlüsse ziehen lässt.
+    \item Bei dem Treffen einer Entscheidung des Modells dürfen keine Aspekte berücksichtigt werden, die für eine erfolgreiche Ergebnisfindung der Aufgabenstellung nicht nötig sind.
+    \item Die Formulierung muss neutral gestaltet sein, das heißt durch die Formulierung an sich dürfen siche keine voreingenommenen Schlüsse ziehen lassen.
 \end{itemize}
 
-\subsubsection{Vermeidung von Verzerrungen bei der Modellbewertung}
+\subsubsection{Verzerrungen bei der Modellbewertung}
 Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
-Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite{Srinivasan}.
+Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten. \cite{Srinivasan}
 
-Ein menschliche Bewerter eines Modells können in veschiedenen Aspekten kritisch handeln. Sie können durch eigene Einstellungen und Erfahrungen auch unabsichtlich beeinflußt sein \cite{Srinivasan}.
-Gerade wenn ein Bewerter direkt am Model beteiligt ist kann es zum so genannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen \cite{Srinivasan}.
-Ein Bestätigungsfehler ist der Neigung durch subjektive Wahrnemung eine Erwartung bestätigt zu sehen \cite{Srinivasan}. 
-Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Höhepunkten und dem letzten Eindruck geprägt \cite{Srinivasan}.
-Ebenfalls kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird \cite{Srinivasan}.
+Menschliche Bewerter eines Modells können in veschiedenen Aspekten kritisch handeln. Sie können durch eigene Einstellungen und Erfahrungen, auch unabsichtlich, beeinflußt sein.
+Gerade wenn ein Bewerter direkt am Model beteiligt ist kann es zum so genannten Bestätigungsfehler, oder \glqq Peak-End-Effect\grqq{} kommen.
+Ein Bestätigungsfehler ist die Neigung durch subjektive Wahrnemung, eine Erwartung bestätigt zu sehen. Ist so beispielsweise der Beurteiler beruflich oder finanziell direkt vom Erfolg des Projekts abhängig ist es schnell möglich, dass Fehler nicht auffallen oder relativiert werden.
+Beim \glqq Peak-End-Effect\grqq{} wird eine Bewertung anhand von einzelnen Besonderheiten oder dem letzten Eindruck geprägt.
+Ebenfalls kann ein entworfenes Test-Framework fehlerhaft sein, wenn darin zum Beispiel zu wenig getestet wird, oder mit nicht geeigneten Testdaten gearbeitet wird. \cite{Srinivasan}
 
 Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden:
 \begin{itemize}
@@ -179,7 +161,7 @@ Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden
     \item Wird für die Evaluation ein Test-Framework verwendet, muss dieses weitreichend auf systematische Fehler überprüft werden.
 \end{itemize}
 
-\subsubsection{Verwendung von Datenerweiterung (Data Augmentation)}
+\subsubsection{Datenerweiterung (Data Augmentation)}
 Data Augmentation beschreibt eine Technik Varianz in vorhandene Daten einzufügen und so die Datenmenge zu erweitern.
 Im Fall von IGAIs könnten so Eingabetexte, mit welchen moralisch kritische Inhalte erzeugt werden könnten, im mehreren leicht oder stärker abgewandelten Formen der IGAI vorgegeben werden um die Konsistenz dieser zu überprüfen und besser anzutrainieren.  
 Zusätzlich können Einschränkungen und Richtlinien in den Augmentationsprozess integriert werden, um sicherzustellen, dass bestimmte ethische Prinzipien eingehalten werden. 
@@ -190,7 +172,7 @@ Quelle:
 https://arxiv.org/pdf/1712.04621.pdf 
 https://doi.org/10.48550/arXiv.1712.04621
 
-\subsubsection{Verwendung von überwachtem Lernen (Supervised Learning)}
+\subsubsection{Überwachtes Lernen (Supervised Learning)}
 Die Trainingsdatensätze werden im Voraus bewertet und sortiert, bevor der Algorithmus durchlaufen wird. Nachdem der Algorithmus durchlaufen ist, wird das Ergebnis mit der Bewertung verglichen. 
 Das Modell kann aus diesem Vergleich lernen, welches Verhalten oder Ergebnis richtig und welches falsch ist.
 
@@ -199,10 +181,10 @@ Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erz
 
 Weiter wäre auch das Gegenteil möglich: Ein geordnetes Paar an Texten und moralisch verwerflichen Bildern, anhand derer die KI lernen kann, was sie auf keinen Fall generieren darf.
 
-\subsubsection{Verwendung von verstärktem Lernen (Reinforcement Learning)}
+\subsubsection{Verstärktes Lernen (Reinforcement Learning)}
 Wie in \ref{subsection:ethicsdefinition} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von IGAIs daraus bestehen, einen zweiten Agenten zu verwenden, welcher die erzeugten Inhalte auf moralische Sauberkeit und dementsprechend den ersten Agenten, also die IGAI, bestraft oder belohnt.
 
-\subsubsection{Verwendung von kontradiktorischen Training (adversarial training)}
+\subsubsection{Kontradiktorisches Lernen (Adversarial Learning)}
 Adversarial Learning ist eine Technik, die eingesetzt werden kann, um einen Machine Learning-Algorithmus moralisch ertragbarer zu gestalten. 
 Dabei wird ein zusätzlicher Algorithmus, der als Adversary bezeichnet wird, verwendet, um den Hauptalgorithmus herauszufordern und zu verbessern. 
 
