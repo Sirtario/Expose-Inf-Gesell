@@ -19,6 +19,7 @@
 \maketitle
 \tableofcontents
 \newpage
+
 \begin{acronym}
     \acro{EU}{Europäische Union}
 \acro{KI}{Künstliche Intelligenz}
@@ -27,6 +28,20 @@
 \acro{GAI}{Generative artifical intelligence}
 \end{acronym}
 \newpage
+
+
+\begin{abstract}
+	Entwickler von image generating artificial intelligence (IGAI) müssen sichergehen, dass ihre IGAI so wenig wie möglich unethischen Inhalt generiert.
+	Dieses Paper analysiert Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
+	Um die Methoden zusammenzustellen wurde zunächst Ethik definiert und anschließend eine Literaturübersicht erstellt. 
+	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von AI im Allgemeinen und Möglichkeiten Inhalte zu moderieren. 
+	Als Ergebniss stellt dieses Paper ein Liste an Methoden bereit, die Entwickler verwenden können, um ihre IGAI unter dem Aspekt der Ethik zu verbessern. 
+	Die Methoden können in verschiedenen Abschnitten der Entwicklung einer IGAI eingeetzt werden und haben unterschiedliche Komplexität. 
+	Dieses Paper kann als Grundlage dienen, um ethisch korrekter handelnde KI zu entwickeln.
+\end{abstract}
+
+%Bitte nach dem Inhaltsverzeichnis ein Abkürzungsverzeichnis einfügen. Dieses kann einfach nur eine Tabelle mit KI, GAI und IGAI (und, falls ich gerade nicht daran gedacht habe, andere nicht im Duden stehende Abkürzungen) und den jeweiligen Langformen enthalten.
+
 \chapter{Einleitung}
 
 Die Generierung von Bildern mithilfe von KI reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst in den letzten zwei Jahren wurden diese KIs durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser KIs zeigen jedoch auf, dass sie sexistische oder rassistische Verzerrungen aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
@@ -37,7 +52,7 @@ Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem 
 
 \chapter{Definitionen}
 Im Folgenden wird ein kurzer Abriss gegeben, wie sich der Begriff der Ethik bezüglich bildgenerierender KI in den letzten vier Jahren auf internationaler und nationaler Ebene entwickelt haben und welche Fachtermini aus der Thematik bildgenerierende KI in der vorliegenden Arbeit wie verwendet werden.
-\section{Ethik}
+\section{Ethik}\label{def_ai}
 
 \paragraph{UNESCO\cite{UNESCO}\\}
 Im November 2019 verabschiedete die Generalversammlung der Organisation der Vereinten Nationen für Bildung, Wissenschaft und Kultur (\textbf{UNESCO}) auf ihrer 40. Sitzung die 40 C/Resolution 37, durch die sie die Generaldirektorin beauftragte, \glqq ein international gültiges Instrument zur Festlegung von Standards in Bezug auf die Ethik der künstlichen Intelligenz (KI) in Form einer Empfehlung vorzubereiten\glqq{}.\\Im November 2021 wurde auf der 41. Sitzung der \textbf{UNESCO} diese Empfehlung von den Mitgliedstaaten als weltweit erste globale Norm für die Ethik der künstlichen Intelligenz angenommen.\\
