@@ -5,10 +5,21 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{ngerman}
-\usepackage{graphicx}
+\usepackage{graphicx} 
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{acronym}
+\usepackage[left = 3.5cm, right = 1.5cm]{geometry}
+
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter.}{0.5em}{}
+
+\usepackage{enumitem}
+\setlist{nosep}
+\titlespacing*{\chapter}{0pt}{0pt}{12pt}
+\titlespacing*{\section}{0pt}{16pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
 
 \title{Erster Forschungsbericht \\[1ex] \large Methodiken zur Verhinderung von  Erzeugung unethischer Inhalte durch IGAI}
 \date{21.05.2023}
@@ -20,15 +31,16 @@
 \tableofcontents
 \newpage
 
-\begin{acronym}
-    \acro{EU}{Europäische Union}
-\acro{KI}{Künstliche Intelligenz}
-\acro{AI}{Artificial Intelligence}
-\acro{IGAI}{image generating artifical intelligence}
-\acro{GAI}{Generative artifical intelligence}
+\section*{Abkürzungsverzeichnis}
+\begin{acronym}[Abkürzungsverzeichnis]
+	
+	\acro{KI}{Künstliche Intelligenz}
+	\acro{AI}{Artificial Intelligence}
+	\acro{IGAI}{image generating artifical intelligence}
+	\acro{GAI}{Generative artifical intelligence}
+	\acro{AGB}{Allgemeine Geschäftsbedingungen}
 \end{acronym}
 \newpage
-
 
 \begin{abstract}
 	Entwickler von image generating artificial intelligence (IGAI) müssen sichergehen, dass ihre IGAI so wenig wie möglich unethischen Inhalt generiert.
@@ -40,15 +52,16 @@
 	Dieses Paper kann als Grundlage dienen, um ethisch korrekter handelnde KI zu entwickeln.
 \end{abstract}
 
-%Bitte nach dem Inhaltsverzeichnis ein Abkürzungsverzeichnis einfügen. Dieses kann einfach nur eine Tabelle mit KI, GAI und IGAI (und, falls ich gerade nicht daran gedacht habe, andere nicht im Duden stehende Abkürzungen) und den jeweiligen Langformen enthalten.
 
 \chapter{Einleitung}
-
 Die Generierung von Bildern mithilfe von KI reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst in den letzten zwei Jahren wurden diese KIs durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser KIs zeigen jedoch auf, dass sie sexistische oder rassistische Verzerrungen aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
 Angesichts dessen haben u. a. die Entwickler von Midjourney reagiert und das Verwenden von Wörtern mit Bezug zur Thematik menschlicher Fortpflanzungssysteme verboten \cite{Heikkilae} und ihre kostenlose Testversion eingestellt \cite{NelsonMidjourney}. Daraus ergibt sich die Frage, welche Methodiken generell möglich sind bzw. angewandt werden, um die Erzeugung unethischer Inhalte durch \ac{IGAI} zu verhindern.
 Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem sie zusammenträgt, welche Methoden in der Literatur beschrieben werden, um KIs vor Missbrauch zu schützen. Sie diskutiert, wie die Anbieter und Entwickler dieser Technologie verantwortungsbewusst handeln können, um sicherzustellen, dass ihre KIs nur für ethisch vertretbare Zwecke eingesetzt werden. Das Ziel besteht darin, aufzuzeigen wie \ac{IGAI}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden.
 
 % Bitte bei allen Zitationen an Seitenzahlen denken, also z. B., auf welcher Seite Schmidt das sagt. -> Das sind hier alles nur Nachrichtenartikel, haben keine Seitenzahl
+
+\include{StandForschung.tex}
+\include{Methodik.tex}
 
 \chapter{Definitionen}
 Im Folgenden wird ein kurzer Abriss gegeben, wie sich der Begriff der Ethik bezüglich bildgenerierender KI in den letzten vier Jahren auf internationaler und nationaler Ebene entwickelt haben und welche Fachtermini aus der Thematik bildgenerierende KI in der vorliegenden Arbeit wie verwendet werden.
@@ -127,7 +140,7 @@ Die sieben Anforderungen lauten wie folgt:
 
 Seit April 2021 liegt ein Vorschlag der Europäischen Kommission vor, einheitliche Regeln für künstliche Intelligenz festzulegen, der einige Rechtssysteme in der Union ändern soll \cite{GesetzesentwurfEUComm}.
 
-Vor dem Hintergrund dieses Vorschlags haben die Regierungen einiger Länder, wie die der Bundesrepublik Deutschland, versucht unter Berücksichtigung der Studie des Deutschen Komitees für die UNESCO in \cite{UNESCO} zu prüfen, ob in Bezug auf die diesbezüglichen Empfehlungen der UNESCO weiterer Handlungsbedarf besteht \cite{Deutscher_Bundestag}.  
+Vor dem Hintergrund dieses Vorschlags haben die Regierungen einiger Länder, wie die der Bundesrepublik Deutschland, versucht unter Berücksichtigung der Studie des Deutschen Komitees für die UNESCO in \cite[UNESCO-Empfehlung zur Ethik Künstlicher Intelligenz. Bedingungen zur Implementierung in Deutschland]{Kettemann} zu prüfen, ob in Bezug auf die diesbezüglichen Empfehlungen der UNESCO weiterer Handlungsbedarf besteht \cite{Deutscher_Bundestag}.  
 %habe ich den Zitierzusammenhang mit dem Bundestag richtig verstanden oder ist das jetzt falsch so? -> ich denke das passt dann jetzt so
 
 
@@ -146,8 +159,6 @@ Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Ma
 optimalen Verhaltens automatisiert werden.
 \cite{serafeim}
 
-\include{StandForschung.tex}
-\include{Methodik.tex}
 
 \chapter{Durchführung}\label{execution}
 Verschiedene Formen der Voreingenommenheit von AI lassen sich durch unterschiedliche Methoden verhindern. Nachfolgend werden die Methoden erläutert, wobei sie in technische und nicht-technische unterteilt werden.
@@ -205,7 +216,7 @@ Um ein Modell ausreichend zu testen sollten einige Punkte berücksichtigt werden
 \end{itemize}
 
 
-\subsection{Abgrenzung des rechtlichen Rahmens durch AGBs}
+\subsection{Abgrenzung des rechtlichen Rahmens durch \ac{AGB}s}
 Eine Etablierung von allgemeinen Geschäftsbedingungen (AGBs) legt den rechtlichen Rahmen für die Nutzung von \ac{IGAI}s fest. Dadurch können sie dazu beitragen, den Missbrauch solcher Systeme einzudämmen. 
 Allerdings sind AGBs allein nicht hinreichend, um den Missbrauch von \ac{IGAI}s gänzlich zu verhindern, da sie keine aktive Nutzungsbeschränkung bieten. Wesentliche Aspekte könnten sein:
 \begin{itemize}
@@ -234,7 +245,7 @@ Laut \cite{WILSON2022101652} kann eine Förderung der öffentlichen Beteiligung 
 Potenzielle Voreingenommenheit, unbeabsichtigte Folgen oder aufkommende ethische Fragen können gemäß \cite{EUCommision} durch die Etablierung fortlaufender Überwachungs- und Evaluierungsprozesse zur Bewertung der ethischen Auswirkungen und Leistung von \ac{IGAI}-Systemen identifiziert werden. Dies bedeute konkret eine regelmäßige Erfassung und Analyse von Rückmeldungen von Nutzern, betroffenen Gemeinschaften und anderen Interessengruppen. Eine solche Feedbackschleife ermögliche es Organisationen, Bedenken proaktiv anzugehen, ihre Modelle zu überarbeiten und sicherzustellen, dass ethische Praktiken während des gesamten Lebenszyklus von \ac{IGAI}-Systemen eingehalten werden.
 
 \subsubsection{Nutzerfeedback}
-In \cite{Mittelstadt} wird argumentiert, dass Nutzerfeedback und -beteiligung zu mehreren ethischen Dimensionen von \ac{KI}-Algorithmen beitragen können, einschließlich Transparenz, Verantwortlichkeit und Fairness. Dieses Konzept könnte um folgende Aspekte erweitert werden:
+In \cite[The ethics of algorithms: Mapping the debate]{Mittelstadt} wird argumentiert, dass Nutzerfeedback und -beteiligung zu mehreren ethischen Dimensionen von \ac{KI}-Algorithmen beitragen können, einschließlich Transparenz, Verantwortlichkeit und Fairness. Dieses Konzept könnte um folgende Aspekte erweitert werden:
 
 %muss das Folgende nicht als Aufzähungsliste formatiert werden? -> ist jetzt ne aufzählung
 \begin{itemize}
@@ -280,7 +291,7 @@ Ein Machine-Learning-Algorithmus kann durch Anwendung von kontradiktorischem Ler
 Die Anwendungsphase ist der Zeitraum von der Fertigstellung einer \ac{IGAI} bis zu dem Zeitpunkt, an dem ihr Dienst eingestellt wird. In diesem Zeitraum wird die \ac{IGAI} von den Nutzern verwendet. Techniken in der Anwendungsphase nehmen keinen direkten Einfluss auf die Funktionsweise der \ac{IGAI} selbst. Die Techniken verändern die Rahmenbedingungen in denen die \ac{IGAI} verwendet wird.
 
 \subsubsection{Input-Filter}
-Die Entwickler von \ac{IGAI}s müssen davon ausgehen, dass Nutzer unethische Eingaben vornehmen. Damit ist der Input in Textform gemeint, den die \ac{IGAI} verwendet, um daraus Bilder zu generieren. Um zu verhindern, dass diese Eingaben vorgenommen werden, können die Entwickler Input-Filter verwenden. In \cite{Shah} wird eine \ac{KI} beschrieben, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von \ac{IGAI}s können anhand dieser Ergebnisse ihre eigene \ac{KI} entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese \ac{AI} können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur \ac{IGAI} gelangen.
+Die Entwickler von \ac{IGAI}s müssen davon ausgehen, dass Nutzer unethische Eingaben vornehmen. Damit ist der Input in Textform gemeint, den die \ac{IGAI} verwendet, um daraus Bilder zu generieren. Um zu verhindern, dass diese Eingaben vorgenommen werden, können die Entwickler Input-Filter verwenden. In \cite[Artificial Intelligence as a Service for Immoral ContentDetection and Eradication]{Shah} wird eine \ac{KI} beschrieben, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von \ac{IGAI}s können anhand dieser Ergebnisse ihre eigene \ac{KI} entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese \ac{AI} können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur \ac{IGAI} gelangen.
 
 \subsubsection{Output-Filter}
 Wenn eine \ac{IGAI} Bilder generiert, müssen Entwickler davon ausgehen, dass dabei unethische Bilder generiert werden können. Diese Bilder dürfen den Nutzer nicht erreichen. Um das zu verhindern können die Entwickler Output-Filter verwenden. Der Output ist das von der \ac{IGAI} generierte Bild. \cite{Zheng} beschreibt ein System, das aus zwei getrennten Filtern besteht: einem Filter für verbotene Symbole und einem für nicht jugendfreie Bilder. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Dies ermöglicht eine Filterung aller Inhalte, die einem Nutzer der \ac{KI} nicht ausgegeben werden sollen. Das beschriebene System ist laut \cite{Zheng} schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels ist anzunehmen, dass heutige Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln. Ein solches System kann von den Entwicklern verwendet werden, um den Output zu überwachen. Erkennt das System ein generiertes Bild als unethisch wird es nicht an den Nutzer ausgegeben. Außerdem können diese Ergebnisse auch zur Weiterentwicklung der \ac{IGAI} selbst verwendet werden.
@@ -294,6 +305,14 @@ Das Ziel der vorliegenden Arbeit besteht darin, die Frage zu beantworten, welche
 So kann diese Arbeit jedoch als Grundlage dienen, um einen Überblick über mögliche Methoden zu gewinnen, um darauf fußend ethisch korrekter handelnde \ac{KI} zu entwickeln.
 
 % Gefahr Achtung! Supervised Learning also überwachtes Lernen ist nicht selbst erdacht, ich hab nur die Quelle vergessen! -> habs zu übertragen geändert
+
+\chapter{KI-Werkzeuge zur Unterstützung des wissenschaftlichen Arbeitens}
+Für die Recherche wurden verschiedene KI-Werkzeuge verwendet, deren Nutzung im Folgenden eingeschätzt und die Nützlichkeit dessen diskutiert werden soll. 
+ChatGPT3 ist ein Sprachmodell und dient somit der Fomulierung sprachlich korrekter Texte, kann jedoch beispielsweise keine Paper zusammenfassen, sondern gibt nur anhand des Titels jeweils ähnlich klingende Zusammenfassungen, ohne sich dabei auf die tatsächlichen Inhalte des Papers berufen zu können. Somit eignet sich höchstens, um die betrachtete Disziplin erforschende Autoren zu finden und auf dieser Basis mit anderen Werkzeugen weiterzurecherchieren. Solche Unterstützung liefern allerdings auch wissenschaftlich
+etabliertere Webseiten wie WikiCFP. Zudem könnte ChatGPT3 von Wissenschaftlern, die in der Sprache, in der sie eine wissenschaftliche Arbeit schreiben, nicht ausreichend versiert sind, als Unterstützung bei der Formulierung eines wohlklingenden Texts verwendet werden.
+Neben dem reinen ChatGPT3 wurde Bing mit ChatGPT4 verwendet. Dies bietet gegenüber der oben beschriebenen Variante den Vorteil, dass Bing das Internet durchsucht und somit inhaltlich passendere Antworten liefern kann. Der Nachteil besteht darin, dass nur das Internet beipielsweise nach dem Papertitel und „summary“ durchsucht wird und eines der ersten Suchergebnisse in wohlformulierter Sprache widergegeben wird, weshalb auch hier keine wirklich brauchbaren Inhalte erzeugt werden.
+Generell muss die Benutzung eines Werkzeugs geübt werden, um die Möglichkeiten dessen in guter Qualität auszuschöpfen. Demzufolge  müsste länger und intensiver mit diesem Werkzeug gearbeitet werden, um eventuell nützlichere Ergebnisse zu erzielen als diese. Die oben genannte Einschätzung beruht nur auf einwöchige Nutzung ohne nennenswerte Vorkenntnisse und ist demnach nicht repräsentativ für das tatsächliche Potenzial der genutzten KI-Werkzeuge.
+Dasselbe gilt für Elicit. Dieses Werkzeug ist durch die Größe seiner Datenbank beschränkt, innerhalb dieser jedoch hilfreich, um einen Überblick über Werke zu erlangen, deren Autoren nicht auf den hiesigen Konferenzen vertreten und folglich mithilfe der klassischen Recherche über Konferenzen und deren Paper und Teilnehmer nicht auffindbar wären. Mithilfe geeigneter Fragen kann auch Zeit bei der Recherche gespart werden, indem die Zusammenfassung der ersten vier Paper genutzt wird. Diese sollte jedoch nicht nur, wenn die eigentlich intendierte Frage nicht direkt beantwortet wird, überprüft werden, da sie sehr kurz und nicht immer vollständig zutreffend ist.
 
 \bibliographystyle{ieeetr}
 \bibliography{Sources.bib}
