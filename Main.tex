@@ -25,6 +25,17 @@
 \date{21.05.2023}
 \author{Ronja Drechsler, \and Dominic Fitter, \and Michel Hecker, \and Khaldon Kassem, \and Phillip Eckstein}
 
+
+% Define "abrev" key:
+\glsaddkey*
+{abrev}% key
+{\glsentrytext{\glslabel}abrev}
+{\glsentryabrev}% command analogous to \glsentrytext
+{\Glsentryabrev}% command analogous to \Glsentrytext
+{\glsabrev}% command analogous to \glstext
+{\Glsabrev}% command analogous to \Glstext
+{\GLSabrev}% command analogous to \GLStext
+
 \makenoidxglossaries
 \newglossaryentry{ai}
 {
@@ -34,7 +45,8 @@
 
 \newglossaryentry{igai}
 {
-    name=igai,
+    name={image generatin atrificial intelligence},
+	abrev={igai},
     description={image generatin atrificial intelligence}
 }
 \newglossaryentry{gai}
@@ -62,7 +74,7 @@
 \newpage
 
 \begin{abstract}
-	Entwickler von \gls{igai} müssen sichergehen, dass ihre \Gls{igai} so wenig wie möglich unethischen Inhalt generiert.
+	Entwickler von \Gls{igai} müssen sichergehen, dass ihre \GLSabrev{igai} so wenig wie möglich unethischen Inhalt generiert.
 	Dieses Paper analysiert Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
 	Um die Methoden zusammenzustellen wurde zunächst Ethik definiert und anschließend eine Literaturübersicht erstellt. 
 	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von AI im Allgemeinen und Möglichkeiten Inhalte zu moderieren. 
