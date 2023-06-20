@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{acronym}
+\usepackage{glossaries}
 \usepackage[left = 3.5cm, right = 1.5cm]{geometry}
 
 \titleformat{\chapter}
@@ -25,21 +26,40 @@
 \date{21.05.2023}
 \author{Ronja Drechsler, \and Dominic Fitter, \and Michel Hecker, \and Khaldon Kassem, \and Phillip Eckstein}
 
+\makeglossary
+\newglossaryentry{ai}
+{
+    name=ai,
+    description={}
+}
+
+\newglossaryentry{igai}
+{
+    name=igai,
+    description={}
+}
+\newglossaryentry{gai}
+{
+    name=gai,
+    description={}
+}
+\newglossaryentry{tos}
+{
+    name=tos,
+    description={}
+}
+\newglossaryentry{bias}
+{
+    name=bias,
+    description={}
+}
+
 \begin{document}
 
 \maketitle
 \tableofcontents
 \newpage
-
-\section*{Abkürzungsverzeichnis}
-\begin{acronym}[Abkürzungsverzeichnis]
-	
-	\acro{KI}{Künstliche Intelligenz}
-	\acro{AI}{Artificial Intelligence}
-	\acro{IGAI}{image generating artifical intelligence}
-	\acro{GAI}{Generative artifical intelligence}
-	\acro{AGB}{Allgemeine Geschäftsbedingungen}
-\end{acronym}
+\printglossaries
 \newpage
 
 \begin{abstract}
