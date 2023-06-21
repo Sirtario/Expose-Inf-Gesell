@@ -39,20 +39,22 @@
 \makenoidxglossaries
 \newglossaryentry{ai}
 {
-    name=ai,
-    description={}
+    name={Atrificial Intelligence (AI)},
+	abrev={ai},
+    description={Atrificial Intelligence}
 }
 
 \newglossaryentry{igai}
 {
-    name={image generatin atrificial intelligence},
+	name={Image Generating Artificial Intelligence (IGAI)},
 	abrev={igai},
-    description={(IGAI) image generating ç}
+	description={Image Generating Artificial Intelligence}
 }
 \newglossaryentry{gai}
 {
-    name=gai,
-    description={generative artificial intelligence}
+    name={Generative Artificial Intelligence (GAI)},
+	abrev={gai},
+    description={Generative Artificial Intelligence}
 }
 \newglossaryentry{tos}
 {
@@ -79,16 +81,16 @@
 	Dieses Paper analysiert Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
 	Um die Methoden zusammenzustellen wurde zunächst Ethik definiert und anschließend eine Literaturübersicht erstellt. 
 	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von AI im Allgemeinen und Möglichkeiten Inhalte zu moderieren. 
-	Als Ergebniss stellt dieses Paper ein Liste an Methoden bereit, die Entwickler verwenden können, um ihre IGAI unter dem Aspekt der Ethik zu verbessern. 
-	Die Methoden können in verschiedenen Abschnitten der Entwicklung einer IGAI eingesetzt werden und haben unterschiedliche Komplexität. 
+	Als Ergebniss stellt dieses Paper ein Liste an Methoden bereit, die Entwickler verwenden können, um ihre \GLSabrev{igai} unter dem Aspekt der Ethik zu verbessern. 
+	Die Methoden können in verschiedenen Abschnitten der Entwicklung einer \GLSabrev{igai} eingesetzt werden und haben unterschiedliche Komplexität. 
 	Dieses Paper kann als Grundlage dienen, um ethisch korrekter handelnde AI zu entwickeln.
 \end{abstract}
 
 
 \chapter{Einleitung}
 Die Generierung von Bildern mithilfe von AI reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst in den letzten zwei Jahren wurden diese AIs durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser AIs zeigen jedoch auf, dass sie sexistische oder rassistische Verzerrungen aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
-Angesichts dessen haben u. a. die Entwickler von Midjourney reagiert und das Verwenden von Wörtern mit Bezug zur Thematik menschlicher Fortpflanzungssysteme verboten \cite{Heikkilae} und ihre kostenlose Testversion eingestellt \cite{NelsonMidjourney}. Daraus ergibt sich die Frage, welche Methodiken generell möglich sind bzw. angewandt werden, um die Erzeugung unethischer Inhalte durch IGAI zu verhindern.
-Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem sie zusammenträgt, welche Methoden in der Literatur beschrieben werden, um AIs vor Missbrauch zu schützen. Sie diskutiert, wie die Anbieter und Entwickler dieser Technologie verantwortungsbewusst handeln können, um sicherzustellen, dass ihre AIs nur für ethisch vertretbare Zwecke eingesetzt werden. Das Ziel besteht darin, aufzuzeigen wie IGAI-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden.
+Angesichts dessen haben u. a. die Entwickler von Midjourney reagiert und das Verwenden von Wörtern mit Bezug zur Thematik menschlicher Fortpflanzungssysteme verboten \cite{Heikkilae} und ihre kostenlose Testversion eingestellt \cite{NelsonMidjourney}. Daraus ergibt sich die Frage, welche Methodiken generell möglich sind bzw. angewandt werden, um die Erzeugung unethischer Inhalte durch \GLSabrev{igai} zu verhindern.
+Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem sie zusammenträgt, welche Methoden in der Literatur beschrieben werden, um AIs vor Missbrauch zu schützen. Sie diskutiert, wie die Anbieter und Entwickler dieser Technologie verantwortungsbewusst handeln können, um sicherzustellen, dass ihre AIs nur für ethisch vertretbare Zwecke eingesetzt werden. Das Ziel besteht darin, aufzuzeigen wie \GLSabrev{igai}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden.
 
 % Bitte bei allen Zitationen an Seitenzahlen denken, also z. B., auf welcher Seite Schmidt das sagt. -> Das sind hier alles nur Nachrichtenartikel, haben keine Seitenzahl
 
@@ -174,7 +176,7 @@ Vor dem Hintergrund dieses Vorschlags haben die Regierungen einiger Länder, wie
 
 
 \section{AI}\label{def_ki}
-Generative artifical intelligence (GAI) können neue Daten generieren, im Gegensatz zu vor deren Einführung entwickelten AIs (im Englischen AI), die nur Daten analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen wie der komplette Inhalt von Wikipedia zur Verfügung gestellt. Daher sind diese AIs erst mit steigender Rechenkapazität möglich geworden. GAIs modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können GAIs ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind image generating artifical intelligence (IGAI) oder auch text-to-image AIs, eine Unterkategorie von GAIs. Diese AIs können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
+Generative artifical intelligence (GAI) können neue Daten generieren, im Gegensatz zu vor deren Einführung entwickelten AIs (im Englischen AI), die nur Daten analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen wie der komplette Inhalt von Wikipedia zur Verfügung gestellt. Daher sind diese AIs erst mit steigender Rechenkapazität möglich geworden. GAIs modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können GAIs ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind \gls{igai} oder auch text-to-image AIs, eine Unterkategorie von GAIs. Diese AIs können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
 \cite{Roberto}
 
 %bitte hier nochmal über Konkretisierung von "steigender Rechenkapazität" nachdenken -> kommt so aus Quelle, laut Michel
