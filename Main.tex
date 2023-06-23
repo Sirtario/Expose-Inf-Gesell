@@ -88,7 +88,7 @@
 
 
 \chapter{Einleitung}
-Die Generierung von Bildern mithilfe von \GLSabrev{ai} reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst in den letzten zwei Jahren wurden diese \GLSabrev{ai}s durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser \GLSabrev{ai}s zeigen jedoch auf, dass sie sexistische oder rassistische Verzerrungen aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
+Die Generierung von Bildern mithilfe von \GLSabrev{ai} reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst in den letzten zwei Jahren wurden diese \GLSabrev{ai}s durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser \GLSabrev{ai}s zeigen jedoch auf, dass sie sexistische oder rassistische \Gls{bias} aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
 Angesichts dessen haben u. a. die Entwickler von Midjourney reagiert und das Verwenden von Wörtern mit Bezug zur Thematik menschlicher Fortpflanzungssysteme verboten \cite{Heikkilae} und ihre kostenlose Testversion eingestellt \cite{NelsonMidjourney}. Daraus ergibt sich die Frage, welche Methodiken generell möglich sind bzw. angewandt werden, um die Erzeugung unethischer Inhalte durch \GLSabrev{igai} zu verhindern.
 Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem sie zusammenträgt, welche Methoden in der Literatur beschrieben werden, um \GLSabrev{ai}s vor Missbrauch zu schützen. Sie diskutiert, wie die Anbieter und Entwickler dieser Technologie verantwortungsbewusst handeln können, um sicherzustellen, dass ihre \GLSabrev{ai}s nur für ethisch vertretbare Zwecke eingesetzt werden. Das Ziel besteht darin, aufzuzeigen wie \GLSabrev{igai}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden.
 
@@ -200,16 +200,16 @@ Verschiedene Formen der Voreingenommenheit von \GLSabrev{ai} lassen sich durch u
 Nicht-technische Methoden sind solche, die nicht primär auf technische Lösungen setzen.\\
 Die hiernach beschriebenen Methoden wurden, wenn keine andere Quelle zitiert wird, aus \cite{UNESCO} und \cite{EUCommision} abgeleitet. %bitte schauen, ob das mit dem Zitierstil so passt, ich will einfach nur, dass da so etwas wie "...aus [Fitter, 2022] und [Kassem, 2023] abgeleitet" steht. -> wird so schon passen
 
-\subsection{Datenverzerrungen im Trainingsdatensatz}
-Bereits bei der Zusammenstellung des Trainingsdatensatzes einer \GLSabrev{ai} kann es zu Verzerrungen kommen. Würde eine \GLSabrev{ai} durch einen so verzerrten Datensatz trainiert werden, könnte sich bei der Anwendung der \GLSabrev{ai} diese Verzerrung wiederspiegeln. Eine antrainierte Verzerrung lässt sich, wenn überhaupt, nur sehr aufwendig wieder korrigieren, es empfiehlt sich also, von vornherein einen geeigneten Datensatz zu verwenden.
+\subsection{Daten\gls{bias} im Trainingsdatensatz}
+Bereits bei der Zusammenstellung des Trainingsdatensatzes einer \GLSabrev{ai} kann es zu \Gls{bias}  kommen. Würde eine \GLSabrev{ai} durch einen so verzerrten Datensatz trainiert werden, könnte sich bei der Anwendung der \GLSabrev{ai} diese Verzerrung wiederspiegeln. Eine antrainierte Verzerrung lässt sich, wenn überhaupt, nur sehr aufwendig wieder korrigieren, es empfiehlt sich also, von vornherein einen geeigneten Datensatz zu verwenden.
 
-Dabei wird zwischen Stichprobenverzerrungen, Messwertverzerrungen, Kennzeichnungsverzerrungen oder Verzerrung durch Einseitigkeit unterschieden \cite[S. 48ff.]{Srinivasan}.
-Beispiele für Stichprobenverzerrungen können sein, dass zu wenig Daten in die Datensätze aufgenommen werden und diese keine realitätsnahe Darstellung ermöglichen.
+Dabei wird zwischen Stichproben\gls{bias}, Messwert\gls{bias}, Kennzeichnungs\gls{bias} oder \gls{bias} durch Einseitigkeit unterschieden \cite[S. 48ff.]{Srinivasan}.
+Beispiele für Stichproben\gls{bias} können sein, dass zu wenig Daten in die Datensätze aufgenommen werden und diese keine realitätsnahe Darstellung ermöglichen.
 Auch ist es möglich, dass die Daten systematisch einseitig sind. Ein Gesichtserkennungsmodell, das hauptsächlich an hellhäutigen Gesichtern trainiert wurde, kann z. B. bei dunkleren Hauttönen schlechter abschneiden oder bestimmte Gesichtsformen und -farben gar nicht als Gesichter erkennen.
-Zudem ist eine systematisch Messwertverzerrung möglich, etwa wenn Bilder, die mit einer nicht vollständig funktionstüchtigen Kamera aufgenommen worden, in die Trainingsdaten einbezogen werden.
+Zudem ist eine systematisch Messwert\gls{bias} möglich, etwa wenn Bilder, die mit einer nicht vollständig funktionstüchtigen Kamera aufgenommen worden, in die Trainingsdaten einbezogen werden.
 Es kann auch vorkommen, dass Daten falsch, überflüssig oder unzuverlässig gekennzeichnet werden. So ist die Unterscheidung zwischen \textit{Wiese} und \textit{Gras} selten nötig. Existieren allerdings beide Label im Trainingsdatensatz einer \GLSabrev{ai}, kann sich dies negativ auf die Genauigkeit des Modells auswirken, wenn bei der Beschriftung nicht konsequent beide Bezeichnungen unterschieden werden\cite[S. 48ff.]{Srinivasan}. 
 
-Eine Überwachungsinstanz in Form eines neutralen Beobachters oder Systems zuzüglich einer reflektierten Selbstkontrolle der Datensammler kann dabei helfen, solche Verzerrungen zu vermeiden.
+Eine Überwachungsinstanz in Form eines neutralen Beobachters oder Systems zuzüglich einer reflektierten Selbstkontrolle der Datensammler kann dabei helfen, solche \Gls{bias}  zu vermeiden.
 Bei dieser Überwachung sollten mindestens nachstehende Überlegungen Beachtung finden: %Haben wir uns die ausgedacht oder müssen wir sie zitieren? -> ausgedacht
 \begin{itemize}
 
@@ -220,8 +220,8 @@ Bei dieser Überwachung sollten mindestens nachstehende Überlegungen Beachtung 
 
 \end{itemize}
 
-\subsection{Verzerrungen in der Anforderungsformulierungen}
-Bei den Definitionen einer Aufgabenstellung und der Anforderungen an ein Modell kann es zu Verzerrungen kommen. Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung aus den Anforderungen oder durch die Art der verwendeten Daten entstehen.  \cite[S. 51f.]{Srinivasan} 
+\subsection{\Gls{bias}  in der Anforderungsformulierungen}
+Bei den Definitionen einer Aufgabenstellung und der Anforderungen an ein Modell kann es zu \Gls{bias}  kommen. Diese Verzerrung kann einerseits durch die Formulierung der Aufgabenstellung aus den Anforderungen oder durch die Art der verwendeten Daten entstehen.  \cite[S. 51f.]{Srinivasan} 
 
 Ein Problem bei der Formulierung der Anforderungen an einen Algorithmus kann beispielsweise darin bestehen, wenn Daten wie Geschlecht, Hautfarbe oder ethnische Zugehörigkeit in die Entscheidung einfließen, ob einer Person ein Kredit gewährt wird. Hierdurch können sexistische oder rassistische Diskriminierungen bei der Entscheidung stattfinden \cite[S. 51f.]{Srinivasan}.
 
@@ -231,8 +231,8 @@ Es empfiehlt sich das Einsetzten eines neutralen Beobachters, welcher die Anford
     \item Die Formulierung muss neutral gestaltet sein, sodass sich durch die Formulierung an sich keine Schlüsse ziehen lassen, die mit Voreingenommenheit einhergehen.
 \end{itemize}
 
-\subsection{Vermeidung von Verzerrungen bei der Modellbewertung}
-Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus Verzerrungen enthalten, kann es auch sein, dass die Evaluation des Modells Verzerrungen aufweist.
+\subsection{Vermeidung von \Gls{bias}  bei der Modellbewertung}
+Neben der Möglichkeit, dass die Trainingsdaten oder der Algorithmus \Gls{bias}  enthalten, kann es auch sein, dass die Evaluation des Modells \Gls{bias}  aufweist.
 Diese können durch menschliches Verhalten der Tester, oder durch schlecht entworfene Test-Frameworks auftreten \cite[S. 54f.]{Srinivasan}.
 
 Menschliche Bewerter eines Modells können auf verschiedene Arten unethisch handeln. Sie können durch eigene Einstellungen und Erfahrungen beeinflusst sein, auch unbeabsichtigt.
