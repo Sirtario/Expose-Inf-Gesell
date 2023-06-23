@@ -47,14 +47,14 @@
 
 \newglossaryentry{igai}
 {
-	name={Image Generating Artificial Intelligence (IGAI)},
+	name={Image Generating Artificial Intelligence},
 	abrev={igai},
 	description={Image Generating Artificial Intelligence zu Deutsch bildgenerierende künstliche Intelligenz. Im Kontext dieser Arbeit bezieht sich IGAI auf KI, welche Bilder aus Texteingaben generiert.},
 	see={ai}
 }
 \newglossaryentry{gai}
 {
-    name={Generative Artificial Intelligence (GAI)},
+    name={Generative Artificial Intelligence},
 	abrev={gai},
     description={Generative Artificial Intelligence, zu Deutsch Generative Künstliche Intelligenz bezeichnet KI, die alle möglichen kreativen Texte, Bilder, Videos, Audios, Codes oder synthetische Daten neu erstellt.},
 	see={ai}
@@ -80,7 +80,7 @@
 \newpage
 
 \begin{abstract}
-	Entwickler von \Gls{igai} müssen sichergehen, dass ihre \GLSabrev{igai} so wenig wie möglich unethischen Inhalt generiert.
+	Entwickler von \Gls{igai} (\GLSabrev{igai}) müssen sichergehen, dass ihre \GLSabrev{igai} so wenig wie möglich unethischen Inhalt generiert.
 	Dieses Paper analysiert Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
 	Um die Methoden zusammenzustellen wurde zunächst Ethik definiert und anschließend eine Literaturübersicht erstellt. 
 	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von \GLSabrev{ai} im Allgemeinen und Möglichkeiten Inhalte zu moderieren. 
@@ -98,13 +98,13 @@ Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem 
 % Bitte bei allen Zitationen an Seitenzahlen denken, also z. B., auf welcher Seite Schmidt das sagt. -> Das sind hier alles nur Nachrichtenartikel, haben keine Seitenzahl
 
 \chapter{Definitionen}
-Im Folgenden wird ein kurzer Abriss gegeben, wie sich der Begriff der Ethik bezüglich bildgenerierender \GLSabrev{ai} in den letzten vier Jahren auf internationaler und nationaler Ebene entwickelt haben und welche Fachtermini aus der Thematik bildgenerierende \GLSabrev{ai} in der vorliegenden Arbeit wie verwendet werden.
+Im Folgenden wird ein kurzer Abriss gegeben, wie sich der Begriff der Ethik bezüglich \Gls{igai} (\GLSabrev{igai}) in den letzten vier Jahren auf internationaler und nationaler Ebene entwickelt haben und welche Fachtermini aus der Thematik \GLSabrev{igai} in der vorliegenden Arbeit wie verwendet werden.
 \section{Ethik}\label{def_ai}
 
 \paragraph{UNESCO\cite{UNESCO}\\}
-Im November 2019 verabschiedete die Generalversammlung der Organisation der Vereinten Nationen für Bildung, Wissenschaft und Kultur (\textbf{UNESCO}) auf ihrer 40. Sitzung die 40 C/Resolution 37, durch die sie die Generaldirektorin beauftragte, \glqq ein international gültiges Instrument zur Festlegung von Standards in Bezug auf die Ethik der künstlichen Intelligenz (AI) in Form einer Empfehlung vorzubereiten\glqq{}.\\Im November 2021 wurde auf der 41. Sitzung der \textbf{UNESCO} diese Empfehlung von den Mitgliedstaaten als weltweit erste globale Norm für die Ethik der künstlichen Intelligenz angenommen.\\
+Im November 2019 verabschiedete die Generalversammlung der Organisation der Vereinten Nationen für Bildung, Wissenschaft und Kultur (\textbf{UNESCO}) auf ihrer 40. Sitzung die 40 C/Resolution 37, durch die sie die Generaldirektorin beauftragte, \glqq ein international gültiges Instrument zur Festlegung von Standards in Bezug auf die Ethik der \gls{ai} in Form einer Empfehlung vorzubereiten\glqq{}.\\Im November 2021 wurde auf der 41. Sitzung der \textbf{UNESCO} diese Empfehlung von den Mitgliedstaaten als weltweit erste globale Norm für die Ethik der \gls{ai} angenommen.\\
 
-Diese Empfehlungen basieren auf allgemeingültigen Werten und Grundsätzen wie der Achtung der Menschenrechte, der Grundfreiheiten und der Rechtsstaatlichkeit in der digitalen Welt ebenso wie in der realen Welt. Das soll die Mitgliedstaaten ermutigen, diese Empfehlung freiwillig bei der Nutzung künstlicher Intelligenz einzuhalten und auch als Umsetzung ihres nationales Rechts zu begreifen. Im Detail werden folgende Werte in der Empfehlung angewandt:
+Diese Empfehlungen basieren auf allgemeingültigen Werten und Grundsätzen wie der Achtung der Menschenrechte, der Grundfreiheiten und der Rechtsstaatlichkeit in der digitalen Welt ebenso wie in der realen Welt. Das soll die Mitgliedstaaten ermutigen, diese Empfehlung freiwillig bei der Nutzung \gls{ai} einzuhalten und auch als Umsetzung ihres nationales Rechts zu begreifen. Im Detail werden folgende Werte in der Empfehlung angewandt:
 %Zitation!
 
 \paragraph{Werte:}
@@ -172,15 +172,15 @@ Die sieben Anforderungen lauten wie folgt:
 	\item  Rechenschaftspflicht
 \end{enumerate}
 
-Seit April 2021 liegt ein Vorschlag der Europäischen Kommission vor, einheitliche Regeln für künstliche Intelligenz festzulegen, der einige Rechtssysteme in der Union ändern soll \cite{GesetzesentwurfEUComm}.
+Seit April 2021 liegt ein Vorschlag der Europäischen Kommission vor, einheitliche Regeln für \gls{ai} festzulegen, der einige Rechtssysteme in der Union ändern soll \cite{GesetzesentwurfEUComm}.
 
 Vor dem Hintergrund dieses Vorschlags haben die Regierungen einiger Länder, wie die der Bundesrepublik Deutschland, versucht unter Berücksichtigung der Studie des Deutschen Komitees für die UNESCO in \cite[UNESCO-Empfehlung zur Ethik Künstlicher Intelligenz. Bedingungen zur Implementierung in Deutschland]{Kettemann} zu prüfen, ob in Bezug auf die diesbezüglichen Empfehlungen der UNESCO weiterer Handlungsbedarf besteht \cite{Deutscher_Bundestag}.  
 Neben diesen Empfehlungen der Kommission der Europäischen Union gibt es von der Unesco definierte Empfehlungen \cite{UNESCO}. Diese werden in der vorliegenden Arbeit jedoch nicht betrachtet, und dies aus zwei Gründen: Einerseits überschneiden sich beide Empfehlungen, andererseits sind zwar beide nicht rechtlich bindend, die Empfehlungen der Kommission der Europäischen Union sollen jedoch im Gegensatz zu denen der UNESCO als Basis für ein für alle EU-Mitgliedsstaaten geltendes Gesetz dienen und kommen der rechtlichen Bindung damit am nächsten.
 
  
 
-\section{AI}\label{def_ki}
-\gls{gai} können neue Daten generieren, im Gegensatz zu vor deren Einführung entwickelten \GLSabrev{ai}s (im Englischen \GLSabrev{ai}), die nur Daten analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen wie der komplette Inhalt von Wikipedia zur Verfügung gestellt. Daher sind diese \GLSabrev{ai}s erst mit steigender Rechenkapazität möglich geworden. GAIs modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können GAIs ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind \gls{igai} oder auch text-to-image \GLSabrev{ai}s, eine Unterkategorie von GAIs. Diese \GLSabrev{ai}s können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
+\section{\GLSabrev{ai}}\label{def_ki}
+\gls{gai} (\GLSabrev{gai}) können neue Daten generieren, im Gegensatz zu vor deren Einführung entwickelten \GLSabrev{ai}s, die nur Daten analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen wie der komplette Inhalt von Wikipedia zur Verfügung gestellt. Daher sind diese \GLSabrev{ai}s erst mit steigender Rechenkapazität möglich geworden. \GLSabrev{gai}s modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können \GLSabrev{gai}s ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind \gls{igai} oder auch text-to-image \GLSabrev{ai}s, eine Unterkategorie von \GLSabrev{gai}s. Diese \GLSabrev{ai}s können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
 \cite{Roberto}
 
 %bitte hier nochmal über Konkretisierung von "steigender Rechenkapazität" nachdenken -> kommt so aus Quelle, laut Michel
@@ -269,13 +269,13 @@ Nutzerfeedback und Engagement beinhalten das aktive Einbeziehen von Nutzern wäh
 Durch eine aktive Zusammenarbeit mit externen Interessengruppen, Forschern und der breiteren Gemeinschaft können Organisationen tiefgründigere Erkenntnisse sammeln, Bedenken ansprechen und ihre Praktiken kontinuierlich verbessern. Dieser kollaborative Ansatz gewährleistet, dass die Entwicklung und Bereitstellung von  \GLSabrev{igai}-Technologien mit gesellschaftlichen Werten und ethischen Standards im Einklang stehen.\cite{EUCommision}\cite{UNESCO}
 
 \subsubsection{Partnerschaften über Sektorengrenzen hinweg}
-Zusammenarbeit und Partnerschaften mit anderen Institutionen einschließlich akademischen Forschern, gemeinnützigen Organisationen, Regierungsbehörden und Branchenkollegen ermöglichen eine breitere Perspektive und ein umfassenderes Verständnis der ethischen Implikationen der Bildgenerierung mittels \GLSabrev{ai}. Durch die Nutzung des gemeinsamen Fachwissens und der Ressourcen verschiedener Sektoren können Organisationen komplexe Herausforderungen angehen und einen ganzheitlicheren Ansatz für ethische \GLSabrev{ai} sicherstellen.\cite{Vogel}
+Zusammenarbeit und Partnerschaften mit anderen Institutionen einschließlich akademischen Forschern, gemeinnützigen Organisationen, Regierungsbehörden und Branchenkollegen ermöglichen eine breitere Perspektive und ein umfassenderes Verständnis der ethischen Implikationen der \GLSabrev{igai}. Durch die Nutzung des gemeinsamen Fachwissens und der Ressourcen verschiedener Sektoren können Organisationen komplexe Herausforderungen angehen und einen ganzheitlicheren Ansatz für ethische \GLSabrev{ai} sicherstellen.\cite{Vogel}
 
 \subsubsection{Partizipative Gestaltung}
 Indem die Endnutzer und Stakeholder in den Design- und Entwicklungsprozess von  \GLSabrev{igai} einbezogen werden, können die Entwickler nach \cite{Zytko} vielseitigere Einblicke gewinnen, spezifische Bedürfnisse identifizieren und Lösungen gemeinsam entwickeln, die den Werten der Nutzer und ethischen Standards entsprechen. Partizipative Designmethoden wie nutzerzentriertes Design und Co-Creation-Workshops fördern die Zusammenarbeit und Empathie und stellen sicher, dass \GLSabrev{ai}-Systeme unter Berücksichtigung der Nutzerinteressen gestaltet werden.
 
 \subsubsection{Öffentliche Beteiligung und Bewusstseinsbildung}
-Laut \cite{WILSON2022101652} kann eine Förderung der öffentlichen Beteiligung an und Bewusstseinsbildung zu ethischen Aspekten bei der Anwendung von \GLSabrev{ai} dienlich sein, um eine breitere Palette von Interessengruppen in den Dialog über die Ethik von Bildgenerierung durch \GLSabrev{ai} einzubeziehen. Im Detail werden öffentliche Konsultationen, Workshops und öffentliche Debatten über die ethischen Implikationen von \GLSabrev{ai}-Technologien empfohlen. Solche Initiativen schaffen \cite{WILSON2022101652} zufolge Raum für Diskussionen, fördern diverse Perspektiven und befähigen Einzelpersonen, zur Entwicklung ethischer Leitlinien und Richtlinien beizutragen.
+Laut \cite{WILSON2022101652} kann eine Förderung der öffentlichen Beteiligung an und Bewusstseinsbildung zu ethischen Aspekten bei der Anwendung von \GLSabrev{ai} dienlich sein, um eine breitere Palette von Interessengruppen in den Dialog über die Ethik von \GLSabrev{igai} einzubeziehen. Im Detail werden öffentliche Konsultationen, Workshops und öffentliche Debatten über die ethischen Implikationen von \GLSabrev{ai}-Technologien empfohlen. Solche Initiativen schaffen \cite{WILSON2022101652} zufolge Raum für Diskussionen, fördern diverse Perspektiven und befähigen Einzelpersonen, zur Entwicklung ethischer Leitlinien und Richtlinien beizutragen.
 
 \subsubsection{Kontinuierliche Überwachung und Evaluation}
 Potenzielle Voreingenommenheit, unbeabsichtigte Folgen oder aufkommende ethische Fragen können gemäß \cite{EUCommision} durch die Etablierung fortlaufender Überwachungs- und Evaluierungsprozesse zur Bewertung der ethischen Auswirkungen und Leistung von \GLSabrev{igai}-Systemen identifiziert werden. Dies bedeute konkret eine regelmäßige Erfassung und Analyse von Rückmeldungen von Nutzern, betroffenen Gemeinschaften und anderen Interessengruppen. Eine solche Feedbackschleife ermögliche es Organisationen, Bedenken proaktiv anzugehen, ihre Modelle zu überarbeiten und sicherzustellen, dass ethische Praktiken während des gesamten Lebenszyklus von \GLSabrev{igai}-Systemen eingehalten werden.
