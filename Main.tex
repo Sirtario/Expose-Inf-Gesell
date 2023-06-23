@@ -46,57 +46,27 @@
 \begin{abstract}
 	Entwickler von image generating artificial intelligence (IGAI) müssen sichergehen, dass ihre IGAI so wenig wie möglich unethischen Inhalt generiert.
 	Dieses Paper analysiert Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
-	Um die Methoden zusammenzustellen wurde zunächst Ethik definiert und anschließend eine Literaturübersicht erstellt. 
-	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von AI im Allgemeinen und Möglichkeiten Inhalte zu moderieren. 
-	Als Ergebniss stellt dieses Paper ein Liste an Methoden bereit, die Entwickler verwenden können, um ihre IGAI unter dem Aspekt der Ethik zu verbessern. 
+	Um die Methoden zusammenzustellen, wurde zunächst auf ethische Vorgaben zu KI eingegangen und anschließend eine Literaturübersicht erstellt. 
+	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von AI allgemein und Möglichkeiten, Inhalte zu moderieren. 
+	Als Ergebnis stellt dieses Paper ein Liste an Methoden bereit, die Entwickler verwenden können, um ihre IGAI bezüglich ethischer Aspekte zu verbessern. 
 	Die Methoden können in verschiedenen Abschnitten der Entwicklung einer IGAI eingesetzt werden und haben unterschiedliche Komplexität. 
 	Dieses Paper kann als Grundlage dienen, um ethisch korrekter handelnde KI zu entwickeln.
 \end{abstract}
 
 
 \chapter{Einleitung}
-Die Generierung von Bildern mithilfe von KI reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst in den letzten zwei Jahren wurden diese KIs durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser KIs zeigen jedoch auf, dass sie sexistische oder rassistische Verzerrungen aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
-Angesichts dessen haben u. a. die Entwickler von Midjourney reagiert und das Verwenden von Wörtern mit Bezug zur Thematik menschlicher Fortpflanzungssysteme verboten \cite{Heikkilae} und ihre kostenlose Testversion eingestellt \cite{NelsonMidjourney}. Daraus ergibt sich die Frage, welche Methodiken generell möglich sind bzw. angewandt werden, um die Erzeugung unethischer Inhalte durch \ac{IGAI} zu verhindern.
+Die Generierung von Bildern mithilfe von KI reicht zurück bis in die 1960er Jahre\cite{Garcia}, doch erst seit 2021 werden solche KIs durch die Veröffentlichungen von Projekten wie DALL-E (01/21), Midjourney (03/22) oder Stable Diffusion (08/22) der Allgemeinheit zugänglich gemacht. Auslotungen der Leistungsfähigkeit dieser KIs zeigen jedoch auf, dass sie sexistische oder rassistische Verzerrungen aufweisen \cite{Schmidt} und für unethische Zwecke missbraucht werden können, z. B. zur Erstellung von Deepfakes, pornografischen oder gewalttätigen Inhalten \cite{Hadero}.
+Angesichts dessen haben u. a. die Entwickler von Midjourney reagiert und das Verwenden von Wörtern mit Bezug zu Geschlechtsorganen und Fortpflanzung verboten \cite{Heikkilae} und ihre kostenlose Testversion eingestellt \cite{NelsonMidjourney}. Daraus ergibt sich die Frage, welche Methodiken theoretisch möglich sind bzw. angewandt werden, um die Erzeugung unethischer Inhalte durch \ac{IGAI} zu verhindern.
 Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem sie zusammenträgt, welche Methoden in der Literatur beschrieben werden, um KIs vor Missbrauch zu schützen. Sie diskutiert, wie die Anbieter und Entwickler dieser Technologie verantwortungsbewusst handeln können, um sicherzustellen, dass ihre KIs nur für ethisch vertretbare Zwecke eingesetzt werden. Das Ziel besteht darin, aufzuzeigen wie \ac{IGAI}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden.
 
 % Bitte bei allen Zitationen an Seitenzahlen denken, also z. B., auf welcher Seite Schmidt das sagt. -> Das sind hier alles nur Nachrichtenartikel, haben keine Seitenzahl
 
-\chapter{Definitionen}
-Im Folgenden wird ein kurzer Abriss gegeben, wie sich der Begriff der Ethik bezüglich bildgenerierender KI in den letzten vier Jahren auf internationaler und nationaler Ebene entwickelt haben und welche Fachtermini aus der Thematik bildgenerierende KI in der vorliegenden Arbeit wie verwendet werden.
+\chapter{Theoretische Grundlagen}
+Im Folgenden wird ein kurzer Abriss gegeben, welche internationale Vorgaben zu ethischen Aspekten von KI in dieser Arbeit angewandt werden, um zu definieren, was "Ethik" in Bezug auf KI bedeutet, und welche Fachtermini aus der Thematik bildgenerierende KI in der vorliegenden Arbeit wie verwendet werden.
 \section{Ethik}\label{def_ai}
 
-\paragraph{UNESCO\cite{UNESCO}\\}
-Im November 2019 verabschiedete die Generalversammlung der Organisation der Vereinten Nationen für Bildung, Wissenschaft und Kultur (\textbf{UNESCO}) auf ihrer 40. Sitzung die 40 C/Resolution 37, durch die sie die Generaldirektorin beauftragte, \glqq ein international gültiges Instrument zur Festlegung von Standards in Bezug auf die Ethik der künstlichen Intelligenz (KI) in Form einer Empfehlung vorzubereiten\glqq{}.\\Im November 2021 wurde auf der 41. Sitzung der \textbf{UNESCO} diese Empfehlung von den Mitgliedstaaten als weltweit erste globale Norm für die Ethik der künstlichen Intelligenz angenommen.\\
-
-Diese Empfehlungen basieren auf allgemeingültigen Werten und Grundsätzen wie der Achtung der Menschenrechte, der Grundfreiheiten und der Rechtsstaatlichkeit in der digitalen Welt ebenso wie in der realen Welt. Das soll die Mitgliedstaaten ermutigen, diese Empfehlung freiwillig bei der Nutzung künstlicher Intelligenz einzuhalten und auch als Umsetzung ihres nationales Rechts zu begreifen. Im Detail werden folgende Werte in der Empfehlung angewandt:
-%Zitation!
-
-\paragraph{Werte:}
-\begin{itemize}
-	\item Respect, protection and promotion of human rights and fundamental freedoms and human dignity
-	\item Environment and ecosystem flourishing
-	\item Ensuring diversity and inclusiveness
-	\item Living in peaceful, just and interconnected societies
-\end{itemize}
-
-Außerdem spiegeln sich diese Grundsätze wider:
-
-\paragraph{Grundsätze:}
-\begin{itemize}
-	\item  Proportionality and Do No Harm
-	\item  Safety and security
-	\item  Fairness and non-discrimination
-	\item  Sustainability
-	\item  Right to Privacy, and Data Protection
-	\item  Human oversight and determination
-	\item  Transparency and explainability
-	\item  Responsibility and accountability
-	\item  Awareness and literacy
-	\item  Multi-stakeholder and adaptive governance and collaboration
-\end{itemize}
 \paragraph{EU\cite{EUCommision}\\}
-Im April 2019 veröffentlichte die Kommission der Europäischen Union \cite{EUCommision}.
-% Bitte "(\textbf{EU}) \glqq ETHIK-LEITLINIEN FÜR EINE VERTRAUENSWÜRDIGE KI\glqq{}.\\" vollständig durch korrekte Zitation ersetzen, also so ähnlich wie "Im April 2019 veröffentlichte die Kommission der Europäischen Union [Kommission der Europäischen Union, 2019]". -> Hoffe das passt jetzt so
+Im April 2019 veröffentlichte die Kommission der Europäischen Union Empfehlungen zur Umsetzung ethischer KI \cite{EUCommision}.
 Demnach muss eine KI während ihres gesamten Lebenszyklus drei Komponenten erfüllen, um vertrauenswürdig zu sein: Sie muss a) rechtmäßig, b) ethisch und c) robust sein. Diese Komponenten bedienen die nachstehenden Grundsätze und Werte und geben ihre Umsetzung bei der Entwicklung, Einführung und Verwendung von KI-Systemen vor:
 
 \paragraph{Werte:}
@@ -139,8 +109,9 @@ Die sieben Anforderungen lauten wie folgt:
 Seit April 2021 liegt ein Vorschlag der Europäischen Kommission vor, einheitliche Regeln für künstliche Intelligenz festzulegen, der einige Rechtssysteme in der Union ändern soll \cite{GesetzesentwurfEUComm}.
 
 Vor dem Hintergrund dieses Vorschlags haben die Regierungen einiger Länder, wie die der Bundesrepublik Deutschland, versucht unter Berücksichtigung der Studie des Deutschen Komitees für die UNESCO in \cite[UNESCO-Empfehlung zur Ethik Künstlicher Intelligenz. Bedingungen zur Implementierung in Deutschland]{Kettemann} zu prüfen, ob in Bezug auf die diesbezüglichen Empfehlungen der UNESCO weiterer Handlungsbedarf besteht \cite{Deutscher_Bundestag}.  
-%habe ich den Zitierzusammenhang mit dem Bundestag richtig verstanden oder ist das jetzt falsch so? -> ich denke das passt dann jetzt so
+Neben diesen Empfehlungen der Kommission der Europäischen Union gibt es von der Unesco definierte Empfehlungen \cite{UNESCO}. Diese werden in der vorliegenden Arbeit jedoch nicht betrachtet, und dies aus zwei Gründen: Einerseits überschneiden sich beide Empfehlungen, andererseits sind zwar beide nicht rechtlich bindend, die Empfehlungen der Kommission der Europäischen Union sollen jedoch im Gegensatz zu denen der UNESCO als Basis für ein für alle EU-Mitgliedsstaaten geltendes Gesetz dienen und kommen der rechtlichen Bindung damit am nächsten.
 
+ 
 
 \section{KI}\label{def_ki}
 Generative artifical intelligence (GAI) können neue Daten generieren, im Gegensatz zu vor deren Einführung entwickelten \ac{KI}s (im Englischen \ac{AI}), die nur Daten analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen wie der komplette Inhalt von Wikipedia zur Verfügung gestellt. Daher sind diese \ac{AI}s erst mit steigender Rechenkapazität möglich geworden. \ac{GAI}s modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können \ac{GAI}s ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind image generating artifical intelligence (IGAI) oder auch text-to-image \ac{AI}s, eine Unterkategorie von \ac{GAI}s. Diese \ac{AI}s können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
@@ -153,14 +124,13 @@ Generative artifical intelligence (GAI) können neue Daten generieren, im Gegens
 Um \ac{GAI}s zu trainieren, werden drei Arten von Machine Learning verwendet: überwachtes Lernen, unüberwachtes Lernen und verstärktes Lernen. 
 Beim überwachten Lernen werden gekennzeichnete Datensätze verwendet, um Vorhersagen zu treffen. Die gekennzeichneten Daten werden als Trainingsdaten verwendet und nach dem Ausführen des Algorithmus wird überprüft, ob die getroffene Vorhersage der Kennzeichnung entspricht.
 Beim unüberwachten Lernen wird dem Algorithmus nicht gekennzeichnete Daten zugeführt. Hierbei wird nicht versucht eine Vorhersage zu treffen, sondern Schlussfolgerungen oder Zusammenhänge zwischen den Daten zu finden.
-Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des 
-optimalen Verhaltens automatisiert werden.
+Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des optimalen Verhaltens automatisiert werden.
 \cite{serafeim}
 
 \include{StandForschung.tex}
 \include{Methodik.tex}
 
-\chapter{Durchführung}\label{execution}
+\chapter{Durchführung und Ergebnisse}\label{execution}
 Verschiedene Formen der Voreingenommenheit von AI lassen sich durch unterschiedliche Methoden verhindern. Nachfolgend werden die Methoden erläutert, wobei sie in technische und nicht-technische unterteilt werden.
 
 \section{Nicht-Technische Methoden}
@@ -294,17 +264,15 @@ Die Anwendungsphase ist der Zeitraum von der Fertigstellung einer \ac{IGAI} bis 
 Die Entwickler von \ac{IGAI}s müssen davon ausgehen, dass Nutzer unethische Eingaben vornehmen. Damit ist der Input in Textform gemeint, den die \ac{IGAI} verwendet, um daraus Bilder zu generieren. Um zu verhindern, dass diese Eingaben vorgenommen werden, können die Entwickler Input-Filter verwenden. In \cite[Artificial Intelligence as a Service for Immoral ContentDetection and Eradication]{Shah} wird eine \ac{KI} beschrieben, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von \ac{IGAI}s können anhand dieser Ergebnisse ihre eigene \ac{KI} entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese \ac{AI} können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur \ac{IGAI} gelangen.
 
 \subsubsection{Output-Filter}
-Wenn eine \ac{IGAI} Bilder generiert, müssen Entwickler davon ausgehen, dass dabei unethische Bilder generiert werden können. Diese Bilder dürfen den Nutzer nicht erreichen. Um das zu verhindern können die Entwickler Output-Filter verwenden. Der Output ist das von der \ac{IGAI} generierte Bild. \cite{Zheng} beschreibt ein System, das aus zwei getrennten Filtern besteht: einem Filter für verbotene Symbole und einem für nicht jugendfreie Bilder. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Dies ermöglicht eine Filterung aller Inhalte, die einem Nutzer der \ac{KI} nicht ausgegeben werden sollen. Das beschriebene System ist laut \cite{Zheng} schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels ist anzunehmen, dass heutige Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln. Ein solches System kann von den Entwicklern verwendet werden, um den Output zu überwachen. Erkennt das System ein generiertes Bild als unethisch wird es nicht an den Nutzer ausgegeben. Außerdem können diese Ergebnisse auch zur Weiterentwicklung der \ac{IGAI} selbst verwendet werden.
+Wenn eine \ac{IGAI} Bilder generiert, müssen Entwickler davon ausgehen, dass dabei unethische Bilder generiert werden können. Diese Bilder dürfen den Nutzer nicht erreichen. Um das zu verhindern können die Entwickler Output-Filter verwenden. Der Output ist das von der \ac{IGAI} generierte Bild. In \cite{Zheng} wird ein System beschrieben, das aus zwei getrennten Filtern besteht: einem Filter für verbotene Symbole und einem für nicht jugendfreie Bilder. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Dies ermöglicht eine Filterung aller Inhalte, die einem Nutzer der \ac{KI} nicht ausgegeben werden sollen. Das beschriebene System ist laut \cite{Zheng} schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels ist anzunehmen, dass heutige Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln. Ein solches System kann von den Entwicklern verwendet werden, um den Output zu überwachen. Erkennt das System ein generiertes Bild als unethisch wird es nicht an den Nutzer ausgegeben. Außerdem können diese Ergebnisse auch zur Weiterentwicklung der \ac{IGAI} selbst verwendet werden.
 
 \subsubsection{Anwendungsbeschränkung} %Haben wir uns das selbst ausgedacht oder ist das alles von Jang? Ich habe es mal so geschrieben, als käme alles von Jang, wenn nicht, bitte wieder zurückändern. -> Eigenes Beipspiel anhand von Jang, brauch also keine Quelle
-Anwendungsbeschränkung bedeutet, dass Entwickler die Art und Weise wie Nutzer mit der \ac{IGAI} interagieren einschränken. In dieser Methode soll es um eine Beschränkung der Anwendungsfrequenz gehen, wie sie \cite{Jang} beschreibt. Als Beispiel dient hierbei das Credit-System von DALL E2 von OpenAI. Bei diesem System werden Credits benötigt, um mittels der \ac{IGAI} ein Bild zu generieren. Credits sind käuflich oder werden gestatten, wenn man sich in einem bestimmten Zeitraum nach Veröffentlichung von DALL E2 angemeldet hat. Wenn die \ac{IGAI} ein Bild generiert, wird ein Credit verbraucht. Hat ein Nutzer keine Credits mehr, kann er keine Bilder mehr generieren. Dadurch wird eine initiale Barriere geschaffen, da Nutzer Credits kaufen müssen, um Bilder zu generieren. Nutzer, die auf die Generierung von unethischen Bildern abzielen, können damit abgeschreckt werden. Durch Anzahl der Credits kann zusätzlich beschränkt werden wie viele Bilder generiert werden können. Entwickler können dieses Credit-System nach ihrem Bedarf anpassen.
+Anwendungsbeschränkung bedeutet, dass Entwickler die Art und Weise wie Nutzer mit der \ac{IGAI} interagieren einschränken. In dieser Methode soll es um eine Beschränkung der Anwendungsfrequenz wie in \cite{Jang} gehen. Als Beispiel dient hierbei das Credit-System von DALL E2 von OpenAI. Bei diesem System werden Credits benötigt, um mittels der \ac{IGAI} ein Bild zu generieren. Credits sind käuflich oder werden gestatten, wenn man sich in einem bestimmten Zeitraum nach Veröffentlichung von DALL E2 angemeldet hat. Wenn die \ac{IGAI} ein Bild generiert, wird ein Credit verbraucht. Hat ein Nutzer keine Credits mehr, kann er keine Bilder mehr generieren. Dadurch wird eine initiale Barriere geschaffen, da Nutzer Credits kaufen müssen, um Bilder zu generieren. Nutzer, die auf die Generierung von unethischen Bildern abzielen, können damit abgeschreckt werden. Durch Anzahl der Credits kann zusätzlich beschränkt werden wie viele Bilder generiert werden können. Entwickler können dieses Credit-System nach ihrem Bedarf anpassen.
 
 
 \chapter{Fazit}
-Das Ziel der vorliegenden Arbeit besteht darin, die Frage zu beantworten, welche Methoden es aktuell gibt, mit denen \ac{IGAI}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden. Diese Frage konnte durch die detaillierte Auflistung und Erklärung der Methoden in Kapitel \nameref{execution} beantwortet werden. Die gewählte Methode, ausschließlich einen Überblick über die in der Literatur beschriebenen Methoden auszuführen, kann jedoch nicht zeigen, welche Methoden tatsächlich wie angewandt werden und ihren Zweck inwiefern erfüllen. Von den Autoren der vorliegenden Arbeit selbst übertragene Methoden wie die Verwendung von überwachtem Lernen in Kapitel \nameref{Supervised Learning} konnten nicht auf ihre tatsächliche Anwendbarkeit überprüft werden, da dies den Rahmen der vorliegenden Arbeit sprengen würde. Es würde sich im Anschluss an die vorliegende Arbeit also anbieten, experimentell die tatsächliche Umsetzung der genannten Methoden an verschiedenen \ac{IGAI}s zu überprüfen bzw. auch experimentell zu untersuchen, inwiefern die skizzierten im Rahmen der vorliegenden Arbeit erdachten Methoden tatsächlich anwendbar und dienlich sind.
+Das Ziel der vorliegenden Arbeit besteht darin, die Frage zu beantworten, welche Methoden es aktuell gibt, mit denen \ac{IGAI}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden. Diese Frage konnte durch die detaillierte Auflistung und Erklärung der Methoden in Kapitel \nameref{execution} beantwortet werden. Die gewählte Methode, ausschließlich einen Überblick über die in der Literatur beschriebenen Methoden auszuführen, kann jedoch nicht zeigen, welche Methoden tatsächlich wie angewandt werden und ihren Zweck inwiefern erfüllen. Von den Autoren der vorliegenden Arbeit selbst übertragene Methoden wie die Verwendung von überwachtem Lernen in Kapitel \nameref{Supervised Learning} konnten nicht auf ihre tatsächliche Anwendbarkeit überprüft werden, da das den Rahmen der vorliegenden Arbeit sprengen würde. Es würde sich im Anschluss an die vorliegende Arbeit also anbieten, experimentell die tatsächliche Umsetzung der genannten Methoden an verschiedenen \ac{IGAI}s zu überprüfen bzw. auch experimentell zu untersuchen, inwiefern die skizzierten im Rahmen der vorliegenden Arbeit erdachten Methoden tatsächlich anwendbar und dienlich sind.
 So kann diese Arbeit jedoch als Grundlage dienen, um einen Überblick über mögliche Methoden zu gewinnen, um darauf fußend ethisch korrekter handelnde \ac{KI} zu entwickeln.
-
-% Gefahr Achtung! Supervised Learning also überwachtes Lernen ist nicht selbst erdacht, ich hab nur die Quelle vergessen! -> habs zu übertragen geändert
 
 \chapter{KI-Werkzeuge zur Unterstützung des wissenschaftlichen Arbeitens}
 Für die Recherche wurden verschiedene KI-Werkzeuge verwendet, deren Nutzung im Folgenden eingeschätzt und die Nützlichkeit dessen diskutiert werden soll. 
