@@ -81,11 +81,11 @@
 
 \begin{abstract}
 	Entwickler von \Gls{igai} (\GLSabrev{igai}) müssen sichergehen, dass ihre \GLSabrev{igai} so wenig wie möglich unethischen Inhalt generiert.
-	Dieses Paper analysiert Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
+	Dieses Paper ermittelt Methoden, die Entwickler verwenden können, um dieses Ziel zu erreichen. 
 	Um die Methoden zusammenzustellen, wurde zunächst auf ethische Vorgaben zu \GLSabrev{ai} eingegangen und anschließend eine Literaturübersicht erstellt. 
-	Fokus der Literaturübersicht war Trainingsmethoden und Möglichkeiten zur Verbesserung von \GLSabrev{ai} allgemein und Möglichkeiten, Inhalte zu moderieren. 
+	Bei der Literaturübersicht lag der Fokus auf der Ermittlung von Trainingsmethoden, Möglichkeiten zur Verbesserung von \GLSabrev{ai} im Allgemeinen und Möglichkeiten Inhalte zu moderieren. 
 	Als Ergebnis stellt dieses Paper ein Liste an Methoden bereit, die Entwickler verwenden können, um ihre \GLSabrev{igai} bezüglich ethischer Aspekte zu verbessern. 
-	Die Methoden können in verschiedenen Abschnitten der Entwicklung einer \GLSabrev{igai} eingesetzt werden und haben unterschiedliche Komplexität. 
+	Die Methoden können in verschiedenen Phasen, in denen mit \GLSabrev{igai}s interagiert wird, eingesetzt werden und haben unterschiedliche Komplexität. 
 	Dieses Paper kann als Grundlage dienen, um ethisch korrekter handelnde \GLSabrev{ai} zu entwickeln.
 \end{abstract}
 
@@ -98,10 +98,9 @@ Die vorliegende Arbeit setzt sich mit dieser Forschungsfrage auseinander, indem 
 % Bitte bei allen Zitationen an Seitenzahlen denken, also z. B., auf welcher Seite Schmidt das sagt. -> Das sind hier alles nur Nachrichtenartikel, haben keine Seitenzahl
 
 \chapter{Theoretische Grundlagen}
-Im Folgenden wird ein kurzer Abriss gegeben, welche internationale Vorgaben zu ethischen Aspekten von \GLSabrev{ai} in dieser Arbeit angewandt werden, um zu definieren, was "Ethik" in Bezug auf \GLSabrev{ai} bedeutet, und welche Fachtermini aus der Thematik \gls{igai} in der vorliegenden Arbeit wie verwendet werden.
-\section{Ethik}\label{def_ai}
+Im Folgenden wird ein kurzer Abriss gegeben, welche internationale Vorgaben zu ethischen Aspekten von \GLSabrev{ai} in dieser Arbeit angewandt werden, um zu definieren, was Ethik in Bezug auf \GLSabrev{ai} bedeutet, und welche Fachtermini aus der Thematik \gls{igai} in der vorliegenden Arbeit wie verwendet werden.
+\section{Ethische Anforderungen an \Gls{ai}}\label{def_ai}
 
-\paragraph{EU\cite{EUCommision}\\}
 Im April 2019 veröffentlichte die Kommission der Europäischen Union Empfehlungen zur Umsetzung ethischer \GLSabrev{ai} \cite{EUCommision}.
 Demnach muss eine \GLSabrev{ai} während ihres gesamten Lebenszyklus drei Komponenten erfüllen, um vertrauenswürdig zu sein: Sie muss a) rechtmäßig, b) ethisch und c) robust sein. Diese Komponenten bedienen die nachstehenden Grundsätze und Werte und geben ihre Umsetzung bei der Entwicklung, Einführung und Verwendung von \GLSabrev{ai}-Systemen vor:
 
@@ -145,9 +144,8 @@ Die sieben Anforderungen lauten wie folgt:
 Seit April 2021 liegt ein Vorschlag der Europäischen Kommission vor, einheitliche Regeln für \gls{ai} festzulegen, der einige Rechtssysteme in der Union ändern soll \cite{GesetzesentwurfEUComm}.
 
 Vor dem Hintergrund dieses Vorschlags haben die Regierungen einiger Länder, wie die der Bundesrepublik Deutschland, versucht unter Berücksichtigung der Studie des Deutschen Komitees für die UNESCO in \cite[UNESCO-Empfehlung zur Ethik Künstlicher Intelligenz. Bedingungen zur Implementierung in Deutschland]{Kettemann} zu prüfen, ob in Bezug auf die diesbezüglichen Empfehlungen der UNESCO weiterer Handlungsbedarf besteht \cite{Deutscher_Bundestag}.  
-Neben diesen Empfehlungen der Kommission der Europäischen Union gibt es von der Unesco definierte Empfehlungen \cite{UNESCO}. Diese werden in der vorliegenden Arbeit jedoch nicht betrachtet, und dies aus zwei Gründen: Einerseits überschneiden sich beide Empfehlungen, andererseits sind zwar beide nicht rechtlich bindend, die Empfehlungen der Kommission der Europäischen Union sollen jedoch im Gegensatz zu denen der UNESCO als Basis für ein für alle EU-Mitgliedsstaaten geltendes Gesetz dienen und kommen der rechtlichen Bindung damit am nächsten.
+%habe ich den Zitierzusammenhang mit dem Bundestag richtig verstanden oder ist das jetzt falsch so? -> ich denke das passt dann jetzt so
 
- 
 
 \section{\GLSabrev{ai}}\label{def_ki}
 \gls{gai} (\GLSabrev{gai}) können neue Daten generieren, im Gegensatz zu vor deren Einführung entwickelten \GLSabrev{ai}s, die nur Daten analysieren oder basierend auf gegebenen Daten zu handeln. Außerdem werden ihnen zum Trainieren enorme Datenmengen wie der komplette Inhalt von Wikipedia zur Verfügung gestellt. Daher sind diese \GLSabrev{ai}s erst mit steigender Rechenkapazität möglich geworden. \GLSabrev{gai}s modellieren Netze aus miteinander verbundenen Daten in verschiedenen multimedialen Formaten. Demnach bestünden beispielsweise Verbindungen zwischen dem Wort Panda, ein Bild von einem Panda und einem Video von einem Panda. Dadurch können \GLSabrev{gai}s ein beliebiges Eingabeformat in ein beliebiges Ausgabeformat übersetzen. Thema dieser Arbeit sind \gls{igai} oder auch text-to-image \GLSabrev{ai}s, eine Unterkategorie von \GLSabrev{gai}s. Diese \GLSabrev{ai}s können nach Eingabe von natürlichsprachlichem Text Bilder erzeugen.
@@ -160,7 +158,8 @@ Neben diesen Empfehlungen der Kommission der Europäischen Union gibt es von der
 Um  \GLSabrev{gai}s zu trainieren, werden drei Arten von Machine Learning verwendet: überwachtes Lernen, unüberwachtes Lernen und verstärktes Lernen. 
 Beim überwachten Lernen werden gekennzeichnete Datensätze verwendet, um Vorhersagen zu treffen. Die gekennzeichneten Daten werden als Trainingsdaten verwendet und nach dem Ausführen des Algorithmus wird überprüft, ob die getroffene Vorhersage der Kennzeichnung entspricht.
 Beim unüberwachten Lernen wird dem Algorithmus nicht gekennzeichnete Daten zugeführt. Hierbei wird nicht versucht eine Vorhersage zu treffen, sondern Schlussfolgerungen oder Zusammenhänge zwischen den Daten zu finden.
-Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des optimalen Verhaltens automatisiert werden.
+Beim verstärkten Lernen wird ein System aus Belohnung und Strafen verwendet. Macht der Algorithmus wenige Fehler ist die Belohnung groß und die Strafe klein, macht der Algorithmus viele Fehler ist die Belohnung klein und die Strafe groß. Dadurch kann das Finden des 
+optimalen Verhaltens automatisiert werden.
 \cite{serafeim}
 
 \include{StandForschung.tex}
@@ -266,6 +265,7 @@ In \cite[The ethics of algorithms: Mapping the debate]{Mittelstadt} wird argumen
 Technische Ansätze können von den Entwicklern einer \GLSabrev{igai} sowohl während als auch nach der Entwicklungsphase eingesetzt werden, beispielsweise in Form von Datenaufbereitung und -manipulation oder Filtern. Aufgrund dessen werden in der weiteren Durchführung diese Ansätze danach gruppiert, ob diese in der Entwicklungsphase der \GLSabrev{igai} oder in deren Anwendungsphase anzuwenden sind.
 
 \subsection{Entwicklungsphase}
+Der Zeitraum zwischen finaler Formulierung der Anforderungen und Fertigstellung der \GLSabrev{igai} ist die Entwicklungsphase. In dieser Phase setzen die Entwickler die Anforderungen um. Techniken in dieser Phase nehmen Einfluss auf grundlegende Funktionsweisen.
 
 \subsubsection{Verwendung von Datenerweiterung (Data Augmentation)}
 Datenerweiterung beschreibt eine Technik, Varianz in vorhandene Daten einzufügen und so die Datenmenge zu erweitern. Dabei werden synthetische Daten aus vorhandenen Daten erzeugt, die geringe Unterschiede zu den Originaldaten haben, oder aus Kombinationen mehrerer Originaldaten entstehen \cite[S. 2]{Shorten}. %Falls Shorten nur diese Erzeugung synthetischer Daten erklärt, stimmt das so, wenn er sich allerdings die konkrete, in den folgenden Sätzen beschriebene Methode ausgedacht hat, bitte wie in den oberen Abschnitten einflechten, sodass klar ist, dass alles von ihm stammt. -> stammt von Dominics Kopf, der ist wenn Schuld
@@ -273,12 +273,13 @@ Im Fall von \GLSabrev{igai}s könnten so Eingabetexte, mit denen ethisch kritisc
 gegeben und anschließend die erzeugten Bilder überprüft werden, um die Konsistenz dieser zu überprüfen und einen besseren Umgang mit kritischen Inhalten anzutrainieren.  
 
 \subsubsection{Verwendung von überwachtem Lernen}\label{Supervised Learning}
-Nach dem im Kapitel \nameref{def_ai} vorgestellten Prinzip des überwachten Lernens könnte man für \GLSabrev{igai}s Datensätze erstellen, welche aus 2-Tupeln bestehen: einem Text anhand dem ein Bild erzeugt werden soll und einem dazu passenden ethisch unbedenklichen Bild. Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erzeugen darf.
+Nach dem im Kapitel \nameref{def_ki} vorgestellten Prinzip des überwachten Lernens könnte man für \GLSabrev{igai}s Datensätze erstellen, welche aus 2-Tupeln bestehen: einem Text anhand dem ein Bild erzeugt werden soll und einem dazu passenden ethisch unbedenklichen Bild. Das Modell kann so anhand von positiven Beispielen lernen, welche Inhalte es erzeugen darf.
 
 Auch das Gegenteil wäre möglich: ein geordnetes Paar an Texten und ethisch verwerflichen Bildern, anhand derer die \GLSabrev{ai} lernen kann, was sie auf keinen Fall generieren darf.
 
 \subsubsection{Verwendung von verstärktem Lernen}
-Wie in \nameref{def_ai} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von \GLSabrev{igai}s daraus bestehen, die \GLSabrev{igai} zu belohnen, wenn 
+Wie in \nameref{def_ki} erklärt, wird beim verstärkten Lernen ein Belohnungs-Bestrafungs-System eingesetzt. Dieses könnte im Fall von \GLSabrev{igai}s daraus bestehen, die \GLSabrev{igai} zu belohnen, wenn 
+
 \begin{itemize}
     \item ethisch nicht vetretbare Texte erkannt werden und kein Bild erzeugt wird,
     \item ethisch vetretbare Texte erkannt werden und ein Bild erzeugt wird
@@ -293,14 +294,13 @@ oder zu bestrafen, wenn
 Ein Machine-Learning-Algorithmus kann durch Anwendung von kontradiktorischem Lernen ethisch hochwertiger gestaltet werden. Dabei wird ein als Adversary bezeichneter zusätzlicher Algorithmus verwendet, um den Hauptalgorithmus herauszufordern und zu verbessern. \cite[S. 3]{Kurakin} Der Adversary wird darauf trainiert, gezielt ethisch problematische Beispiele zu generieren, die der Hauptalgorithmus möglicherweise falsch klassifizieren könnte. Durch die Konfrontation des Hauptalgorithmus mit solchen herausfordernden Beispielen wird dieser dazu gezwungen, seine Entscheidungen präziser zu treffen und ethisch akzeptablere Ergebnisse zu erzeugen.
 
 \subsection{Anwendungsphase}
-
-Die Anwendungsphase ist der Zeitraum von der Fertigstellung einer \GLSabrev{igai} bis zu dem Zeitpunkt, an dem ihr Dienst eingestellt wird. In diesem Zeitraum wird die \GLSabrev{igai} von den Nutzern verwendet. Techniken in der Anwendungsphase nehmen keinen direkten Einfluss auf die Funktionsweise der \GLSabrev{igai} selbst. Die Techniken verändern die Rahmenbedingungen in denen die \GLSabrev{igai} verwendet wird.
+Die Anwendungsphase ist der Zeitraum von der Fertigstellung einer \GLSabrev{igai} bis zu dem Zeitpunkt, an dem ihr Dienst eingestellt wird. In diesem Zeitraum wird die \GLSabrev{igai} von den Nutzern verwendet. Techniken in der Anwendungsphase nehmen keinen direkten Einfluss auf die Funktionsweise der \GLSabrev{igai} selbst. Die Techniken verändern die Rahmenbedingungen, in denen die \GLSabrev{igai} verwendet wird.
 
 \subsubsection{Input-Filter}
 Die Entwickler von \GLSabrev{igai}s müssen davon ausgehen, dass Nutzer unethische Eingaben vornehmen. Damit ist der Input in Textform gemeint, den die \GLSabrev{igai} verwendet, um daraus Bilder zu generieren. Um zu verhindern, dass diese Eingaben vorgenommen werden, können die Entwickler Input-Filter verwenden. In \cite[Artificial Intelligence as a Service for Immoral ContentDetection and Eradication]{Shah} wird eine \GLSabrev{ai} beschrieben, die unmoralischen Inhalt aus sozialen Netzwerken erkennen kann. Die Entwickler von \GLSabrev{igai}s können anhand dieser Ergebnisse ihre eigene \GLSabrev{ai} entwickeln, jedoch mit der Spezialisierung auf unethischen Inhalt anstatt unmoralischen Inhaltes. Diese \GLSabrev{ai} können sie dann als Filter verwenden, um einzuschränken welche Eingaben überhaupt zur \GLSabrev{igai} gelangen.
 
 \subsubsection{Output-Filter}
-Wenn eine \GLSabrev{igai} Bilder generiert, müssen Entwickler davon ausgehen, dass dabei unethische Bilder generiert werden können. Diese Bilder dürfen den Nutzer nicht erreichen. Um das zu verhindern können die Entwickler Output-Filter verwenden. Der Output ist das von der \GLSabrev{igai} generierte Bild. In \cite{Zheng} wird ein System beschrieben, das aus zwei getrennten Filtern besteht: einem Filter für verbotene Symbole und einem für nicht jugendfreie Bilder. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Dies ermöglicht eine Filterung aller Inhalte, die einem Nutzer der \GLSabrev{ai} nicht ausgegeben werden sollen. Das beschriebene System ist laut \cite{Zheng} schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels ist anzunehmen, dass heutige Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln. Ein solches System kann von den Entwicklern verwendet werden, um den Output zu überwachen. Erkennt das System ein generiertes Bild als unethisch wird es nicht an den Nutzer ausgegeben. Außerdem können diese Ergebnisse auch zur Weiterentwicklung der \GLSabrev{igai} selbst verwendet werden.
+Wenn eine \GLSabrev{igai} Bilder generiert, müssen Entwickler davon ausgehen, dass dabei unethische Bilder generiert werden können. Diese Bilder dürfen den Nutzer nicht erreichen. Um das zu verhindern, können die Entwickler Output-Filter verwenden. Der Output ist das von der \GLSabrev{igai} generierte Bild. In \cite{Zheng} wird ein System beschrieben, das aus zwei getrennten Filtern besteht: einem Filter für verbotene Symbole und einem für nicht jugendfreie Bilder. Da diese Filter unabhängig voneinander arbeiten, kann das System um weitere Filter ergänzt werden. Dies ermöglicht eine Filterung aller Inhalte, die einem Nutzer der \GLSabrev{ai} nicht ausgegeben werden sollen. Das beschriebene System ist laut \cite{Zheng} schneller und zuverlässig als seine Vorgänger. In Anbetracht des Alters des Artikels ist anzunehmen, dass heutige Systeme noch schneller und zuverlässiger den zu filternden Inhalt ermitteln. Ein solches System kann von den Entwicklern verwendet werden, um den Output zu überwachen. Erkennt das System ein generiertes Bild als unethisch wird es nicht an den Nutzer ausgegeben. Außerdem können diese Ergebnisse auch zur Weiterentwicklung der \GLSabrev{igai} selbst verwendet werden.
 
 \subsubsection{Anwendungsbeschränkung} %Haben wir uns das selbst ausgedacht oder ist das alles von Jang? Ich habe es mal so geschrieben, als käme alles von Jang, wenn nicht, bitte wieder zurückändern. -> Eigenes Beipspiel anhand von Jang, brauch also keine Quelle
 Anwendungsbeschränkung bedeutet, dass Entwickler die Art und Weise wie Nutzer mit der \GLSabrev{igai} interagieren einschränken. In dieser Methode soll es um eine Beschränkung der Anwendungsfrequenz wie in \cite{Jang} gehen. Als Beispiel dient hierbei das Credit-System von DALL E2 von OpenAI. Bei diesem System werden Credits benötigt, um mittels der \GLSabrev{igai} ein Bild zu generieren. Credits sind käuflich oder werden gestatten, wenn man sich in einem bestimmten Zeitraum nach Veröffentlichung von DALL E2 angemeldet hat. Wenn die \GLSabrev{igai} ein Bild generiert, wird ein Credit verbraucht. Hat ein Nutzer keine Credits mehr, kann er keine Bilder mehr generieren. Dadurch wird eine initiale Barriere geschaffen, da Nutzer Credits kaufen müssen, um Bilder zu generieren. Nutzer, die auf die Generierung von unethischen Bildern abzielen, können damit abgeschreckt werden. Durch Anzahl der Credits kann zusätzlich beschränkt werden wie viele Bilder generiert werden können. Entwickler können dieses Credit-System nach ihrem Bedarf anpassen.
@@ -309,6 +309,8 @@ Anwendungsbeschränkung bedeutet, dass Entwickler die Art und Weise wie Nutzer m
 \chapter{Fazit}
 Das Ziel der vorliegenden Arbeit besteht darin, die Frage zu beantworten, welche Methoden es aktuell gibt, mit denen \GLSabrev{igai}-Entwickler dazu beitragen können, dass mit ihrer Technologie keine unethischen Inhalte erzeugt werden. Diese Frage konnte durch die detaillierte Auflistung und Erklärung der Methoden in Kapitel \nameref{execution} beantwortet werden. Die gewählte Methode, ausschließlich einen Überblick über die in der Literatur beschriebenen Methoden auszuführen, kann jedoch nicht zeigen, welche Methoden tatsächlich wie angewandt werden und ihren Zweck inwiefern erfüllen. Von den Autoren der vorliegenden Arbeit selbst übertragene Methoden wie die Verwendung von überwachtem Lernen in Kapitel \nameref{Supervised Learning} konnten nicht auf ihre tatsächliche Anwendbarkeit überprüft werden, da das den Rahmen der vorliegenden Arbeit sprengen würde. Es würde sich im Anschluss an die vorliegende Arbeit also anbieten, experimentell die tatsächliche Umsetzung der genannten Methoden an verschiedenen \GLSabrev{igai}s zu überprüfen bzw. auch experimentell zu untersuchen, inwiefern die skizzierten im Rahmen der vorliegenden Arbeit erdachten Methoden tatsächlich anwendbar und dienlich sind.
 So kann diese Arbeit jedoch als Grundlage dienen, um einen Überblick über mögliche Methoden zu gewinnen, um darauf fußend ethisch korrekter handelnde \GLSabrev{ai} zu entwickeln.
+
+% Gefahr Achtung! Supervised Learning also überwachtes Lernen ist nicht selbst erdacht, ich hab nur die Quelle vergessen! -> habs zu übertragen geändert
 
 \chapter{KI-Werkzeuge zur Unterstützung des wissenschaftlichen Arbeitens}
 Für die Recherche wurden verschiedene KI-Werkzeuge verwendet, deren Nutzung im Folgenden eingeschätzt und die Nützlichkeit dessen diskutiert werden soll. 
