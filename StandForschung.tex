@@ -1,46 +1,13 @@
 \chapter{Stand der Forschung}
 
-Nachfolgend wird der Stand der Forschung zum Thema Möglichkeiten zur Verhinderung 
-des Missbrauchs bildergenerierender Kis zur Erzeugung ethisch fragwürdiger Inhalte mit Fokus darauf beleuchtet, wie in der Praxis verhindert wird, dass \GLSabrev{igai} zur Erzeugung ethisch fragwürdiger Inhalte missbraucht werden. Anschließend wird die Nützlichkeit der für die Recherche verwendeten \GLSabrev{ai}-Anwendungen kurz diskutiert.\\
-
-\GLSabrev{ai} ist nicht ethisch, sondern liefert Ergebnisse auf Basis ihres Datensatzes, wobei \gls{bias} schnell zu diskriminierenden Verteilungen von Ergebnismengen führen können \cite{Salminen}. \cite{Jobin} und \cite{Partadiredja} sind Beispiele für Werke, die bereits vorhandene Richtlinien und ähnliche Werke zu ethischen Festlegungen bezüglich \GLSabrev{ai} 
-aufgreifen und darlegen, wobei in \cite{Partadiredja} auch Unterschiede zwischen von \GLSabrev{ai} und von Menschen generierte 
-Mediacontent einschließlich Bildern herausgearbeitet werden. Dabei wird insbesondere auf ethische Implikationen eingegangen. \\
-
-Es gibt solche weisenden, jedoch nicht gesetzlich bindenden Vorschriften also, jedoch demonstrieren Werke wie 
-\cite{Ayling}, dass diese bei der Entwicklung und dem Einsatz von \GLSabrev{ai} noch nicht ausreichend praktische Anwendung 
-finden. \cite{Ayling} zeigt hierzu explizit Defizite aktueller Werkzeuge für Audits und Risikobewertungen bezüglich 
-ethischer Rahmenwerke und Grundsätze in der \GLSabrev{ai} auf, die in Zukunft berücksichtigt werden sollten. 
-Prinzipiell gibt es bereits Arbeiten, deren Ergebnisse die Umsetzung verschiedener Richtlinien fördern können, so gibt 
-\cite{EUCommision} Anforderungen an \GLSabrev{ai} in der EU vor. \\
-
-In \cite{Jobin} und \cite{Hagendorff} werden Strategien 
-für die Implementierung von Richtlinien für ethische Prinzipien für \GLSabrev{ai} definiert. \cite{Stahl} diskutiert die Ethik von \GLSabrev{ai} und Robotik 
-und liefert Einblicke, wie ethische Prinzipien im Allgemeinen in der Praxis angewendet werden können. \cite{Srinivasan} bietet 
-eine Zusammenstellung von \gls{bias} in verschiedenen Phasen des \GLSabrev{ai}-Prozesses und gibt Empfehlungen für bewährte Verfahren und 
-Richtlinien zur Identifizierung und Minderung von Verzerrungen in \GLSabrev{ai}-Systemen für Entwickler von maschinellem Lernen. \cite{Jameel} 
-geht auf Grundlage einer Vorstellung verschiedener \GLSabrev{ai}-Modelle auf bestimmte ethische Probleme ein und zeigt Wege auf, 
-Daten von ethisch hoher Qualität zu erhalten.
-Zudem geben einige Unternehmen Überblick über ihre Ansätze zur Verminderung von Verzerrungen bei der Benutzung von \GLSabrev{ai}, 
-beispielsweise IBM über \cite{Hobson}. In diesem Werk wird auch anhand von Prozessen dargelegt, wie ethisch korrekt mit \GLSabrev{ai} 
-umgegangen werden kann.\\
-
-Eine Variante, bestimmte Inhalte zu blockieren, besteht in der Filterung. Einen solchen Filter für Bilder zeigt \cite{Zheng}.
-Die beschriebene Software kann Haut auf Bildern erkennen und darüber z. B. nicht kinder- und jugendfreie Inhalte und Symbole herausfiltern.
-Zusammenfassend lässt sich also sagen, dass die Problematik bei der Umsetzung ethischer Prinzipien in der \GLSabrev{ai} erkannt und
-durch Richtlinien u. ä. Anleitungen gegeben werden, wie diese geschehen kann. Außerdem gibt es Untersuchungen 
-zur Anforderungsanalyse und Vorschläge zur Implementierung für diese Umsetzung, allerdings keinen zusammenfassenden 
-Überblick, was denn tatsächlich praktisch getan wird, um Missbrauch bildergenerierender \GLSabrev{ai}s zur Erzeugung ethisch 
-fragwürdiger Inhalte zu verhindern.
-Nennung und Einschätzung der verwendeten \GLSabrev{ai}-Werkzeuge.\\
-
-Die betrachteten Arbeiten lassen sich somit wie folgt inhaltlich gruppieren: Es gibt wissenschaftliche Arbeiten zur Analyse und Filterung
-bestimmter Inputs/Outputs wie Haut und Symbole aus Bildern \cite{Zheng} oder unmoralische Wörter oder Phrasen \cite{Shah}. Des weiteren 
-werden Richtlinien zum ethischen Einsatz von \GLSabrev{ai} zusammenstellt oder definiert und diskutiert \cite{Ayling} \cite{Srinivasan} 
-\cite{Jameel} \cite{Hagendorff} \cite{Jobin} \cite{Unity} \cite{EUCommision}[World Economic Forum 2018] \cite{Mueller}.
-Neben diesen Richtlinien werden Frameworks für \GLSabrev{ai} entwickelt [Huang et al. 2022] \cite{Mueller}. Es werden Probleme von Kis ermittelt \cite{Ayling}, 
-beispielsweise Bias \cite{Salminen} \cite{Jameel}, Kopien \cite{Somepalli}, wobei u. a. Bias auch zu ethisch 
-fragwürdigen Resultaten führen kann [Zuber 2022]. Lösungsansätze für diese Probleme werden allgemein für \GLSabrev{ai}-spezifische Probleme ohne 
-Konzentration auf ein bestimmtes \cite{Ayling} \cite{Avelar}, aber auch konkret für bestimmte Problemkategorien wie Bias \cite{Srinivasan}
-\cite{Jameel}untersucht. Technikfolgen und Regulierungsfragen für verschiedene von \GLSabrev{ai} beeinflusste Kontexte wie Politik und Wirtschaft
-werden analysiert \cite{Pawelec}.
+Nachfolgend wird der Stand der Forschung zum Thema Möglichkeiten zur Verhinderung des Missbrauchs bildergenerierender \GLSabrev{ai}s zur Erzeugung ethisch fragwürdiger Inhalte mit Fokus darauf beleuchtet, wie in der Praxis verhindert wird, dass \GLSabrev{igai} zur Erzeugung ethisch fragwürdiger Inhalte missbraucht werden. \GLSabrev{ai} ist nicht ethisch, sondern liefert Ergebnisse auf Basis ihres Datensatzes, sodass \Gls{bias} schnell zu diskriminierenden Verteilungen von Ergebnismengen führen können \cite{Salminen}. Bereits vorhandene Richtlinien und ähnliche Werke zu ethischen Festlegungen bezüglich \GLSabrev{ai} werden aufgegriffen und dargelegt \cite{Jobin} und \cite{Partadiredja}, wobei teilweise auch Unterschiede zwischen von \GLSabrev{ai} und von Menschen generiertem Mediacontent einschließlich Bildern herausarbeitet und dabei insbesondere auf ethische Implikationen eingegangen wird \cite{Partadiredja}. 
+\\\\
+Es gibt solche weisenden, jedoch nicht gesetzlich bindenden Vorschriften also, jedoch demonstrieren Ayling und Chapman, dass diese bei der Entwicklung und dem Einsatz von \GLSabrev{ai} noch nicht ausreichend praktische Anwendung finden \cite{Ayling}. Hierzu werden explizit Defizite aktueller Werkzeuge für Audits und Risikobewertungen bezüglich ethischer Rahmenwerke und Grundsätze in der \GLSabrev{ai} aufgezeigt, die in Zukunft berücksichtigt werden sollten \cite{Ayling}. Prinzipiell gibt es bereits Werke, deren Ergebnisse die Umsetzung verschiedener Richtlinien fördern können, z. B. durch eine Definition von Anforderungen an \GLSabrev{ai} in der EU \cite{EUCommision}. 
+\\\\
+Des weiteren zeigen Jobin et al. und Hagendorff Strategien für die Implementierung von Richtlinien für ethische Prinzipien für \GLSabrev{ai} auf \cite{Jobin} \cite{Hagendorff}. Stahl et al. diskutieren Ethik von \GLSabrev{ai} und Robotik und liefert Einblicke, wie ethische Prinzipien im Allgemeinen in der Praxis angewendet werden können \cite{Stahl}. Eine Zusammenstellung von \Gls{bias} in verschiedenen Phasen des \GLSabrev{ai}-Prozesses und Empfehlungen für bewährte Verfahren und Richtlinien zur Identifizierung und Minderung von Verzerrungen in \GLSabrev{ai}-Systemen für Entwickler von maschinellem Lernen geben Srinivasan und Chander \cite{Srinivasan}. Jameel et al. gehen auf Grundlage einer Vorstellung verschiedener \GLSabrev{ai}-Modelle auf bestimmte ethische Probleme ein und zeigt Wege auf, Daten von ethisch hoher Qualität zu erhalten \cite{Jameel}. Zudem geben einige Unternehmen Überblick über ihre Ansätze zur Verminderung von Verzerrungen bei der Benutzung von \GLSabrev{ai}, beispielsweise IBM mithilfe eine auf Prozessen basierende Darlegung, wie ethisch korrekt mit \GLSabrev{ai} umgegangen werden kann \cite{Hobson}.
+\\\\
+Eine Variante, bestimmte Inhalte zu blockieren, besteht in der Filterung. Einen solche Filter für Bilder beschreiben Zheng et al. \cite{Zheng}. Die beschriebene Software kann Haut auf Bildern erkennen und darüber z. B. nicht jugendfreie Inhalte und gesetzlich verbotene Symbole herausfiltern. 
+\\\\
+Zusammenfassend lässt sich also sagen, dass die Problematik bei der Umsetzung ethischer Prinzipien in der \GLSabrev{ai} erkannt und durch Richtlinien u. ä. Anleitungen gegeben werden, wie diese geschehen kann. Außerdem gibt es Untersuchungen zur Anforderungsanalyse und Vorschläge zur Implementierung für diese Umsetzung, allerdings keinen zusammenfassenden Überblick, was denn tatsächlich praktisch getan wird, um Missbrauch bildergenerierender \GLSabrev{ai}s zur Erzeugung ethisch fragwürdiger Inhalte zu verhindern. \\
+\newpage 
+Die betrachteten Arbeiten lassen sich somit wie folgt inhaltlich gruppieren: Es gibt wissenschaftliche Arbeiten zur Analyse und Filterung bestimmter Inputs/Outputs wie Haut und Symbole aus Bildern \cite{Zheng} oder unmoralische Wörter oder Phrasen \cite{Shah}. Des weiteren werden Richtlinien zum ethischen Einsatz von \GLSabrev{ai} zusammenstellt oder definiert und diskutiert \cite{Ayling} \cite{Srinivasan} \cite{Jameel} \cite{Hagendorff} \cite{Jobin} \cite{Unity} \cite{EUCommision} \cite{Mueller}. Neben diesen Richtlinien werden Frameworks für \GLSabrev{ai} entwickelt \cite{Huang} \cite{Mueller}. Es werden Probleme von \GLSabrev{ai}s ermittelt \cite{Ayling}, beispielsweise Bias \cite{Salminen} \cite{Jameel}, Kopien \cite{Somepalli}, wobei u. a. Bias auch zu ethisch fragwürdigen Resultaten führen kann \cite{Zuber}. Lösungsansätze für diese Probleme werden allgemein für \GLSabrev{ai}-spezifische Probleme ohne Konzentration auf ein bestimmtes \cite{Ayling} \cite{Avelar}, aber auch konkret für bestimmte Problemkategorien wie Bias \cite{Srinivasan} \cite{Jameel} untersucht. Technikfolgen und Regulierungsfragen für verschiedene von \GLSabrev{ai} beeinflusste Kontexte wie Politik und Wirtschaft werden analysiert \cite{Pawelec}.
